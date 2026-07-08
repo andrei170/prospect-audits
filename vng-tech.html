@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing &amp; Funnel Audit Scorecard | VNG Tech</title>
+<meta name="description" content="A scored marketing and funnel audit of VNG Tech across 8 dimensions, with ranked findings and a priority action plan.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#17202e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2317202e'/%3E%3Ctext x='50' y='66' font-family='Inter,Arial' font-size='42' font-weight='bold' fill='%233b76d6' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  :root{
+    --ink:#17202e; --ink2:#28344a; --paper:#f5f7fa; --sand:#eaeef4; --card:#ffffff;
+    --accent:#3b76d6; --accent2:#2b5db8;
+    --a:#3f9e6a; --b:#7bab45; --c:#d6a531; --d:#dd7f37; --f:#cf4d3e;
+    --line:#e2e8f1; --muted:#5c6675; --muted2:#8a94a3;
+    --sh1:0 1px 2px rgba(23,32,46,.05),0 4px 12px rgba(23,32,46,.08);
+    --sh2:0 4px 10px rgba(23,32,46,.07),0 18px 44px rgba(23,32,46,.14);
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#232c3a;background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Fraunces','Georgia',serif;font-weight:600;line-height:1.12;color:var(--ink);letter-spacing:-.015em}
+  h1{font-size:clamp(2rem,4.4vw,3rem);letter-spacing:-.025em;line-height:1.05}
+  h2{font-size:clamp(1.5rem,2.8vw,2rem)}
+  p{margin-bottom:1rem;color:var(--muted)}
+  a{color:var(--accent2);text-decoration:none}
+  .wrap{max-width:940px;margin:0 auto;padding:0 26px}
+  section{padding:56px 0}
+  iconify-icon{display:inline-block;width:1em;height:1em;vertical-align:-.135em}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--accent);margin-bottom:14px}
+  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--accent)}
+  .lead{font-size:1.08rem;color:var(--muted);line-height:1.7}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,#4884e4,var(--accent));color:#fff;font-weight:700;padding:14px 28px;border-radius:11px;border:none;cursor:pointer;transition:.2s;box-shadow:0 10px 26px rgba(59,118,214,.3)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(59,118,214,.42)}
+
+  .masthead{background:linear-gradient(160deg,#141c28,#1f2a3c);color:#fff;padding:18px 0}
+  .mh{max-width:940px;margin:0 auto;padding:0 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .mh .l{display:flex;align-items:center;gap:12px}
+  .mh .mk{width:38px;height:38px;border-radius:11px;background:var(--accent);display:grid;place-items:center;color:#fff;font-weight:800}
+  .mh b{font-family:'Fraunces',serif;font-size:1.05rem;color:#fff;font-weight:600}
+  .mh small{display:block;font-size:.72rem;color:#94a1b5}
+  .mh .tag{font-size:.76rem;color:#aab6c7;border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:6px 13px}
+
+  /* Verdict hero */
+  .verdict{background:linear-gradient(165deg,#1a2333,#131a26);color:#fff}
+  .verdict .wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+  .grade-ring{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;position:relative;background:conic-gradient(var(--d) 0 43%,rgba(255,255,255,.08) 43% 100%);flex:none}
+  .grade-ring .inner{width:150px;height:150px;border-radius:50%;background:#131a26;display:grid;place-items:center;text-align:center}
+  .grade-ring .g{font-family:'Fraunces',serif;font-size:3.4rem;font-weight:700;color:#fff;line-height:1}
+  .grade-ring .s{font-size:.8rem;color:#9aa6b8;margin-top:2px}
+  .verdict h1{color:#fff}
+  .verdict .eyebrow{color:#7fa9ee}.verdict .eyebrow::before{background:#7fa9ee}
+  .verdict p{color:#c2cdda;max-width:52ch}
+  .verdict .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .verdict .meta span{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:7px 14px;font-size:.82rem;color:#d5deea;display:inline-flex;align-items:center;gap:7px}
+  .verdict .meta iconify-icon{color:#7fa9ee}
+  @media(max-width:680px){.verdict .wrap{grid-template-columns:1fr;justify-items:center;text-align:center}.verdict p{margin-left:auto;margin-right:auto}}
+
+  /* Scorecard */
+  .score-row{display:grid;grid-template-columns:200px 1fr auto;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+  .score-row:last-child{border-bottom:none}
+  .score-row .name{font-weight:600;color:var(--ink);font-size:.98rem}
+  .score-row .name span{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
+  .bar{height:12px;border-radius:8px;background:var(--sand);overflow:hidden;position:relative}
+  .bar span{display:block;height:100%;border-radius:8px}
+  .score-row .gr{font-family:'Fraunces',serif;font-weight:700;font-size:1.4rem;width:44px;text-align:center}
+  @media(max-width:680px){.score-row{grid-template-columns:1fr auto;gap:10px}.score-row .bar{grid-column:1 / -1;order:3}}
+
+  /* Findings */
+  .finding{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--sh1);margin-top:14px}
+  .finding .top{display:flex;align-items:flex-start;gap:14px}
+  .finding .sev{flex:none;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:#fff;font-size:1rem;margin-top:2px}
+  .sev.high{background:var(--f)}.sev.med{background:var(--d)}.sev.low{background:var(--c)}
+  .finding h3{font-size:1.1rem;margin-bottom:3px}
+  .finding .tag{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted2)}
+  .finding p{margin:10px 0 0;font-size:.94rem}
+  .finding .fix{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:.92rem;color:var(--ink2)}
+  .finding .fix b{color:var(--a)}.finding .fix iconify-icon{color:var(--a)}
+
+  .wedge{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-radius:18px;padding:32px 30px;margin-top:8px}
+  .wedge .eyebrow{color:#cfe0ff}.wedge .eyebrow::before{background:#cfe0ff}
+  .wedge p{color:#fff;font-size:1.2rem;font-family:'Fraunces',serif;font-style:italic;line-height:1.4;margin:0}
+
+  .ptable{width:100%;border-collapse:collapse;margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--sh1)}
+  .ptable th,.ptable td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);font-size:.92rem}
+  .ptable th{background:var(--sand);font-weight:700;color:var(--ink);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+  .ptable td{color:var(--muted)}.ptable tr:last-child td{border-bottom:none}
+  .ptable .p{font-weight:700;color:var(--ink)}
+  .imp{display:inline-block;font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:20px}
+  .imp.h{background:#fbe4e0;color:var(--f)}.imp.m{background:#fbeede;color:var(--d)}.imp.l{background:#e6f3ec;color:var(--a)}
+  .scroll{overflow-x:auto}
+
+  .cta{background:var(--ink);color:#e6edf5;border-radius:18px;padding:38px 34px;text-align:center;margin-top:8px}
+  .cta h2{color:#fff}.cta p{color:#aab6c7;max-width:48ch;margin:12px auto 22px}
+  footer{padding:34px 0;border-top:1px solid var(--line);margin-top:14px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:var(--muted)}
+  .disclaimer{font-size:.74rem;color:var(--muted2);line-height:1.6;margin-top:16px}
+  .rv{opacity:0;transform:translateY(20px);transition:.6s var(--ease)}.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="mh">
+    <div class="l"><span class="mk">AG</span><div><b>Marketing &amp; Funnel Audit</b><small>Scorecard prepared for VNG Tech</small></div></div>
+    <span class="tag">By AG1 &middot; 8-point scorecard</span>
+  </div>
+</div>
+
+<!-- Verdict -->
+<section class="verdict">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom:0"></div>
+    <div style="height:0"></div>
+  </div>
+  <div class="wrap" style="padding-top:8px;padding-bottom:8px">
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center" class="v-inner">
+      <div class="grade-ring"><div class="inner"><div><div class="g">D</div><div class="s">43 / 100</div></div></div></div>
+      <div>
+        <div class="eyebrow">Overall verdict</div>
+        <h1>A capable agency that doesn't run its own playbook.</h1>
+        <p>VNG Tech sells websites that sell, plus SEO and content. The competence is there, but the proof and funnel maturity are not: placeholder testimonials, no case studies, and no content engine. The exact systems you sell for clients are not running for your own brand, and that is the biggest thing holding conversion back.</p>
+        <div class="meta">
+          <span><iconify-icon icon="mdi:web"></iconify-icon> vng-tech.com</span>
+          <span><iconify-icon icon="mdi:office-building-outline"></iconify-icon> Digital agency, est. 2019</span>
+          <span><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Rancho Mission Viejo, CA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scorecard -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The scorecard</div>
+    <h2>Eight dimensions, scored.</h2>
+    <p class="lead" style="margin-top:10px">How the marketing operation stacks up, from first impression to follow-up.</p>
+    <div style="margin-top:30px">
+      <div class="score-row rv"><div class="name">Website &amp; UX<span>Clean, functional brochure site</span></div><div class="bar"><span style="width:62%;background:var(--c)"></span></div><div class="gr" style="color:var(--c)">C</div></div>
+      <div class="score-row rv"><div class="name">Lead capture &amp; funnel<span>One CTA, no lead magnet, no nurture</span></div><div class="bar"><span style="width:42%;background:var(--d)"></span></div><div class="gr" style="color:var(--d)">D</div></div>
+      <div class="score-row rv"><div class="name">Offer &amp; pricing clarity<span>Hidden pricing, generalist stack</span></div><div class="bar"><span style="width:45%;background:var(--d)"></span></div><div class="gr" style="color:var(--d)">D</div></div>
+      <div class="score-row rv"><div class="name">Proof &amp; social proof<span>Lorem ipsum quotes, no case studies</span></div><div class="bar"><span style="width:25%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">SEO &amp; discoverability<span>Sells SEO, has no blog of its own</span></div><div class="bar"><span style="width:35%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Email &amp; nurture<span>No list, no follow-up sequence</span></div><div class="bar"><span style="width:30%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Paid &amp; distribution<span>Thin presence, one social link</span></div><div class="bar"><span style="width:48%;background:var(--d)"></span></div><div class="gr" style="color:var(--d)">D</div></div>
+      <div class="score-row rv"><div class="name">Brand &amp; positioning<span>Coherent angle, undifferentiated</span></div><div class="bar"><span style="width:58%;background:var(--c)"></span></div><div class="gr" style="color:var(--c)">C</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Findings -->
+<section style="background:var(--sand)">
+  <div class="wrap">
+    <div class="eyebrow">Key findings</div>
+    <h2>What is costing the most, in order.</h2>
+    <div class="finding rv"><div class="top"><div class="sev high"><iconify-icon icon="mdi:alert"></iconify-icon></div><div><div class="tag">Proof &middot; Critical</div><h3>Placeholder testimonials and no real case studies</h3></div></div>
+      <p>The homepage quotes are Lorem ipsum attributed to "John Doe" and "Jane Shaft," and the Design Library links to generic template previews rather than named client outcomes. For an agency whose promise is "websites that sell," having no verifiable results is the single biggest trust killer, exactly for the mid-size buyers you target.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> replace placeholders with 3 to 5 real named results (before/after, lead lift, revenue) and turn the Design Library into a true case-study portfolio.</div>
+    </div>
+    <div class="finding rv"><div class="top"><div class="sev high"><iconify-icon icon="mdi:alert"></iconify-icon></div><div><div class="tag">SEO &middot; Critical</div><h3>You sell SEO and content, but run neither for yourself</h3></div></div>
+      <p>There is no blog and no content section anywhere on the site. Selling SEO while ranking on none of your own terms and publishing nothing is a credibility gap any informed prospect will spot.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> stand up a local-SEO content hub that proves the capability you sell, and rank for your own service terms.</div>
+    </div>
+    <div class="finding rv"><div class="top"><div class="sev med"><iconify-icon icon="mdi:alert-outline"></iconify-icon></div><div><div class="tag">Offer &middot; High</div><h3>Hidden pricing and no productized offer</h3></div></div>
+      <p>Pricing is nowhere, and the stack reads as a commodity "we do everything" generalist. The only path is a manual free consultation, which pushes all qualification onto a call.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> define a productized flagship with a visible "starting at" and a clear systems framing to stand apart from generalists.</div>
+    </div>
+    <div class="finding rv"><div class="top"><div class="sev med"><iconify-icon icon="mdi:alert-outline"></iconify-icon></div><div><div class="tag">Funnel &middot; High</div><h3>Single conversion path, zero recapture</h3></div></div>
+      <p>Every CTA is the same "free consultation." There is no lead magnet or email capture for the 95%+ who are not ready to book, so all non-ready traffic leaks with no way back.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> add a low-friction lead magnet (a free website or SEO audit) plus an email nurture sequence.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Wedge -->
+<section>
+  <div class="wrap">
+    <div class="wedge">
+      <div class="eyebrow">The one-line takeaway</div>
+      <p>"You tell prospects you build websites that sell and that you do SEO and content, but your own site has placeholder testimonials, no case studies, and no blog. The proof engine you sell for clients is not running for you."</p>
+    </div>
+  </div>
+</section>
+
+<!-- Plan -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Priority action plan</div>
+    <h2>Where I would start.</h2>
+    <div class="scroll">
+    <table class="ptable">
+      <thead><tr><th>#</th><th>Move</th><th>Area</th><th>Effort</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td class="p">1</td><td>Real named case studies + kill Lorem ipsum</td><td>Proof</td><td>Med</td><td><span class="imp h">High</span></td></tr>
+        <tr><td class="p">2</td><td>Productized flagship offer with a price anchor</td><td>Offer</td><td>Low</td><td><span class="imp h">High</span></td></tr>
+        <tr><td class="p">3</td><td>Free audit lead magnet + email nurture</td><td>Funnel</td><td>Med</td><td><span class="imp h">High</span></td></tr>
+        <tr><td class="p">4</td><td>Local-SEO content hub (eat your own cooking)</td><td>SEO</td><td>Med</td><td><span class="imp m">Med</span></td></tr>
+        <tr><td class="p">5</td><td>Founder authority + results front and center</td><td>Brand</td><td>Low</td><td><span class="imp m">Med</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <div class="eyebrow" style="color:#7fa9ee;justify-content:center">The fastest wins</div>
+      <h2>Turn the proof and funnel gaps into pipeline.</h2>
+      <p>A quick call to walk the scorecard, prioritise the fixes, and map what to build first.</p>
+      <a href="https://calendly.com/ag-copy/call-with-andrei" class="btn">Book a 15-minute call <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><span>Marketing &amp; Funnel Audit Scorecard &middot; VNG Tech</span><span>Prepared by AG1</span></div>
+    <p class="disclaimer">Scores are a professional assessment based on the publicly observable website and funnel plus established best practices, not a review of private analytics. Grades are directional and meant to prioritise, not to be precise metrics. Founder identity and any private data should be confirmed before external use. A full, quantified audit requires access to the relevant analytics and accounts.</p>
+  </div>
+</footer>
+
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>

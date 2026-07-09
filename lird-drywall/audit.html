@@ -47,7 +47,13 @@
   .mh small{display:block;font-size:.66rem;color:#948e86;letter-spacing:.2em;text-transform:uppercase}
   .mh .tag{font-size:.76rem;color:#b3ada4;border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:6px 13px}
 
-  .verdict{background:linear-gradient(165deg,#1a1a1d,#0e0e10);color:#fff}
+  .verdict{background:linear-gradient(165deg,#1a1a1d,#0e0e10);color:#fff;position:relative;overflow:hidden}
+  .verdict .bg{position:absolute;inset:0;z-index:0}
+  .verdict .bg .grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(120% 90% at 30% 20%,#000 30%,transparent 78%)}
+  .verdict .bg .glow{position:absolute;top:-16%;left:-8%;width:min(680px,80vw);height:min(680px,80vw);background:radial-gradient(circle,rgba(236,148,48,.2),transparent 62%);filter:blur(8px)}
+  .verdict .bg .grain{position:absolute;inset:0;opacity:.4;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+  .verdict .wrap{position:relative;z-index:1}
+  .grade-ring{box-shadow:0 0 0 10px rgba(236,148,48,.06),0 20px 50px rgba(0,0,0,.4)}
   .grade-ring{width:184px;height:184px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--f) 0 22%,rgba(255,255,255,.08) 22% 100%);flex:none}
   .grade-ring .inner{width:152px;height:152px;border-radius:50%;background:#0e0e10;display:grid;place-items:center;text-align:center}
   .grade-ring .g{font-family:'Barlow Condensed';font-size:3.8rem;font-weight:800;color:#fff;line-height:1}
@@ -106,7 +112,9 @@
   footer{padding:34px 0;border-top:1px solid var(--line);margin-top:14px}
   .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:var(--muted)}
   .disclaimer{font-size:.74rem;color:var(--muted2);line-height:1.6;margin-top:16px}
-  .rv{opacity:0;transform:translateY(20px);transition:.6s var(--ease)}.rv.in{opacity:1;transform:none}
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv.in{opacity:1;transform:none}
+  .rv[data-d="1"]{transition-delay:.1s}.rv[data-d="2"]{transition-delay:.2s}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -119,10 +127,11 @@
 </div>
 
 <section class="verdict">
+  <div class="bg" aria-hidden="true"><div class="grid-lines"></div><div class="glow"></div><div class="grain"></div></div>
   <div class="wrap">
     <div style="display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center" class="v-inner">
-      <div class="grade-ring"><div class="inner"><div><div class="g">F</div><div class="s">22 / 100</div></div></div></div>
-      <div>
+      <div class="grade-ring rv"><div class="inner"><div><div class="g">F</div><div class="s">22 / 100</div></div></div></div>
+      <div class="rv" data-d="1">
         <div class="eyebrow">Overall verdict</div>
         <h1>A solid trade, invisible online.</h1>
         <p>LIRD does real work and has a clean, recognizable brand on its sign. The problem is that almost none of it exists online. With no website, no Google presence, and no way to capture a lead, the business is invisible to the homeowners who search before they hire. Nearly every job today comes from word of mouth, which caps how fast it can grow. The upside here is large and the fixes are straightforward.</p>

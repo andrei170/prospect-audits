@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Presence Audit | LIRD Drywall</title>
+<meta name="description" content="A graded digital presence audit of LIRD Drywall across 8 dimensions, with the revenue opportunity and a priority action plan.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#141416">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23141416'/%3E%3Cpath d='M28 62V36l22-14 22 14v26' fill='none' stroke='%23ec9430' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  :root{
+    --ink:#141416; --ink2:#26262a; --paper:#f6f4ef; --sand:#ece7de; --card:#ffffff;
+    --accent:#ec9430; --accent2:#cf7a15;
+    --a:#3f9e6a; --b:#7bab45; --c:#d6a531; --d:#dd7f37; --f:#cf4d3e;
+    --line:#e6e0d5; --muted:#5f5b54; --muted2:#948e84;
+    --sh1:0 1px 2px rgba(20,20,22,.05),0 4px 14px rgba(20,20,22,.08);
+    --sh2:0 4px 10px rgba(20,20,22,.07),0 20px 46px rgba(20,20,22,.15);
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#262329;background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:700;line-height:1.02;color:var(--ink);text-transform:uppercase;letter-spacing:.01em}
+  h1{font-size:clamp(2.2rem,5vw,3.4rem)}
+  h2{font-size:clamp(1.7rem,3.2vw,2.4rem)}
+  p{margin-bottom:1rem;color:var(--muted)}
+  .wrap{max-width:940px;margin:0 auto;padding:0 26px}
+  section{padding:54px 0}
+  iconify-icon{display:inline-block;width:1em;height:1em;vertical-align:-.135em}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow Condensed';font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.9rem;color:var(--accent2);margin-bottom:12px}
+  .eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+  .lead{font-size:1.08rem;color:var(--muted);line-height:1.7}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,#f4a13c,var(--accent));color:#1a1305;font-weight:800;padding:14px 28px;border-radius:10px;border:none;cursor:pointer;transition:.2s;box-shadow:0 10px 26px rgba(236,148,48,.32)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(236,148,48,.46)}
+
+  .masthead{background:linear-gradient(160deg,#141416,#0d0d0f);color:#fff;padding:18px 0}
+  .mh{max-width:940px;margin:0 auto;padding:0 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .mh .l{display:flex;align-items:center;gap:12px}
+  .mh .mk{width:40px;height:40px;border-radius:11px;background:var(--accent);display:grid;place-items:center;color:#1a1305}
+  .mh .mk iconify-icon{font-size:1.4rem}
+  .mh b{font-family:'Barlow Condensed';font-size:1.2rem;color:#fff;font-weight:700;letter-spacing:.02em}
+  .mh small{display:block;font-size:.66rem;color:#948e86;letter-spacing:.2em;text-transform:uppercase}
+  .mh .tag{font-size:.76rem;color:#b3ada4;border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:6px 13px}
+
+  .verdict{background:linear-gradient(165deg,#1a1a1d,#0e0e10);color:#fff}
+  .grade-ring{width:184px;height:184px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--f) 0 22%,rgba(255,255,255,.08) 22% 100%);flex:none}
+  .grade-ring .inner{width:152px;height:152px;border-radius:50%;background:#0e0e10;display:grid;place-items:center;text-align:center}
+  .grade-ring .g{font-family:'Barlow Condensed';font-size:3.8rem;font-weight:800;color:#fff;line-height:1}
+  .grade-ring .s{font-size:.8rem;color:#9a948b;margin-top:2px}
+  .verdict h1{color:#fff}
+  .verdict .eyebrow{color:#e6b45c}.verdict .eyebrow::before{background:#e6b45c}
+  .verdict p{color:#c7c1b8;max-width:52ch}
+  .verdict .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .verdict .meta span{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:7px 14px;font-size:.82rem;color:#dcd6cd;display:inline-flex;align-items:center;gap:7px}
+  .verdict .meta iconify-icon{color:#e6b45c}
+  @media(max-width:680px){.v-inner{grid-template-columns:1fr!important;justify-items:center;text-align:center}.verdict p{margin-left:auto;margin-right:auto}}
+
+  .score-row{display:grid;grid-template-columns:230px 1fr auto;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+  .score-row:last-child{border-bottom:none}
+  .score-row .name{font-weight:600;color:var(--ink);font-size:.98rem}
+  .score-row .name span{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
+  .bar{height:12px;border-radius:8px;background:var(--sand);overflow:hidden}
+  .bar span{display:block;height:100%;border-radius:8px}
+  .score-row .gr{font-family:'Barlow Condensed';font-weight:800;font-size:1.5rem;width:44px;text-align:center}
+  @media(max-width:680px){.score-row{grid-template-columns:1fr auto;gap:10px}.score-row .bar{grid-column:1 / -1;order:3}}
+
+  .opp{background:var(--ink);color:#fff;border-radius:18px;padding:34px 30px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;margin-top:8px}
+  .opp .ic{width:64px;height:64px;border-radius:16px;background:rgba(236,148,48,.16);display:grid;place-items:center;color:var(--accent);font-size:2rem;flex:none}
+  .opp h3{color:#fff;font-size:1.6rem;margin-bottom:6px}
+  .opp p{color:#c7c1b8;margin:0;font-size:.96rem}
+  @media(max-width:600px){.opp{grid-template-columns:1fr;text-align:center;justify-items:center}}
+
+  .finding{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--sh1);margin-top:14px}
+  .finding .top{display:flex;align-items:flex-start;gap:14px}
+  .finding .sev{flex:none;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:#fff;font-size:1rem;margin-top:2px}
+  .sev.high{background:var(--f)}.sev.med{background:var(--d)}.sev.low{background:var(--c)}
+  .finding h3{font-size:1.25rem;margin-bottom:3px}
+  .finding .tag{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted2)}
+  .finding p{margin:9px 0 0;font-size:.94rem}
+  .finding .fix{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:.92rem;color:var(--ink2)}
+  .finding .fix b{color:var(--a)}.finding .fix iconify-icon{color:var(--a)}
+
+  .projected{background:var(--sand);border-radius:16px;padding:26px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+  .projected .from,.projected .to{text-align:center}
+  .projected .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted2);font-weight:700}
+  .projected .val{font-family:'Barlow Condensed';font-weight:800;font-size:2.6rem;line-height:1}
+  .projected .from .val{color:var(--f)}.projected .to .val{color:var(--a)}
+  .projected .arrow{font-size:2rem;color:var(--accent)}
+
+  .ptable{width:100%;border-collapse:collapse;margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--sh1)}
+  .ptable th,.ptable td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);font-size:.92rem}
+  .ptable th{background:var(--sand);font-weight:700;color:var(--ink);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+  .ptable td{color:var(--muted)}.ptable tr:last-child td{border-bottom:none}
+  .ptable .p{font-weight:800;color:var(--ink);font-family:'Barlow Condensed';font-size:1.1rem}
+  .imp{display:inline-block;font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:20px}
+  .imp.h{background:#fbe4e0;color:var(--f)}.imp.m{background:#fbeede;color:var(--d)}.imp.l{background:#e6f3ec;color:var(--a)}
+  .scroll{overflow-x:auto}
+
+  .cta{background:var(--ink);color:#e9e4dc;border-radius:18px;padding:38px 34px;text-align:center;margin-top:8px}
+  .cta h2{color:#fff}.cta p{color:#b3ada4;max-width:48ch;margin:12px auto 22px}
+  footer{padding:34px 0;border-top:1px solid var(--line);margin-top:14px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:var(--muted)}
+  .disclaimer{font-size:.74rem;color:var(--muted2);line-height:1.6;margin-top:16px}
+  .rv{opacity:0;transform:translateY(20px);transition:.6s var(--ease)}.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="mh">
+    <div class="l"><span class="mk"><iconify-icon icon="mdi:home-variant"></iconify-icon></span><div><b>Digital Presence Audit</b><small>Prepared for LIRD Drywall</small></div></div>
+    <span class="tag">By AG1 &middot; 8-point scorecard</span>
+  </div>
+</div>
+
+<section class="verdict">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center" class="v-inner">
+      <div class="grade-ring"><div class="inner"><div><div class="g">F</div><div class="s">22 / 100</div></div></div></div>
+      <div>
+        <div class="eyebrow">Overall verdict</div>
+        <h1>A solid trade, invisible online.</h1>
+        <p>LIRD does real work and has a clean, recognizable brand on its sign. The problem is that almost none of it exists online. With no website, no Google presence, and no way to capture a lead, the business is invisible to the homeowners who search before they hire. Nearly every job today comes from word of mouth, which caps how fast it can grow. The upside here is large and the fixes are straightforward.</p>
+        <div class="meta">
+          <span><iconify-icon icon="mdi:home-city-outline"></iconify-icon> Residential drywall</span>
+          <span><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Long Island, NY</span>
+          <span><iconify-icon icon="mdi:phone-outline"></iconify-icon> Word of mouth only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The scorecard</div>
+    <h2>Eight dimensions, graded.</h2>
+    <p class="lead" style="margin-top:10px">How LIRD's digital presence stacks up today, from first impression to follow-up.</p>
+    <div style="margin-top:30px">
+      <div class="score-row rv"><div class="name">Website &amp; online home<span>No website exists</span></div><div class="bar"><span style="width:8%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Lead capture &amp; follow-up<span>Phone only, nothing to capture or track</span></div><div class="bar"><span style="width:14%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Google &amp; local search<span>Not showing up for "drywall near me"</span></div><div class="bar"><span style="width:18%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Reviews &amp; reputation<span>No online reviews to point to</span></div><div class="bar"><span style="width:20%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Social media presence<span>No active business profiles found</span></div><div class="bar"><span style="width:18%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Discoverability<span>Effectively invisible to online searchers</span></div><div class="bar"><span style="width:12%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Referral &amp; repeat capture<span>Relies on memory, nothing systematized</span></div><div class="bar"><span style="width:22%;background:var(--f)"></span></div><div class="gr" style="color:var(--f)">F</div></div>
+      <div class="score-row rv"><div class="name">Branding &amp; identity<span>Clean logo and clear services on the sign</span></div><div class="bar"><span style="width:62%;background:var(--c)"></span></div><div class="gr" style="color:var(--c)">C</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="opp rv">
+      <div class="ic"><iconify-icon icon="mdi:trending-up"></iconify-icon></div>
+      <div>
+        <h3>The opportunity</h3>
+        <p>The large majority of homeowners search online and read reviews before they hire a contractor. Right now, none of those people can find LIRD, so every one of them goes to a competitor who shows up. A website, a Google listing, and a simple way to capture and follow up leads would put LIRD in front of that demand for the first time, on top of the word-of-mouth work it already gets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--sand)">
+  <div class="wrap">
+    <div class="eyebrow">Key findings</div>
+    <h2>What is costing the most, in order.</h2>
+    <div class="finding rv"><div class="top"><div class="sev high"><iconify-icon icon="mdi:alert"></iconify-icon></div><div><div class="tag">Website &middot; Critical</div><h3>No website, so no online front door</h3></div></div>
+      <p>There is nowhere online for an interested homeowner to see the work, learn the services, or reach out after hours. Anyone who hears the name and looks it up finds nothing, and the trust and jobs go to whoever does have a site.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> a clean, professional website with services, photos, and a quote request. (A demo has already been built for LIRD.)</div>
+    </div>
+    <div class="finding rv"><div class="top"><div class="sev high"><iconify-icon icon="mdi:alert"></iconify-icon></div><div><div class="tag">Local search &middot; Critical</div><h3>Not on Google when people search</h3></div></div>
+      <p>When a Long Island homeowner searches "drywall contractor near me," LIRD does not appear. A Google Business Profile is how local trades get found, get reviews, and show up on the map, and it is free.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> set up and optimize a Google Business Profile, then build a few local pages so LIRD ranks for its towns.</div>
+    </div>
+    <div class="finding rv"><div class="top"><div class="sev high"><iconify-icon icon="mdi:alert"></iconify-icon></div><div><div class="tag">Lead capture &middot; Critical</div><h3>No way to capture or follow up a lead</h3></div></div>
+      <p>If someone cannot call at that moment, the lead is gone. There is no form, no place to leave details, and no system to follow up with the people who reach out, so interested homeowners quietly slip away.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> a quote-request form that sends the lead straight to the phone, plus a simple follow-up habit or tool.</div>
+    </div>
+    <div class="finding rv"><div class="top"><div class="sev med"><iconify-icon icon="mdi:alert-outline"></iconify-icon></div><div><div class="tag">Reviews &middot; High</div><h3>No online reviews to build trust</h3></div></div>
+      <p>Word of mouth is trust between two people. Online reviews are that same trust at scale, working around the clock. With none, a new customer has nothing to reassure them before they call.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> a simple system to ask happy customers for a Google review after each job.</div>
+    </div>
+    <div class="finding rv"><div class="top"><div class="sev low"><iconify-icon icon="mdi:check"></iconify-icon></div><div><div class="tag">Branding &middot; Strength</div><h3>The brand is already a real asset</h3></div></div>
+      <p>The logo, the "Hang, Tape, Finish" line, and the clean sign are genuinely good. That is a strong foundation. It just needs to live online where people can actually find it.</p>
+      <div class="fix"><iconify-icon icon="mdi:wrench-outline"></iconify-icon> <b>Fix:</b> carry the existing brand straight onto the website and Google listing for a consistent, professional look.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Where this can go</div>
+    <h2>From invisible to found.</h2>
+    <div class="projected rv">
+      <div class="from"><div class="lbl">Today</div><div class="val">F</div><div class="lbl" style="color:var(--f)">22 / 100</div></div>
+      <div class="arrow"><iconify-icon icon="mdi:arrow-right-bold"></iconify-icon></div>
+      <div class="to"><div class="lbl">After the fixes</div><div class="val">A-</div><div class="lbl" style="color:var(--a)">~88 / 100</div></div>
+    </div>
+    <p style="text-align:center;max-width:56ch;margin:18px auto 0;font-size:.92rem;color:var(--muted2)">Projected grade once the website, Google listing, review system, and lead capture are in place. Directional, based on what these fundamentals typically do for a local trade.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Priority action plan</div>
+    <h2>Where to start.</h2>
+    <div class="scroll">
+    <table class="ptable">
+      <thead><tr><th>#</th><th>Move</th><th>Area</th><th>Effort</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td class="p">1</td><td>Launch a professional website + quote form</td><td>Website</td><td>Med</td><td><span class="imp h">High</span></td></tr>
+        <tr><td class="p">2</td><td>Set up and optimize a Google Business Profile</td><td>Local search</td><td>Low</td><td><span class="imp h">High</span></td></tr>
+        <tr><td class="p">3</td><td>Start collecting Google reviews after each job</td><td>Reputation</td><td>Low</td><td><span class="imp h">High</span></td></tr>
+        <tr><td class="p">4</td><td>Simple lead follow-up habit or tool</td><td>Lead capture</td><td>Low</td><td><span class="imp m">Med</span></td></tr>
+        <tr><td class="p">5</td><td>Local pages for the towns you serve</td><td>SEO</td><td>Med</td><td><span class="imp m">Med</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <div class="eyebrow" style="color:var(--accent);justify-content:center">The fastest win</div>
+      <h2>Get LIRD found online.</h2>
+      <p>The website demo is already built. A quick call to walk through it, set up Google, and start turning searches into estimate requests.</p>
+      <a href="index.html" class="btn">See the website demo <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><span>Digital Presence Audit &middot; LIRD Drywall</span><span>Prepared by AG1</span></div>
+    <p class="disclaimer">This audit reflects the business as described (residential drywall, word-of-mouth, no existing website) plus a public online search. Grades are a directional professional assessment against local-trade best practices, not a review of private data. Items such as an existing Google Business Profile, reviews, or social profiles should be confirmed directly, as a new or lightly-listed profile may not surface in a public search. The projected grade assumes the priority fixes are completed to a professional standard.</p>
+  </div>
+</footer>
+
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>

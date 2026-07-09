@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AG1 Consulting | Growth Systems That Turn Attention Into Revenue</title>
+<meta name="description" content="AG1 Consulting builds done-for-you growth systems, funnels, VSLs, paid ads, and websites, for coaches, experts, and local businesses. Book a call.">
+<meta name="theme-color" content="#0c0c0d">
+<meta property="og:title" content="AG1 Consulting | Growth Systems That Turn Attention Into Revenue">
+<meta property="og:description" content="Done-for-you growth systems for coaches, experts, and local businesses.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230c0c0d'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='46' font-weight='bold' fill='%23d4a24a' text-anchor='middle'%3EAG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  :root{
+    --ink:#0c0c0d; --ink-2:#141416; --panel:#17171a; --paper:#ffffff; --cream:#faf7f1; --sand:#f1ece1; --card:#ffffff;
+    --gold:#d4a24a; --gold-2:#bb8836; --gold-soft:#e7cd97; --gold-glow:rgba(212,162,74,.5);
+    --line:#ece5d8; --line-dark:rgba(255,255,255,.09);
+    --text:#221f1b; --muted:#6b665e; --muted-2:#98928a; --on-dark:#efe9dd; --on-dark-soft:#b3aca0;
+    --r:16px; --r-sm:11px; --r-lg:22px;
+    --sh-1:0 1px 2px rgba(12,12,13,.05),0 8px 24px rgba(12,12,13,.08);
+    --sh-2:0 18px 44px rgba(12,12,13,.16),0 6px 14px rgba(12,12,13,.09);
+    --sh-3:0 30px 80px rgba(0,0,0,.5);
+    --ease:cubic-bezier(.22,.68,0,1); --ease-2:cubic-bezier(.2,.7,.2,1);
+    --maxw:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--text);background:var(--paper);line-height:1.62;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Fraunces','Georgia',serif;font-weight:600;line-height:1.03;color:var(--ink);letter-spacing:-.015em}
+  h1{font-size:clamp(2.8rem,6.4vw,5rem);letter-spacing:-.028em}
+  h2{font-size:clamp(2rem,4vw,3.1rem)}
+  h3{font-size:1.42rem}
+  p{margin-bottom:1rem;color:var(--muted)}
+  a{color:var(--gold-2);text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:clamp(64px,9vw,116px) 0}
+  iconify-icon{display:inline-block;width:1em;height:1em;vertical-align:-.135em}
+  .eyebrow{display:inline-flex;align-items:center;gap:11px;font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;color:var(--gold-2);margin-bottom:18px}
+  .eyebrow::before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+  .eyebrow.center{justify-content:center}.eyebrow.on-dark{color:var(--gold-soft)}
+  .lead{font-size:1.12rem;color:var(--muted);line-height:1.72}
+
+  .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(180deg,#e0b158,var(--gold));color:#1c1405;font-weight:800;padding:15px 32px;border-radius:11px;border:none;cursor:pointer;font-size:1rem;font-family:'Inter',sans-serif;letter-spacing:.01em;transition:transform .25s var(--ease),box-shadow .25s var(--ease);box-shadow:0 10px 30px rgba(212,162,74,.34);overflow:hidden;isolation:isolate}
+  .btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);transform:translateX(-130%);transition:transform .7s var(--ease);z-index:-1}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 18px 46px rgba(212,162,74,.5)}
+  .btn:hover::after{transform:translateX(130%)}
+  .btn:focus-visible{outline:3px solid var(--gold-glow);outline-offset:3px}
+  .btn.dark{background:#fff;color:var(--ink);box-shadow:0 10px 26px rgba(0,0,0,.25)}
+  .btn.ghost{background:rgba(255,255,255,.04);color:var(--on-dark);border:1.5px solid rgba(255,255,255,.26);box-shadow:none}
+  .btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .btn.lg{padding:17px 38px;font-size:1.06rem}
+
+  header.site{position:sticky;top:0;z-index:55;transition:padding .3s var(--ease)}
+  header.site::before{content:"";position:absolute;inset:0;background:rgba(12,12,13,.82);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid var(--line-dark);opacity:0;transition:opacity .3s var(--ease);z-index:-1}
+  header.site.stuck::before{opacity:1}
+  .nav{max-width:var(--maxw);margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:padding .3s var(--ease)}
+  header.site.stuck .nav{padding:12px 24px}
+  .logo{display:flex;align-items:center;gap:12px;color:#fff}
+  .logo .mk{width:44px;height:44px;border-radius:11px;background:linear-gradient(150deg,var(--gold-soft),var(--gold-2));display:grid;place-items:center;color:#1c1405;font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;box-shadow:0 6px 18px rgba(212,162,74,.4)}
+  .logo b{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;line-height:1;letter-spacing:-.01em}
+  .logo b span{color:var(--gold)}
+  .logo small{display:block;font-family:'Inter';font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:#8f897e;font-weight:600;margin-top:4px}
+  .nav .links{display:flex;gap:30px;align-items:center}
+  .nav .links a{color:#d4cfc5;font-weight:600;font-size:.9rem;position:relative;padding:4px 0}
+  .nav .links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:width .3s var(--ease)}
+  .nav .links a:hover{color:#fff}.nav .links a:hover::after{width:100%}
+  .nav .cta{display:flex;gap:11px;align-items:center}
+  @media(max-width:940px){.nav .links{display:none}}
+  @media(max-width:520px){.nav .cta .btn.dark{display:none}}
+
+  .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;z-index:0}
+  .hero .bg .grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(120% 92% at 70% 16%,#000 30%,transparent 78%)}
+  .hero .bg .glow-a{position:absolute;top:-16%;right:-8%;width:min(760px,80vw);height:min(760px,80vw);background:radial-gradient(circle,rgba(212,162,74,.2),transparent 62%);filter:blur(8px)}
+  .hero .bg .glow-b{position:absolute;bottom:-30%;left:-16%;width:620px;height:620px;background:radial-gradient(circle,rgba(212,162,74,.08),transparent 60%)}
+  .hero .bg .grain{position:absolute;inset:0;opacity:.42;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+  .hero .inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:clamp(64px,9vw,120px) 24px clamp(56px,7vw,96px);text-align:center}
+  .hero .badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:40px;padding:8px 17px;font-size:.82rem;font-weight:600;color:var(--on-dark);margin-bottom:26px;backdrop-filter:blur(6px)}
+  .hero .badge iconify-icon{color:var(--gold);font-size:1.05rem}
+  .hero h1{color:#fff;max-width:16ch;margin:0 auto}
+  .hero h1 .gold{color:transparent;background:linear-gradient(120deg,var(--gold-soft),var(--gold));-webkit-background-clip:text;background-clip:text}
+  .hero p.sub{color:var(--on-dark-soft);font-size:clamp(1.08rem,1.6vw,1.28rem);max-width:56ch;margin:24px auto 0;line-height:1.66}
+  .hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .hero .trust{display:flex;gap:14px 30px;flex-wrap:wrap;justify-content:center;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);max-width:640px;margin-left:auto;margin-right:auto}
+  .hero .trust .t{display:flex;align-items:center;gap:9px;font-size:.9rem;color:var(--on-dark);font-weight:500}
+  .hero .trust iconify-icon{color:var(--gold);font-size:1.35rem}
+
+  /* Stats band */
+  .stats{background:var(--ink-2);color:#fff;border-top:1px solid var(--line-dark)}
+  .stats .in{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr)}
+  .stat{padding:40px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+  .stat:last-child{border-right:none}
+  .stat .n{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(2.2rem,4vw,3rem);color:var(--gold);line-height:1}
+  .stat .l{color:var(--on-dark-soft);font-size:.92rem;margin-top:8px}
+  @media(max-width:720px){.stats .in{grid-template-columns:1fr}.stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);padding:28px 24px}.stat:last-child{border-bottom:none}}
+
+  .sec-head{max-width:680px}
+  .sec-head.center{margin:0 auto;text-align:center}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:1.06rem}
+
+  /* Services bento */
+  .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:48px}
+  .svc{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:var(--sh-1);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;overflow:hidden;grid-column:span 2}
+  .svc.wide{grid-column:span 3}
+  .svc.feature{grid-column:span 3;background:linear-gradient(160deg,var(--ink),#1c1c1f);color:#fff;border-color:transparent}
+  .svc.feature h3,.svc.feature p{color:#fff}.svc.feature p{color:var(--on-dark-soft)}
+  .svc::before{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;background:radial-gradient(circle,var(--gold-glow),transparent 70%);opacity:0;transition:opacity .4s var(--ease)}
+  .svc:hover{transform:translateY(-5px);box-shadow:var(--sh-2);border-color:var(--gold-soft)}
+  .svc.feature:hover{border-color:transparent}
+  .svc:hover::before{opacity:.2}
+  .svc .ic{width:56px;height:56px;border-radius:14px;background:linear-gradient(160deg,#f6ead2,#f0dcb4);display:grid;place-items:center;color:var(--gold-2);font-size:1.85rem;margin-bottom:17px;transition:transform .3s var(--ease)}
+  .svc.feature .ic{background:rgba(212,162,74,.16);color:var(--gold)}
+  .svc:hover .ic{transform:rotate(-6deg) scale(1.06)}
+  .svc h3{margin-bottom:8px;font-size:1.42rem}
+  .svc p{font-size:.95rem;margin:0;line-height:1.62}
+  @media(max-width:900px){.bento{grid-template-columns:1fr 1fr}.svc,.svc.wide,.svc.feature{grid-column:span 1}}
+  @media(max-width:560px){.bento{grid-template-columns:1fr}}
+
+  /* Process */
+  .proc-sec{background:var(--cream)}
+  .proc{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;position:relative}
+  .proc::before{content:"";position:absolute;top:34px;left:11%;right:11%;height:2px;background:linear-gradient(90deg,var(--line),var(--gold),var(--line))}
+  .step{position:relative;text-align:center;padding:0 6px}
+  .step .num{width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--line);box-shadow:var(--sh-1);display:grid;place-items:center;margin:0 auto 18px;font-family:'Fraunces',serif;font-size:1.7rem;font-weight:700;color:var(--gold-2);position:relative;z-index:1;transition:transform .3s var(--ease),border-color .3s}
+  .step:hover .num{transform:translateY(-4px) scale(1.05);border-color:var(--gold)}
+  .step h3{font-size:1.3rem;margin-bottom:6px}
+  .step p{font-size:.92rem;margin:0}
+  @media(max-width:820px){.proc{grid-template-columns:1fr 1fr;gap:30px}.proc::before{display:none}}
+  @media(max-width:460px){.proc{grid-template-columns:1fr}}
+
+  /* Who for */
+  .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+  .who{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:32px;box-shadow:var(--sh-1);transition:transform .3s var(--ease),box-shadow .3s}
+  .who:hover{transform:translateY(-4px);box-shadow:var(--sh-2)}
+  .who .ic{width:52px;height:52px;border-radius:13px;background:var(--ink);display:grid;place-items:center;color:var(--gold);font-size:1.6rem;margin-bottom:16px}
+  .who h3{font-size:1.5rem;margin-bottom:8px}
+  .who ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:9px}
+  .who li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:var(--text)}
+  .who li iconify-icon{color:var(--gold-2);flex:none;margin-top:3px}
+  @media(max-width:720px){.who-grid{grid-template-columns:1fr}}
+
+  /* About */
+  .about{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .about::before{content:"";position:absolute;top:-20%;right:-10%;width:560px;height:560px;background:radial-gradient(circle,rgba(212,162,74,.12),transparent 62%)}
+  .about .in{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .about h2{color:#fff}.about p{color:var(--on-dark-soft)}
+  .about .portrait{aspect-ratio:4/5;border-radius:var(--r-lg);border:2px dashed rgba(255,255,255,.16);background:linear-gradient(160deg,#1a1a1d,#111113);display:grid;place-items:center;text-align:center;color:var(--muted-2)}
+  .about .portrait iconify-icon{font-size:2.2rem;display:block;margin-bottom:8px;color:var(--gold-soft)}
+  .about .sig{font-family:'Fraunces',serif;font-style:italic;font-size:1.5rem;color:var(--gold-soft);margin-top:14px}
+  @media(max-width:820px){.about .in{grid-template-columns:1fr;gap:30px}.about .portrait{max-width:320px}}
+
+  /* FAQ */
+  .faq{max-width:820px;margin:44px auto 0}
+  .qa{border:1px solid var(--line);border-radius:var(--r-sm);margin-bottom:12px;background:#fff;overflow:hidden;transition:box-shadow .3s,border-color .3s}
+  .qa[open]{box-shadow:var(--sh-1);border-color:var(--gold-soft)}
+  .qa summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:700;color:var(--ink);font-size:1.04rem}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary .ico{flex:none;color:var(--gold-2);transition:transform .3s var(--ease)}
+  .qa[open] summary .ico{transform:rotate(45deg)}
+  .qa .body{padding:0 22px 20px;color:var(--muted);font-size:.96rem}
+
+  /* Final CTA */
+  .final{background:var(--ink);color:#fff;position:relative;overflow:hidden;text-align:center}
+  .final::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 380px at 50% 0,rgba(212,162,74,.16),transparent 60%)}
+  .final .in{position:relative;z-index:1}
+  .final h2{color:#fff;max-width:18ch;margin:0 auto}
+  .final p{color:var(--on-dark-soft);max-width:52ch;margin:14px auto 28px}
+
+  footer{background:#08080a;color:#8f897e;padding:56px 0 28px}
+  .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:30px}
+  .foot .logo b{color:#fff}
+  .foot h4{color:#fff;font-family:'Fraunces';font-size:1.05rem;letter-spacing:.01em;margin-bottom:14px}
+  .foot a,.foot p{color:#a8a298;font-size:.9rem;display:flex;align-items:center;gap:8px;margin-bottom:9px}
+  .foot a iconify-icon,.foot p iconify-icon{color:var(--gold)}
+  .foot a:hover{color:var(--gold)}
+  .foot .desc{display:block;line-height:1.7;margin-top:14px}
+  .foot .bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:#6d685f}
+  @media(max-width:720px){.foot{grid-template-columns:1fr 1fr}}
+  @media(max-width:460px){.foot{grid-template-columns:1fr}}
+
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;padding:10px 16px;background:rgba(12,12,13,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line-dark)}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;font-weight:800;font-size:1rem;border-radius:10px;background:linear-gradient(180deg,#e0b158,var(--gold));color:#1c1405}
+  @media(max-width:720px){.callbar{display:block}body{padding-bottom:66px}}
+
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease-2),transform .7s var(--ease-2)}
+  .rv.in{opacity:1;transform:none}
+  .rv[data-d="1"]{transition-delay:.09s}.rv[data-d="2"]{transition-delay:.18s}.rv[data-d="3"]{transition-delay:.27s}.rv[data-d="4"]{transition-delay:.36s}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="site" id="site">
+  <div class="nav">
+    <a class="logo" href="#top" aria-label="AG1 Consulting home">
+      <span class="mk">AG</span>
+      <div><b>AG1 <span>Consulting</span></b><small>Growth systems</small></div>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#process">Process</a>
+      <a href="#who">Who we help</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="cta">
+      <a href="#contact" class="btn dark">Book a call</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="bg" aria-hidden="true">
+    <div class="grid-lines"></div><div class="glow-a"></div><div class="glow-b"></div><div class="grain"></div>
+  </div>
+  <div class="inner">
+    <div class="badge rv"><iconify-icon icon="mdi:robot-happy-outline"></iconify-icon> AI-driven, done-for-you growth</div>
+    <h1 class="rv" data-d="1">Growth systems that turn attention into <span class="gold">revenue.</span></h1>
+    <p class="sub rv" data-d="2">AG1 builds the funnels, VSLs, ads, and websites that convert your audience into booked calls and paying clients. Done for you, built with AI, engineered to perform, for coaches, experts, and local businesses.</p>
+    <div class="cta-row rv" data-d="3">
+      <a href="#contact" class="btn lg">Book a call <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+      <a href="#results" class="btn ghost lg">See the results</a>
+    </div>
+    <div class="trust rv" data-d="4">
+      <div class="t"><iconify-icon icon="mdi:check-decagram"></iconify-icon> Done-for-you</div>
+      <div class="t"><iconify-icon icon="mdi:lightning-bolt-outline"></iconify-icon> AI-accelerated builds</div>
+      <div class="t"><iconify-icon icon="mdi:target-arrow"></iconify-icon> Built to convert</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" id="results">
+  <div class="in">
+    <div class="stat rv"><div class="n">$200k+</div><div class="l">added to a single client's revenue</div></div>
+    <div class="stat rv" data-d="1"><div class="n">$101k</div><div class="l">generated in a client's first week</div></div>
+    <div class="stat rv" data-d="2"><div class="n">30+</div><div class="l">funnels and VSLs built</div></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow center">What we build</div>
+      <h2>Everything that turns traffic into revenue</h2>
+      <p>One partner for the whole growth system, from the first click to the closed deal, so the pieces actually work together.</p>
+    </div>
+    <div class="bento">
+      <div class="svc feature rv"><div class="ic"><iconify-icon icon="mdi:filter-variant"></iconify-icon></div><h3>Funnels &amp; VSLs</h3><p>Opt-ins, sales pages, and video sales letters engineered to move a cold visitor to a booked call or a purchase, step by step.</p></div>
+      <div class="svc wide rv" data-d="1"><div class="ic"><iconify-icon icon="mdi:bullhorn-outline"></iconify-icon></div><h3>Paid Ads</h3><p>Meta and YouTube campaigns that put your offer in front of the right people and feed the funnel with qualified leads.</p></div>
+      <div class="svc rv" data-d="1"><div class="ic"><iconify-icon icon="mdi:monitor-dashboard"></iconify-icon></div><h3>Websites &amp; Pages</h3><p>Fast, high-converting sites and landing pages that look premium and are built to sell.</p></div>
+      <div class="svc rv" data-d="2"><div class="ic"><iconify-icon icon="mdi:magnify-scan"></iconify-icon></div><h3>SEO &amp; Local Growth</h3><p>Get found by the people already searching for what you do, and turn that intent into leads.</p></div>
+      <div class="svc rv" data-d="3"><div class="ic"><iconify-icon icon="mdi:email-fast-outline"></iconify-icon></div><h3>Email &amp; Nurture</h3><p>Automated sequences that follow up, build trust, and convert the leads you already have.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="proc-sec" id="process">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow center">How we work</div>
+      <h2>A clear path from audit to scale</h2>
+    </div>
+    <div class="proc">
+      <div class="step rv"><div class="num">1</div><h3>Audit</h3><p>We map your offer, audience, and funnel to find where revenue is leaking.</p></div>
+      <div class="step rv" data-d="1"><div class="num">2</div><h3>Build</h3><p>We build the system, funnel, pages, ads, and follow-up, done for you.</p></div>
+      <div class="step rv" data-d="2"><div class="num">3</div><h3>Launch</h3><p>We go live, track what matters, and tighten the offer and creative.</p></div>
+      <div class="step rv" data-d="3"><div class="num">4</div><h3>Scale</h3><p>We push the winners and grow the system as the numbers hold.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow center">Who we help</div>
+      <h2>Built for two kinds of business</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who rv"><div class="ic"><iconify-icon icon="mdi:account-tie-voice-outline"></iconify-icon></div><h3>Coaches &amp; experts</h3><p>You have knowledge people want. We turn it into an offer and a funnel that sells while you focus on delivery.</p><ul><li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Productize your expertise into a clear offer</li><li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> VSL and application funnel that books calls</li><li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Paid traffic to fill the calendar</li></ul></div>
+      <div class="who rv" data-d="1"><div class="ic"><iconify-icon icon="mdi:storefront-outline"></iconify-icon></div><h3>Local businesses</h3><p>You do great work but rely on word of mouth. We make you easy to find and easy to book.</p><ul><li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> A professional site that captures leads</li><li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Local SEO and Google presence</li><li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Ads and follow-up that fill your pipeline</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="in">
+      <div class="portrait rv"><div><iconify-icon icon="mdi:account"></iconify-icon><small>Founder photo</small></div></div>
+      <div class="rv" data-d="1">
+        <div class="eyebrow on-dark">The operator</div>
+        <h2>Lean, fast, and built around AI</h2>
+        <p>AG1 is led by Andrei Givero, a full-stack marketing operator who builds growth systems end to end. No bloated agency, no handoffs to junior staff, and no wasted retainers. You work directly with the person doing the work, backed by an AI-powered process that ships faster than a traditional team, and a network of specialists when a project calls for it.</p>
+        <p>The focus is simple: build systems that make you money, and be honest about what it takes to get there.</p>
+        <div class="sig">Andrei Givero</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow center">Good to know</div>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq">
+      <details class="qa" open><summary>Who do you work with? <iconify-icon class="ico" icon="mdi:plus"></iconify-icon></summary><div class="body">Mainly coaches and experts who want to turn their knowledge into a selling funnel, and local businesses that want a real online presence and a steady flow of leads.</div></details>
+      <details class="qa"><summary>What does it cost? <iconify-icon class="ico" icon="mdi:plus"></iconify-icon></summary><div class="body">Every engagement is scoped to the work involved, so pricing is discussed on a call once we understand your goals. Projects begin with a setup investment. It is built for owners who are serious about growth, not the cheapest option.</div></details>
+      <details class="qa"><summary>Do you guarantee results? <iconify-icon class="ico" icon="mdi:plus"></iconify-icon></summary><div class="body">No one credible can guarantee a specific outcome, and anyone who does should be a red flag. What we do is build systems using proven structures, track the numbers, and stay transparent the whole way. The results shown here are real client outcomes, not typical or promised.</div></details>
+      <details class="qa"><summary>How fast can you build? <iconify-icon class="ico" icon="mdi:plus"></iconify-icon></summary><div class="body">Faster than a traditional agency, because the process is AI-accelerated. Exact timelines depend on scope, and we set clear expectations after the audit.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="wrap in">
+    <div class="eyebrow center on-dark">Let's talk</div>
+    <h2>Ready to build a system that grows your business?</h2>
+    <p>Book a short call. We will look at your offer and funnel, show you where the revenue is leaking, and map what to build first. No pressure, no hard sell.</p>
+    <a href="https://calendly.com/ag-copy/call-with-andrei" class="btn lg">Book your call <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+    <p style="margin-top:20px;font-size:.9rem"><iconify-icon icon="mdi:email-outline" style="color:var(--gold)"></iconify-icon> <a href="mailto:info@ag1consulting.co" style="color:var(--on-dark)">info@ag1consulting.co</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo" style="margin-bottom:6px"><span class="mk" style="width:40px;height:40px">AG</span><div><b>AG1 <span style="color:var(--gold)">Consulting</span></b><small style="color:#7d786f">Growth systems</small></div></div>
+        <span class="desc">Done-for-you growth systems, funnels, VSLs, ads, and websites, for coaches, experts, and local businesses.</span>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <a href="https://calendly.com/ag-copy/call-with-andrei"><iconify-icon icon="mdi:calendar-check-outline"></iconify-icon> Book a call</a>
+        <a href="mailto:info@ag1consulting.co"><iconify-icon icon="mdi:email-outline"></iconify-icon> info@ag1consulting.co</a>
+      </div>
+      <div class="bottom">
+        <span>&copy; AG1 Consulting. All rights reserved.</span>
+        <span>Growth systems that turn attention into revenue.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="#contact"><iconify-icon icon="mdi:calendar-check-outline"></iconify-icon> Book a call</a></div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"AG1 Consulting",
+  "description":"Done-for-you growth systems, funnels, VSLs, paid ads, and websites for coaches, experts, and local businesses.",
+  "email":"info@ag1consulting.co",
+  "areaServed":["United Kingdom","United States"],
+  "serviceType":["Marketing funnels","Video sales letters","Paid advertising","Web design","SEO"]
+}
+</script>
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  var head=document.getElementById('site');
+  var onScroll=function(){head.classList.toggle('stuck',window.scrollY>12)};
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>

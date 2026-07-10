@@ -4,431 +4,613 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Alex Mansson - The Primal Reset (Free 7-Day Movement Mini-Course)</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23b06a3c'/%3E%3Ctext x='16' y='22' font-size='17' font-family='Georgia,serif' fill='%23f6f4ee' text-anchor='middle' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<title>The Primal Reset - Free 7-Day Movement Course | Alex Mansson</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2320291f'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23c9a15f' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 <style>
-  :root{
-    --ink:#20291f;
-    --paper:#f6f4ee;
-    --sand:#ebe6da;
-    --accent:#b06a3c;
-    --accent2:#8f5430;
-    --muted:#6c7062;
-    --line:rgba(32,41,31,.12);
-    --radius:18px;
-    --shadow:0 18px 50px -22px rgba(32,41,31,.45);
-    --shadow-sm:0 8px 24px -14px rgba(32,41,31,.4);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',system-ui,sans-serif;
-    color:var(--ink);
-    background:var(--paper);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.f{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
-  .btn{
-    display:inline-flex;align-items:center;gap:.5rem;justify-content:center;
-    background:var(--accent);color:var(--paper);
-    font-weight:600;font-size:1rem;
-    padding:.85rem 1.5rem;border-radius:999px;border:0;cursor:pointer;
-    transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
-    box-shadow:var(--shadow-sm);
-  }
-  .btn:hover{background:var(--accent2);transform:translateY(-2px)}
-  .btn-lg{padding:1.05rem 1.9rem;font-size:1.08rem}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:.5rem;
-    text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:700;
-    color:var(--accent2);
-  }
+:root{
+  --ink:#20291f;
+  --paper:#f6f4ee;
+  --sand:#ebe6da;
+  --accent:#b06a3c;
+  --accent2:#8f5430;
+  --gold:#c9a15f;
+  --ink-soft:#4a5544;
+  --line:rgba(32,41,31,.12);
+  --r-sm:10px; --r-md:16px; --r-lg:24px; --r-xl:34px;
+  --sh-1:0 1px 2px rgba(32,41,31,.06),0 2px 8px rgba(32,41,31,.05);
+  --sh-2:0 6px 18px rgba(32,41,31,.10),0 2px 6px rgba(32,41,31,.06);
+  --sh-3:0 20px 50px rgba(32,41,31,.16),0 8px 22px rgba(32,41,31,.10);
+  --sp:clamp(64px,9vw,120px);
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.08;font-weight:600;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.accent-word{
+  background:linear-gradient(100deg,var(--accent) 0%,var(--gold) 55%,var(--accent2) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Inter';font-size:.72rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent2);
+}
+.eyebrow iconify-icon{font-size:1rem;color:var(--gold)}
 
-  /* Header */
-  header.site{
-    position:sticky;top:0;z-index:50;
-    background:rgba(246,244,238,.85);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .brand{display:flex;align-items:center;gap:.6rem;font-family:'Fraunces',serif;font-weight:600;font-size:1.18rem}
-  .brand .mark{
-    width:34px;height:34px;border-radius:9px;
-    background:var(--accent);color:var(--paper);
-    display:grid;place-items:center;font-weight:700;font-size:1rem;flex:none;
-  }
-  .brand small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:-2px}
-  .nav .btn{padding:.6rem 1.15rem;font-size:.92rem}
+/* Buttons */
+.btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:'Inter';font-weight:600;font-size:1rem;
+  padding:15px 28px;border-radius:100px;border:none;cursor:pointer;
+  background:linear-gradient(180deg,var(--accent) 0%,var(--accent2) 100%);
+  color:#fdf6ee;box-shadow:var(--sh-2),inset 0 1px 0 rgba(255,255,255,.18);
+  transition:transform .28s cubic-bezier(.2,.8,.25,1),box-shadow .28s;
+  overflow:hidden;isolation:isolate;
+}
+.btn::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.35) 50%,transparent 80%);
+  transform:translateX(-130%);transition:transform .7s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh-3),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn:hover::after{transform:translateX(130%)}
+.btn.ghost{
+  background:transparent;color:var(--ink);
+  box-shadow:inset 0 0 0 1.5px var(--line);
+}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--accent)}
+.btn.big{padding:18px 34px;font-size:1.08rem;width:100%}
+.btn iconify-icon{font-size:1.2em}
 
-  /* Hero */
-  .hero{position:relative;overflow:hidden;padding:64px 0 40px}
-  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(10px);z-index:0}
-  .hero::before{width:640px;height:640px;top:-260px;right:-180px;
-    background:radial-gradient(circle at center,rgba(176,106,60,.22),transparent 62%)}
-  .hero::after{width:560px;height:560px;bottom:-320px;left:-220px;
-    background:radial-gradient(circle at center,rgba(143,84,48,.16),transparent 60%)}
-  .hero .wrap{position:relative;z-index:1}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
-  .hero h1{font-size:clamp(2.15rem,5vw,3.5rem);margin:.7rem 0 .4rem}
-  .hero h1 em{font-style:italic;color:var(--accent2)}
-  .hero .sub{font-size:1.12rem;color:var(--muted);max-width:34ch;margin-bottom:1.4rem}
-  .trustline{display:flex;align-items:center;gap:.55rem;font-size:.9rem;color:var(--muted);margin-top:1.3rem}
-  .trustline iconify-icon{color:var(--accent);font-size:1.15rem}
-  .trustline b{color:var(--ink)}
+/* Header */
+header.site{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:padding .3s ease,background .3s ease,box-shadow .3s ease,backdrop-filter .3s;
+  padding:20px 0;
+}
+header.site.stuck{
+  padding:11px 0;
+  background:rgba(246,244,238,.72);
+  backdrop-filter:saturate(160%) blur(16px);
+  -webkit-backdrop-filter:saturate(160%) blur(16px);
+  box-shadow:0 1px 0 var(--line),0 6px 24px rgba(32,41,31,.06);
+}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Fraunces';font-weight:600;font-size:1.18rem}
+.logo .mark{
+  width:38px;height:38px;border-radius:11px;flex:0 0 auto;
+  background:radial-gradient(120% 120% at 30% 20%,#2c3728,var(--ink));
+  display:grid;place-items:center;color:var(--gold);
+  box-shadow:var(--sh-1),inset 0 1px 0 rgba(255,255,255,.08);
+}
+.logo .mark iconify-icon{font-size:1.35rem}
+.logo small{display:block;font-family:'Inter';font-weight:500;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1px}
+header.site .btn{padding:11px 20px;font-size:.9rem}
+@media(max-width:640px){header.site .nav .btn{display:none}}
 
-  /* Form card */
-  .formcard{
-    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-    box-shadow:var(--shadow);padding:28px 26px;
-  }
-  .formcard h3{font-size:1.4rem;margin-bottom:.25rem}
-  .formcard p.k{font-size:.94rem;color:var(--muted);margin-bottom:1.1rem}
-  .field{margin-bottom:.85rem}
-  .field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:.35rem;color:var(--ink)}
-  .field input{
-    width:100%;padding:.8rem .95rem;border:1px solid var(--line);border-radius:12px;
-    font-family:inherit;font-size:1rem;background:var(--paper);color:var(--ink);transition:border .16s,box-shadow .16s;
-  }
-  .field input:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 3px rgba(176,106,60,.16)}
-  form .btn{width:100%;margin-top:.4rem}
-  .formcard .fine{display:flex;align-items:center;gap:.4rem;font-size:.76rem;color:var(--muted);margin-top:.85rem;justify-content:center}
-  .success{display:none;text-align:center;padding:12px 4px}
-  .success iconify-icon{font-size:3rem;color:var(--accent)}
-  .success h3{margin:.4rem 0 .3rem}
-  .success p{color:var(--muted);font-size:.95rem}
-  .is-done form{display:none}
-  .is-done .success{display:block}
+/* Hero */
+.hero{position:relative;padding:calc(var(--sp) + 60px) 0 var(--sp);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-bg .grid{
+  position:absolute;inset:-2px;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:46px 46px;
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000 30%,transparent 78%);
+  mask-image:radial-gradient(120% 90% at 50% 0%,#000 30%,transparent 78%);
+}
+.hero-bg .glow{
+  position:absolute;top:-16%;left:50%;transform:translateX(-50%);
+  width:min(1100px,120vw);height:720px;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(176,106,60,.24),rgba(201,161,95,.12) 45%,transparent 72%);
+  filter:blur(8px);
+}
+.hero-bg .grain{
+  position:absolute;inset:0;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero-copy h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:20px 0 0}
+.hero-copy .lede{font-size:clamp(1.06rem,1.6vw,1.22rem);color:var(--ink-soft);margin-top:22px;max-width:34ch}
+.hero-trust{display:flex;align-items:center;gap:14px;margin-top:26px;flex-wrap:wrap}
+.hero-trust .pill{
+  display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:500;color:var(--ink-soft);
+  background:rgba(255,255,255,.6);border:1px solid var(--line);padding:7px 14px;border-radius:100px;
+}
+.hero-trust .pill iconify-icon{font-size:1.1rem;color:var(--accent)}
 
-  /* Sections */
-  section{padding:64px 0}
-  .sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
-  .sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin:.5rem 0 .5rem}
-  .sec-head p{color:var(--muted);font-size:1.05rem}
+/* Opt-in card */
+.optin-card{
+  position:relative;border-radius:var(--r-xl);padding:2px;
+  background:linear-gradient(135deg,rgba(201,161,95,.7),rgba(176,106,60,.25) 40%,rgba(255,255,255,.5) 75%,rgba(201,161,95,.55));
+  box-shadow:var(--sh-3);
+}
+.optin-card .inner{
+  border-radius:calc(var(--r-xl) - 2px);
+  background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(246,244,238,.94));
+  backdrop-filter:blur(6px);
+  padding:clamp(26px,3vw,38px);
+}
+.optin-card .tag{
+  display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);
+  background:rgba(176,106,60,.1);padding:6px 12px;border-radius:100px;
+}
+.optin-card h3{font-size:1.55rem;margin:16px 0 6px}
+.optin-card p.sub{font-size:.96rem;color:var(--ink-soft);margin-bottom:20px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.8rem;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.field input{
+  width:100%;font-family:'Inter';font-size:1rem;color:var(--ink);
+  padding:14px 16px;border-radius:var(--r-sm);
+  border:1.5px solid var(--line);background:rgba(255,255,255,.75);
+  transition:border-color .2s,box-shadow .2s;
+}
+.field input::placeholder{color:#9aa093}
+.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(176,106,60,.14)}
+.form-fine{display:flex;align-items:center;gap:7px;font-size:.78rem;color:var(--ink-soft);margin-top:14px;justify-content:center}
+.form-fine iconify-icon{color:var(--accent);font-size:1rem}
+.success{display:none;text-align:center;padding:12px 4px}
+.success.show{display:block;animation:pop .5s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.success .ico{
+  width:66px;height:66px;border-radius:50%;margin:0 auto 14px;
+  background:radial-gradient(120% 120% at 30% 20%,#2c3728,var(--ink));
+  display:grid;place-items:center;color:var(--gold);box-shadow:var(--sh-2);
+}
+.success .ico iconify-icon{font-size:2rem}
+.success h3{font-size:1.5rem;margin-bottom:6px}
+.success p{color:var(--ink-soft);font-size:.95rem}
 
-  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .card{
-    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-    padding:26px 22px;box-shadow:var(--shadow-sm);
-  }
-  .card .ic{
-    width:52px;height:52px;border-radius:13px;display:grid;place-items:center;
-    background:var(--sand);color:var(--accent2);font-size:1.7rem;margin-bottom:1rem;
-  }
-  .card h3{font-size:1.18rem;margin-bottom:.4rem}
-  .card p{font-size:.95rem;color:var(--muted)}
-  .day{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+/* Marquee */
+.marquee{
+  position:relative;background:var(--ink);color:var(--paper);
+  padding:16px 0;overflow:hidden;white-space:nowrap;
+}
+.marquee-track{display:inline-flex;align-items:center;gap:0;animation:scroll 26s linear infinite;will-change:transform}
+.marquee-track span{
+  font-family:'Fraunces';font-size:1.35rem;font-weight:500;padding:0 26px;display:inline-flex;align-items:center;gap:26px;
+}
+.marquee-track span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);opacity:.8}
+.marquee-track .hi{color:var(--gold)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  /* Who it's for */
-  .forwho{background:var(--sand)}
-  .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .who{display:flex;gap:.85rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-  .who iconify-icon{color:var(--accent);font-size:1.5rem;flex:none;margin-top:.1rem}
-  .who b{display:block;font-weight:600;font-size:1.02rem}
-  .who span{font-size:.92rem;color:var(--muted)}
+/* Sections */
+section{position:relative}
+.sec{padding:var(--sp) 0}
+.sec-head{max-width:640px;margin:0 auto 54px;text-align:center}
+.sec-head h2{font-size:clamp(2rem,4vw,3rem);margin:16px 0 14px}
+.sec-head p{color:var(--ink-soft);font-size:1.06rem}
 
-  /* Social proof */
-  .proof{text-align:center}
-  .bignum{display:inline-flex;flex-direction:column;align-items:center;gap:.2rem;margin:0 auto 8px}
-  .bignum .n{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(3rem,8vw,5rem);color:var(--accent2);line-height:1}
-  .bignum .l{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-  .proof-note{max-width:52ch;margin:.6rem auto 40px;color:var(--muted)}
-  .samples{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:820px;margin:0 auto;text-align:left}
-  .sample{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-sm);position:relative}
-  .chip{
-    position:absolute;top:16px;right:16px;
-    font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-    background:var(--sand);color:var(--accent2);padding:.28rem .6rem;border-radius:999px;
-  }
-  .sample .stars{color:var(--accent);font-size:1.05rem;margin-bottom:.6rem;display:flex;gap:2px}
-  .sample p{font-size:1rem;color:var(--ink);margin-bottom:.9rem;font-style:italic}
-  .sample .who2{display:flex;align-items:center;gap:.6rem}
-  .avatar{width:38px;height:38px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--accent2);font-size:1.2rem;flex:none}
-  .sample .who2 b{font-size:.9rem}
-  .sample .who2 span{font-size:.78rem;color:var(--muted);display:block}
+/* Bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.card{
+  background:linear-gradient(180deg,#fff,var(--sand));
+  border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px;box-shadow:var(--sh-1);
+  transition:transform .35s cubic-bezier(.2,.8,.25,1),box-shadow .35s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--sh-3)}
+.card .ic{
+  width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
+  background:radial-gradient(120% 120% at 30% 20%,rgba(201,161,95,.28),rgba(176,106,60,.16));
+  color:var(--accent2);box-shadow:inset 0 0 0 1px rgba(176,106,60,.18);
+  transition:transform .4s cubic-bezier(.2,.8,.25,1);
+}
+.card:hover .ic{transform:rotate(-8deg) scale(1.06)}
+.card .ic iconify-icon{font-size:1.7rem}
+.card h3{font-size:1.25rem;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:.96rem}
+.card.wide{grid-column:span 3}
+.card.third{grid-column:span 2}
+.card.feature{
+  grid-column:span 6;display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;
+  background:linear-gradient(120deg,var(--ink),#2b3627);color:var(--paper);border:none;
+}
+.card.feature h3{color:#fff;font-size:1.7rem}
+.card.feature p{color:rgba(246,244,238,.78)}
+.card.feature .ic{background:rgba(201,161,95,.16);color:var(--gold);box-shadow:inset 0 0 0 1px rgba(201,161,95,.3)}
+.day-list{display:flex;flex-direction:column;gap:12px}
+.day-list li{display:flex;align-items:flex-start;gap:12px;list-style:none;font-size:.95rem}
+.day-list li iconify-icon{color:var(--gold);font-size:1.25rem;flex:0 0 auto;margin-top:2px}
+@media(max-width:860px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .card.wide,.card.third,.card.feature{grid-column:span 2}
+  .card.feature{grid-template-columns:1fr}
+}
 
-  /* Founder note */
-  .founder{background:var(--ink);color:var(--paper)}
-  .founder-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:center}
-  .photo-ph{
-    aspect-ratio:4/5;border-radius:var(--radius);
-    background:repeating-linear-gradient(135deg,rgba(246,244,238,.05) 0 14px,rgba(246,244,238,.09) 14px 28px);
-    border:1px dashed rgba(246,244,238,.3);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;
-    color:rgba(246,244,238,.65);text-align:center;
-  }
-  .photo-ph iconify-icon{font-size:2.4rem}
-  .photo-ph span{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
-  .founder .eyebrow{color:var(--accent)}
-  .founder h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--paper);margin:.6rem 0 1rem}
-  .founder p{color:rgba(246,244,238,.82);margin-bottom:1rem;font-size:1.05rem}
-  .founder .sig{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--paper)}
+/* Who it's for */
+.for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.for-item{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:26px;box-shadow:var(--sh-1);transition:transform .35s,box-shadow .35s;
+}
+.for-item:hover{transform:translateY(-4px);box-shadow:var(--sh-2)}
+.for-item iconify-icon{font-size:1.9rem;color:var(--accent);margin-bottom:12px}
+.for-item h3{font-size:1.12rem;margin-bottom:6px}
+.for-item p{font-size:.92rem;color:var(--ink-soft)}
+@media(max-width:760px){.for-grid{grid-template-columns:1fr}}
 
-  /* Final CTA */
-  .final{position:relative;overflow:hidden}
-  .final::before{content:"";position:absolute;width:700px;height:700px;top:-300px;left:50%;transform:translateX(-50%);
-    background:radial-gradient(circle,rgba(176,106,60,.16),transparent 62%);z-index:0}
-  .final .wrap{position:relative;z-index:1}
-  .final-inner{
-    background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);
-    padding:48px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;
-  }
-  .final-inner h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:.6rem}
-  .final-inner .sub{color:var(--muted);font-size:1.05rem}
-  .final ul{list-style:none;margin:1.2rem 0 0}
-  .final ul li{display:flex;gap:.6rem;align-items:center;margin-bottom:.55rem;font-size:.98rem}
-  .final ul li iconify-icon{color:var(--accent);font-size:1.25rem;flex:none}
+/* Social proof */
+.proof{background:linear-gradient(180deg,var(--sand),var(--paper))}
+.proof-strip{
+  display:flex;align-items:center;justify-content:center;gap:clamp(24px,5vw,64px);
+  flex-wrap:wrap;text-align:center;margin-bottom:48px;
+}
+.proof-stat{display:flex;flex-direction:column;align-items:center}
+.proof-stat .num{font-family:'Fraunces';font-size:clamp(2.2rem,4vw,3rem);font-weight:600;color:var(--ink)}
+.proof-stat .lab{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;margin-top:2px}
+.proof-stat .num.accent{color:var(--accent2)}
+.proof-div{width:1px;height:52px;background:var(--line)}
+.tcards{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px;margin:0 auto}
+.tcard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px;box-shadow:var(--sh-1);position:relative;
+}
+.tcard .chip{
+  position:absolute;top:18px;right:18px;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent2);background:rgba(176,106,60,.12);padding:4px 10px;border-radius:100px;
+}
+.tcard .stars{color:var(--gold);font-size:1.05rem;margin-bottom:12px;display:flex;gap:2px}
+.tcard blockquote{font-family:'Fraunces';font-size:1.1rem;font-weight:500;line-height:1.5;color:var(--ink);margin-bottom:16px}
+.tcard .who{display:flex;align-items:center;gap:12px}
+.tcard .who .av{
+  width:42px;height:42px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+  background:var(--sand);color:var(--accent2);border:1px dashed rgba(176,106,60,.4);
+  font-size:.62rem;font-weight:600;text-align:center;line-height:1.1;
+}
+.tcard .who .nm{font-weight:600;font-size:.92rem}
+.tcard .who .rl{font-size:.8rem;color:var(--ink-soft)}
+@media(max-width:760px){.tcards{grid-template-columns:1fr}}
 
-  /* Footer */
-  footer.site{background:var(--ink);color:rgba(246,244,238,.7);padding:44px 0;text-align:center}
-  footer .brand2{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--paper);margin-bottom:.5rem}
-  footer .links{display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;margin:1rem 0;font-size:.9rem}
-  footer .links a{color:rgba(246,244,238,.75)}
-  footer .links a:hover{color:var(--paper)}
-  footer .disc{font-size:.78rem;color:rgba(246,244,238,.5);max-width:60ch;margin:1rem auto 0;line-height:1.5}
+/* Founder */
+.founder{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,64px);align-items:center}
+.photo-box{
+  aspect-ratio:4/5;border-radius:var(--r-xl);
+  background:
+    repeating-linear-gradient(45deg,rgba(176,106,60,.06) 0 12px,transparent 12px 24px),
+    linear-gradient(160deg,var(--sand),#ded7c7);
+  border:1.5px dashed rgba(143,84,48,.4);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  color:var(--accent2);box-shadow:var(--sh-1);
+}
+.photo-box iconify-icon{font-size:2.6rem;opacity:.7}
+.photo-box .lbl{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.founder-copy h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin:14px 0 16px}
+.founder-copy p{color:var(--ink-soft);margin-bottom:14px}
+.founder-copy .sign{font-family:'Fraunces';font-size:1.35rem;color:var(--ink);margin-top:6px}
+.founder-copy .sign small{display:block;font-family:'Inter';font-size:.82rem;color:var(--ink-soft);font-weight:500;letter-spacing:.02em}
+@media(max-width:800px){.founder{grid-template-columns:1fr}.photo-box{max-width:340px;margin:0 auto}}
 
-  /* Reveal */
-  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-  .rv.in{opacity:1;transform:none}
+/* Final CTA */
+.finalcta{position:relative;overflow:hidden;background:var(--ink);color:var(--paper)}
+.finalcta .grain{
+  position:absolute;inset:0;opacity:.35;mix-blend-mode:overlay;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n2)'/%3E%3C/svg%3E");
+}
+.finalcta .glow2{
+  position:absolute;bottom:-40%;left:50%;transform:translateX(-50%);width:900px;height:600px;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(201,161,95,.24),transparent 70%);pointer-events:none;
+}
+.finalcta .wrap{position:relative;z-index:2;text-align:center;max-width:640px}
+.finalcta .eyebrow{color:var(--gold)}
+.finalcta .eyebrow iconify-icon{color:var(--gold)}
+.finalcta h2{font-size:clamp(2rem,4.4vw,3.2rem);color:#fff;margin:18px 0 16px}
+.finalcta p{color:rgba(246,244,238,.78);font-size:1.08rem;margin-bottom:30px}
+.finalcta .mini-form{display:flex;gap:12px;max-width:520px;margin:0 auto;flex-wrap:wrap}
+.finalcta .mini-form input{
+  flex:1;min-width:200px;font-family:'Inter';font-size:1rem;padding:15px 18px;border-radius:100px;
+  border:1.5px solid rgba(246,244,238,.2);background:rgba(246,244,238,.08);color:#fff;
+}
+.finalcta .mini-form input::placeholder{color:rgba(246,244,238,.5)}
+.finalcta .mini-form input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,161,95,.2)}
+.finalcta .mini-form .btn{flex:0 0 auto}
+.finalcta .success h3{color:#fff}
+.finalcta .success p{color:rgba(246,244,238,.78)}
+.finalcta .success .ico{background:rgba(201,161,95,.16);color:var(--gold)}
 
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;gap:34px}
-    .hero .sub{max-width:none}
-    .cards{grid-template-columns:1fr 1fr}
-    .founder-grid{grid-template-columns:1fr;gap:28px}
-    .final-inner{grid-template-columns:1fr;gap:28px;padding:36px 26px}
-    .photo-ph{max-width:320px}
-  }
-  @media (max-width:600px){
-    section{padding:48px 0}
-    .cards,.who-grid,.samples{grid-template-columns:1fr}
-    .nav .brand small{display:none}
-    .hero{padding:40px 0 24px}
-  }
+/* Footer */
+footer.site{background:var(--ink);color:rgba(246,244,238,.72);padding:44px 0 40px;border-top:1px solid rgba(246,244,238,.08)}
+footer.site .row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer.site .logo{color:var(--paper)}
+footer.site .logo small{color:rgba(246,244,238,.5)}
+footer.site .disc{font-size:.78rem;max-width:440px;color:rgba(246,244,238,.5)}
+footer.site .cp{font-size:.8rem;margin-top:22px;padding-top:22px;border-top:1px solid rgba(246,244,238,.08);color:rgba(246,244,238,.45)}
+
+/* Mobile sticky CTA */
+.mobile-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(246,244,238,.86);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);box-shadow:0 -6px 24px rgba(32,41,31,.1);
+}
+.mobile-cta .btn{width:100%}
+@media(max-width:640px){.mobile-cta{display:block}body{padding-bottom:76px}}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.8,.25,1),transform .7s cubic-bezier(.2,.8,.25,1)}
+.rv.in{opacity:1;transform:none}
+
+/* Focus */
+a:focus-visible,button:focus-visible,input:focus-visible,.btn:focus-visible{
+  outline:3px solid var(--accent);outline-offset:3px;border-radius:8px;
+}
+
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-copy{text-align:center}.hero-copy .lede{margin-left:auto;margin-right:auto}.hero-trust{justify-content:center}}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+  .rv{opacity:1;transform:none}
+  .btn::after{display:none}
+}
 </style>
 </head>
 <body>
 
-<header class="site">
+<header class="site" id="hdr">
   <div class="wrap nav">
-    <div class="brand">
-      <span class="mark">A</span>
+    <a class="logo" href="#">
+      <span class="mark"><iconify-icon icon="mdi:pine-tree"></iconify-icon></span>
       <span>Alex Mansson<small>Primal Movement Coach</small></span>
-    </div>
-    <a href="#form" class="btn">Get the free course</a>
+    </a>
+    <a class="btn" href="#optin"><iconify-icon icon="mdi:leaf"></iconify-icon> Get the free course</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="rv">
-        <span class="eyebrow"><iconify-icon icon="mdi:leaf"></iconify-icon> The Primal Reset</span>
-        <h1>Move the way your body was <em>built</em> to move</h1>
-        <p class="sub">A free 7-day movement and mobility mini-course to help you rebuild a strong, pain-free body and live free from chronic tension - one email at a time.</p>
-        <div class="trustline">
-          <iconify-icon icon="mdi:account-group"></iconify-icon>
-          <span>Trusted by a <b>156K</b> primal movement community on Instagram</span>
-        </div>
+  <div class="hero-bg">
+    <div class="grid"></div>
+    <div class="glow"></div>
+    <div class="grain"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow rv"><iconify-icon icon="mdi:seedling-outline"></iconify-icon> Free 7-Day Mini-Course</span>
+      <h1 class="rv" data-d="1">Rebuild your body the way it was <span class="accent-word">designed to move</span>.</h1>
+      <p class="lede rv" data-d="2">The Primal Reset is a free 7-day movement and mobility course, delivered by email. Simple daily practices to move well, feel strong, and live free from chronic pain.</p>
+      <div class="hero-trust rv" data-d="3">
+        <span class="pill"><iconify-icon icon="mdi:account-group-outline"></iconify-icon> 156K community</span>
+        <span class="pill"><iconify-icon icon="mdi:email-fast-outline"></iconify-icon> One lesson a day</span>
+        <span class="pill"><iconify-icon icon="mdi:cash-remove"></iconify-icon> Always free</span>
       </div>
+    </div>
 
-      <div class="rv" id="form">
-        <div class="formcard" id="card-top">
+    <div class="optin-card rv" data-d="2" id="optin">
+      <div class="inner">
+        <form id="form-main" action="#" novalidate>
+          <span class="tag"><iconify-icon icon="mdi:gift-outline"></iconify-icon> Free lead magnet</span>
           <h3>Start The Primal Reset</h3>
-          <p class="k">Enter your details and the first lesson lands in your inbox today. It is completely free.</p>
-          <form novalidate onsubmit="return handleOptin(event,'card-top')">
-            <div class="field">
-              <label for="name-1">First name</label>
-              <input id="name-1" name="name" type="text" placeholder="Your first name" autocomplete="given-name" required>
-            </div>
-            <div class="field">
-              <label for="email-1">Email address</label>
-              <input id="email-1" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
-            </div>
-            <button type="submit" class="btn btn-lg">Send me the free course</button>
-            <div class="fine"><iconify-icon icon="mdi:lock-outline"></iconify-icon> No spam. Unsubscribe anytime.</div>
-          </form>
-          <div class="success">
-            <iconify-icon icon="mdi:email-check-outline"></iconify-icon>
-            <h3>Check your inbox</h3>
-            <p>Your first lesson of The Primal Reset is on its way. If you do not see it, check your promotions or spam folder.</p>
+          <p class="sub">Enter your details and lesson one lands in your inbox in minutes.</p>
+          <div class="field">
+            <label for="name-main">First name</label>
+            <input id="name-main" name="name" type="text" placeholder="Your first name" autocomplete="given-name" required>
           </div>
+          <div class="field">
+            <label for="email-main">Email address</label>
+            <input id="email-main" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+          </div>
+          <button class="btn big" type="submit"><iconify-icon icon="mdi:send-outline"></iconify-icon> Send me the free course</button>
+          <p class="form-fine"><iconify-icon icon="mdi:lock-outline"></iconify-icon> No spam. Unsubscribe anytime.</p>
+        </form>
+        <div class="success" id="success-main" role="status" aria-live="polite">
+          <div class="ico"><iconify-icon icon="mdi:email-check-outline"></iconify-icon></div>
+          <h3>Check your inbox</h3>
+          <p>Day one of The Primal Reset is on its way. If you don't see it, check spam or promotions.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Mobility</span><span class="hi">Movement</span><span>Pain-free</span><span class="hi">Primal</span><span>Strength</span><span class="hi">Flow</span>
+    <span>Mobility</span><span class="hi">Movement</span><span>Pain-free</span><span class="hi">Primal</span><span>Strength</span><span class="hi">Flow</span>
+  </div>
+</div>
+
 <!-- WHAT'S INSIDE -->
-<section>
+<section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow"><iconify-icon icon="mdi:play-box-outline"></iconify-icon> What's inside</span>
-      <h2>Seven days. A simpler, stronger body.</h2>
-      <p>Short, practical lessons you can do at home with no equipment. Built to undo the stiffness of sitting and rebuild natural movement.</p>
+      <span class="eyebrow"><iconify-icon icon="mdi:package-variant-closed"></iconify-icon> What's inside</span>
+      <h2>Seven days to move like a human again</h2>
+      <p>Short, practical lessons you can do at home with no equipment. Built to rebuild the movement your body forgot.</p>
     </div>
-    <div class="cards">
-      <div class="card rv">
+    <div class="bento">
+      <div class="card wide rv">
         <div class="ic"><iconify-icon icon="mdi:human-handsup"></iconify-icon></div>
-        <div class="day">Days 1-2</div>
-        <h3>Reset your base</h3>
-        <p>Ground-level positions that restore hip, ankle and spine mobility your body has forgotten.</p>
+        <h3>Ground-up mobility</h3>
+        <p>Reclaim the deep squat, the hip hinge, and the natural positions your body was built to rest and move in.</p>
       </div>
-      <div class="card rv">
-        <div class="ic"><iconify-icon icon="mdi:arm-flex-outline"></iconify-icon></div>
-        <div class="day">Days 3-4</div>
-        <h3>Build real strength</h3>
-        <p>Bodyweight patterns that make you resilient through your full range of motion, not just the gym range.</p>
+      <div class="card third rv" data-d="1">
+        <div class="ic"><iconify-icon icon="mdi:spine"></iconify-icon></div>
+        <h3>Spine and posture</h3>
+        <p>Undo the desk slump with daily resets for a tall, pain-free spine.</p>
       </div>
-      <div class="card rv">
-        <div class="ic"><iconify-icon icon="mdi:meditation"></iconify-icon></div>
-        <div class="day">Days 5-6</div>
-        <h3>Release chronic tension</h3>
-        <p>Simple daily drills to unwind the tightness behind everyday aches and stiffness.</p>
+      <div class="card third rv">
+        <div class="ic"><iconify-icon icon="mdi:foot-print"></iconify-icon></div>
+        <h3>Feet and gait</h3>
+        <p>Wake up the foundation most training ignores: your feet and how you walk.</p>
       </div>
-      <div class="card rv">
-        <div class="ic"><iconify-icon icon="mdi:calendar-check-outline"></iconify-icon></div>
-        <div class="day">Day 7</div>
-        <h3>Your daily rhythm</h3>
-        <p>A short movement flow you can keep for life, so the results actually stick.</p>
+      <div class="card third rv" data-d="1">
+        <div class="ic"><iconify-icon icon="mdi:weather-windy"></iconify-icon></div>
+        <h3>Breath and calm</h3>
+        <p>Breathing patterns that downshift tension and help the body recover.</p>
+      </div>
+      <div class="card third rv" data-d="2">
+        <div class="ic"><iconify-icon icon="mdi:run-fast"></iconify-icon></div>
+        <h3>Natural strength</h3>
+        <p>Bodyweight patterns that build usable, real-world strength.</p>
+      </div>
+
+      <div class="card feature rv">
+        <div>
+          <div class="ic"><iconify-icon icon="mdi:calendar-check-outline"></iconify-icon></div>
+          <h3>A simple daily rhythm</h3>
+          <p>One focused lesson per day for seven days. No overwhelm, no gym required. Just press play and follow along at your own pace.</p>
+        </div>
+        <ul class="day-list">
+          <li><iconify-icon icon="mdi:numeric-1-circle-outline"></iconify-icon> Days 1-2: Restore your foundation</li>
+          <li><iconify-icon icon="mdi:numeric-3-circle-outline"></iconify-icon> Days 3-4: Open the hips and spine</li>
+          <li><iconify-icon icon="mdi:numeric-5-circle-outline"></iconify-icon> Days 5-6: Build natural strength</li>
+          <li><iconify-icon icon="mdi:numeric-7-circle-outline"></iconify-icon> Day 7: Put it together as a daily flow</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- WHO IT'S FOR -->
-<section class="forwho">
+<section class="sec" style="background:var(--sand)">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow"><iconify-icon icon="mdi:target-account"></iconify-icon> Who it's for</span>
-      <h2>Made for people ready to move freely again</h2>
-      <p>You do not need to be flexible, athletic, or young. You just need a body and ten minutes a day.</p>
+      <h2>Made for people who feel it</h2>
+      <p>If your body feels stiff, tight, or older than it should, this reset is your starting point.</p>
     </div>
-    <div class="who-grid">
-      <div class="who rv">
+    <div class="for-grid">
+      <div class="for-item rv">
         <iconify-icon icon="mdi:seat-recline-normal"></iconify-icon>
-        <div><b>Desk-bound and stiff</b><span>You sit for work and feel it in your back, hips and shoulders.</span></div>
+        <h3>Desk-bound and stiff</h3>
+        <p>You sit most of the day and your hips, back, and shoulders are paying the price.</p>
       </div>
-      <div class="who rv">
-        <iconify-icon icon="mdi:run-fast"></iconify-icon>
-        <div><b>Active but restricted</b><span>You train hard yet feel tight, guarded or held back by nagging aches.</span></div>
+      <div class="for-item rv" data-d="1">
+        <iconify-icon icon="mdi:medical-bag"></iconify-icon>
+        <h3>Tired of nagging pain</h3>
+        <p>You want to move without that familiar ache and get ahead of it before it worsens.</p>
       </div>
-      <div class="who rv">
-        <iconify-icon icon="mdi:heart-pulse"></iconify-icon>
-        <div><b>Tired of chronic tension</b><span>You want a natural way to feel loose and strong without endless appointments.</span></div>
+      <div class="for-item rv" data-d="2">
+        <iconify-icon icon="mdi:dumbbell"></iconify-icon>
+        <h3>Fit but not mobile</h3>
+        <p>You train hard but still can't sit in a deep squat or reach the floor with ease.</p>
       </div>
-      <div class="who rv">
+      <div class="for-item rv">
         <iconify-icon icon="mdi:sprout-outline"></iconify-icon>
-        <div><b>Starting fresh</b><span>You are new to movement work and want a simple, guided place to begin.</span></div>
+        <h3>Starting from zero</h3>
+        <p>You are new to movement work and want a simple, guided place to begin.</p>
+      </div>
+      <div class="for-item rv" data-d="1">
+        <iconify-icon icon="mdi:clock-fast"></iconify-icon>
+        <h3>Short on time</h3>
+        <p>You need something that fits a busy day in a few focused minutes.</p>
+      </div>
+      <div class="for-item rv" data-d="2">
+        <iconify-icon icon="mdi:compass-outline"></iconify-icon>
+        <h3>Ready to move naturally</h3>
+        <p>You want to feel free, capable, and at home in your body again.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SOCIAL PROOF -->
-<section class="proof">
+<section class="sec proof">
   <div class="wrap">
-    <div class="rv">
-      <div class="bignum">
-        <span class="n">156K</span>
-        <span class="l">Instagram community</span>
-      </div>
-      <p class="proof-note">Alex shares primal movement and mobility with a community of more than 156,000 people on Instagram. The Primal Reset brings that same approach straight to your inbox.</p>
+    <div class="sec-head rv">
+      <span class="eyebrow"><iconify-icon icon="mdi:heart-outline"></iconify-icon> Trusted movement community</span>
+      <h2>Built for a growing community</h2>
+      <p>Alex shares primal movement with a community of 156K on Instagram. The Primal Reset brings that daily practice to your inbox.</p>
     </div>
-    <div class="samples">
-      <div class="sample rv">
+
+    <div class="proof-strip rv">
+      <div class="proof-stat">
+        <span class="num accent">156K</span>
+        <span class="lab">Instagram community</span>
+      </div>
+      <div class="proof-div"></div>
+      <div class="proof-stat">
+        <span class="num">7</span>
+        <span class="lab">Days of lessons</span>
+      </div>
+      <div class="proof-div"></div>
+      <div class="proof-stat">
+        <span class="num">0</span>
+        <span class="lab">Cost to start</span>
+      </div>
+    </div>
+
+    <div class="tcards">
+      <div class="tcard rv">
         <span class="chip">Sample</span>
         <div class="stars" aria-label="5 out of 5">
           <iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon>
         </div>
-        <p>"Placeholder testimonial. Replace with a real quote from a course member once the list is live."</p>
-        <div class="who2">
-          <span class="avatar"><iconify-icon icon="mdi:account"></iconify-icon></span>
-          <div><b>Member name</b><span>Sample placeholder</span></div>
+        <blockquote>"This is placeholder testimonial copy for the demo. A real member quote about feeling looser and more mobile would live here."</blockquote>
+        <div class="who">
+          <span class="av">SAMPLE</span>
+          <div><div class="nm">Placeholder Name</div><div class="rl">Sample member quote</div></div>
         </div>
       </div>
-      <div class="sample rv">
+      <div class="tcard rv" data-d="1">
         <span class="chip">Sample</span>
         <div class="stars" aria-label="5 out of 5">
           <iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon>
         </div>
-        <p>"Placeholder testimonial. Swap in a genuine student result here. No claims are shown until they are real."</p>
-        <div class="who2">
-          <span class="avatar"><iconify-icon icon="mdi:account"></iconify-icon></span>
-          <div><b>Member name</b><span>Sample placeholder</span></div>
+        <blockquote>"Another placeholder quote for layout. Replace with a genuine story once the course has real graduates and permission to share."</blockquote>
+        <div class="who">
+          <span class="av">SAMPLE</span>
+          <div><div class="nm">Placeholder Name</div><div class="rl">Sample member quote</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER NOTE -->
-<section class="founder">
-  <div class="wrap">
-    <div class="founder-grid">
-      <div class="rv">
-        <div class="photo-ph">
-          <iconify-icon icon="mdi:camera-outline"></iconify-icon>
-          <span>Coach photo</span>
-        </div>
-      </div>
-      <div class="rv">
-        <span class="eyebrow"><iconify-icon icon="mdi:account-heart-outline"></iconify-icon> A note from Alex</span>
-        <h2>Your body already knows how to move</h2>
-        <p>Modern life trains us out of natural movement. We sit, we stiffen, and we start to believe pain is just part of getting older. It does not have to be.</p>
-        <p>The Primal Reset is the simple starting point I share with my community: seven short days to remind your body of the way it was built to move. No equipment, no pressure, just the fundamentals that change how you feel.</p>
-        <p class="sig">- Alex Mansson</p>
-      </div>
+<!-- FOUNDER -->
+<section class="sec">
+  <div class="wrap founder">
+    <div class="photo-box rv">
+      <iconify-icon icon="mdi:camera-outline"></iconify-icon>
+      <span class="lbl">Coach photo</span>
+    </div>
+    <div class="founder-copy">
+      <span class="eyebrow rv"><iconify-icon icon="mdi:account-heart-outline"></iconify-icon> A note from Alex</span>
+      <h2 class="rv" data-d="1">Movement is your birthright</h2>
+      <p class="rv" data-d="1">We were built to squat, crawl, climb, and carry. Modern life trades all of that for a chair, and the body slowly forgets how to move. The good news: it remembers fast once you give it the right practice.</p>
+      <p class="rv" data-d="2">The Primal Reset is where I start everyone. Seven days of simple movement to reconnect with how your body wants to move. No equipment, no pressure, just a daily practice you can build on for life.</p>
+      <p class="sign rv" data-d="2">Alex Mansson<small>Primal movement coach</small></p>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="final">
+<section class="sec finalcta">
+  <div class="grain"></div>
+  <div class="glow2"></div>
   <div class="wrap">
-    <div class="final-inner">
-      <div class="rv">
-        <span class="eyebrow"><iconify-icon icon="mdi:email-fast-outline"></iconify-icon> Start today</span>
-        <h2>Get The Primal Reset free</h2>
-        <p class="sub">Seven days of simple movement lessons, delivered to your inbox. Start feeling looser and stronger this week.</p>
-        <ul>
-          <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> No equipment needed</li>
-          <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Around ten minutes a day</li>
-          <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Completely free to join</li>
-        </ul>
-      </div>
-      <div class="rv">
-        <div class="formcard" id="card-bottom">
-          <h3>Send it to my inbox</h3>
-          <p class="k">First lesson arrives today.</p>
-          <form novalidate onsubmit="return handleOptin(event,'card-bottom')">
-            <div class="field">
-              <label for="name-2">First name</label>
-              <input id="name-2" name="name" type="text" placeholder="Your first name" autocomplete="given-name" required>
-            </div>
-            <div class="field">
-              <label for="email-2">Email address</label>
-              <input id="email-2" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
-            </div>
-            <button type="submit" class="btn btn-lg">Send me the free course</button>
-            <div class="fine"><iconify-icon icon="mdi:lock-outline"></iconify-icon> No spam. Unsubscribe anytime.</div>
-          </form>
-          <div class="success">
-            <iconify-icon icon="mdi:email-check-outline"></iconify-icon>
-            <h3>Check your inbox</h3>
-            <p>Your first lesson of The Primal Reset is on its way. If you do not see it, check your promotions or spam folder.</p>
-          </div>
-        </div>
-      </div>
+    <span class="eyebrow rv"><iconify-icon icon="mdi:leaf"></iconify-icon> Start today</span>
+    <h2 class="rv" data-d="1">Your body is ready when you are</h2>
+    <p class="rv" data-d="1">Join the free 7-day Primal Reset and take the first step back to moving like a human.</p>
+    <form class="mini-form rv" data-d="2" id="form-final" action="#" novalidate>
+      <label for="name-final" style="position:absolute;left:-9999px">First name</label>
+      <input id="name-final" name="name" type="text" placeholder="First name" autocomplete="given-name" required>
+      <label for="email-final" style="position:absolute;left:-9999px">Email address</label>
+      <input id="email-final" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+      <button class="btn" type="submit"><iconify-icon icon="mdi:send-outline"></iconify-icon> Send it</button>
+    </form>
+    <div class="success" id="success-final" role="status" aria-live="polite">
+      <div class="ico"><iconify-icon icon="mdi:email-check-outline"></iconify-icon></div>
+      <h3>Check your inbox</h3>
+      <p>Day one of The Primal Reset is on its way to you.</p>
     </div>
   </div>
 </section>
@@ -436,40 +618,61 @@
 <!-- FOOTER -->
 <footer class="site">
   <div class="wrap">
-    <div class="brand2">Alex Mansson</div>
-    <div class="links">
-      <a href="#form">Get the free course</a>
-      <a href="#">Instagram</a>
-      <a href="#">Contact</a>
+    <div class="row">
+      <a class="logo" href="#">
+        <span class="mark"><iconify-icon icon="mdi:pine-tree"></iconify-icon></span>
+        <span>Alex Mansson<small>Primal Movement Coach</small></span>
+      </a>
+      <p class="disc">This is a sample concept page created for demonstration only. Testimonials shown are placeholders. It is not a medical program and does not diagnose, treat, or promise any specific health outcome.</p>
     </div>
-    <p class="disc">This is a sample concept page created for demonstration purposes only. It is not an official website and makes no health outcome guarantees. Results from any movement program vary from person to person.</p>
+    <div class="cp">Copyright 2026 Alex Mansson. Concept demo. All names and quotes marked Sample are illustrative placeholders.</div>
   </div>
 </footer>
 
+<div class="mobile-cta">
+  <a class="btn" href="#optin"><iconify-icon icon="mdi:leaf"></iconify-icon> Get the free course</a>
+</div>
+
 <script>
-  // Opt-in success state
-  function handleOptin(e, cardId){
-    e.preventDefault();
-    var card = document.getElementById(cardId);
-    if(card){ card.classList.add('is-done'); }
-    return false;
+// Sticky header shrink
+(function(){
+  var hdr=document.getElementById('hdr');
+  function onScroll(){ if(window.scrollY>24){hdr.classList.add('stuck');}else{hdr.classList.remove('stuck');} }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
+
+// Scroll reveal
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        var d=parseInt(en.target.getAttribute('data-d')||'0',10);
+        en.target.style.transitionDelay=(d*90)+'ms';
+        en.target.classList.add('in');
+        io.unobserve(en.target);
+      }
+    });
+  },{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+
+// Form success states
+(function(){
+  function wire(formId, successId){
+    var f=document.getElementById(formId), s=document.getElementById(successId);
+    if(!f) return;
+    f.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      if(!f.checkValidity()){f.reportValidity();return;}
+      f.style.display='none';
+      s.classList.add('show');
+    });
   }
-
-  // Scroll reveal
-  (function(){
-    var els = document.querySelectorAll('.rv');
-    if(!('IntersectionObserver' in window)){
-      els.forEach(function(el){ el.classList.add('in'); });
-      return;
-    }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
-      });
-    }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
-    els.forEach(function(el){ io.observe(el); });
-  })();
+  wire('form-main','success-main');
+  wire('form-final','success-final');
+})();
 </script>
-
 </body>
 </html>

@@ -3,287 +3,723 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Primal Method | Alex Mansson</title>
-<meta name="description" content="A self-paced program to rebuild your body, move without pain, and train the way you were built to.">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#20291f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2320291f'/%3E%3Ctext x='50' y='66' font-family='Inter,Arial' font-size='40' font-weight='bold' fill='%23c07a45' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+<title>The Primal Method - Move Like You Were Built To</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23b06a3c'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23f6f4ee' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 <style>
-  :root{
-    --ink:#20291f; --ink2:#354230; --paper:#f6f4ee; --sand:#ebe6da; --card:#fff;
-    --accent:#b06a3c; --accent2:#8f5430; --gold:#c9a15f;
-    --line:#e5e0d3; --muted:#5f6355; --muted2:#8f9082;
-    --sh1:0 1px 2px rgba(32,41,31,.05),0 4px 12px rgba(32,41,31,.08);
-    --sh2:0 10px 24px rgba(32,41,31,.1),0 30px 60px rgba(32,41,31,.16);
-    --ease:cubic-bezier(.2,.7,.2,1);
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#2b332a;background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,h4{font-family:'Fraunces','Georgia',serif;font-weight:600;line-height:1.1;color:var(--ink);letter-spacing:-.015em}
-  h1{font-size:clamp(2.2rem,5.2vw,3.6rem);letter-spacing:-.025em}
-  h2{font-size:clamp(1.6rem,3.2vw,2.4rem)}
-  p{margin-bottom:1rem;color:var(--muted)}
-  a{color:var(--accent2);text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
-  .narrow{max-width:740px;margin:0 auto;padding:0 26px}
-  section{padding:64px 0}
-  iconify-icon{display:inline-block;width:1em;height:1em;vertical-align:-.135em}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--accent);margin-bottom:16px}
-  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--accent)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(180deg,#c07a45,var(--accent));color:#fff;font-weight:700;padding:15px 32px;border-radius:12px;border:none;cursor:pointer;font-size:1.02rem;font-family:inherit;transition:.2s var(--ease);box-shadow:0 10px 26px rgba(176,106,60,.34)}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(176,106,60,.46)}
-  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
-  .btn.ghost:hover{border-color:var(--accent);color:var(--accent2)}
-  header.site{position:sticky;top:0;z-index:40;background:rgba(246,244,238,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{max-width:1080px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .brand{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-weight:600;color:var(--ink);font-size:1.1rem}
-  .brand .mk{width:36px;height:36px;border-radius:10px;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-weight:800;font-family:'Inter';font-size:.9rem}
-  .brand small{display:block;font-family:'Inter';font-weight:500;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2)}
-  .nav .btn{padding:10px 22px;font-size:.9rem}
-  @media(max-width:640px){.nav .btn{display:none}}
-  .hero{position:relative;overflow:hidden;padding:76px 0 60px;text-align:center}
-  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(1000px 500px at 50% -8%,rgba(176,106,60,.15),transparent 60%),radial-gradient(700px 460px at 90% 100%,rgba(107,138,74,.1),transparent 55%);z-index:0}
-  .hero .narrow{position:relative;z-index:1}
-  .hero h1 span{color:var(--accent)}
-  .hero .sub{font-size:1.16rem;color:var(--ink2);max-width:54ch;margin:8px auto 0}
-  .hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
-  .hero .microtrust{margin-top:18px;font-size:.86rem;color:var(--muted);display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-  .hero .microtrust span{display:inline-flex;align-items:center;gap:6px}
-  .hero .microtrust iconify-icon{color:var(--accent)}
-  .imgband{max-width:1000px;margin:34px auto 0;padding:0 26px;position:relative;z-index:1}
-  .imgband .ph{border-radius:20px;border:2px dashed var(--line);background:repeating-linear-gradient(45deg,#efe9e0,#efe9e0 14px,#eae3d8 14px,#eae3d8 28px);aspect-ratio:16/7;display:grid;place-items:center;text-align:center;color:var(--muted2)}
-  .imgband .ph iconify-icon{font-size:2rem;display:block;margin-bottom:6px}
-  .imgband .ph small{font-size:.78rem;letter-spacing:.05em}
-  .pain{background:var(--ink);color:#dfe4da}
-  .pain h2{color:#fff}
-  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
-  .pain-item{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:13px;padding:18px 20px}
-  .pain-item iconify-icon{color:#e0a877;font-size:1.35rem;flex:none;margin-top:2px}
-  .pain-item b{color:#fff;font-size:.98rem}.pain-item p{margin:3px 0 0;color:#b7bcaa;font-size:.9rem}
-  .mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
-  .mod{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--sh1);transition:.2s var(--ease)}
-  .mod:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
-  .mod .n{font-family:'Fraunces',serif;font-weight:700;color:var(--gold);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase}
-  .mod .ic{width:48px;height:48px;border-radius:13px;background:linear-gradient(160deg,#f0e2d4,#e7d3bf);display:grid;place-items:center;color:var(--accent2);font-size:1.5rem;margin:10px 0 14px}
-  .mod h3{font-size:1.12rem;margin-bottom:5px}.mod p{font-size:.92rem;margin:0}
-  .who{background:var(--sand)}
-  .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
-  .who-item{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 18px}
-  .who-item iconify-icon{font-size:1.3rem;flex:none;margin-top:2px}
-  .who-item.yes iconify-icon{color:#3f9e6a}.who-item.no iconify-icon{color:#cf4d3e}
-  .who-item b{color:var(--ink);font-size:.95rem}
-  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-  .tcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:22px;box-shadow:var(--sh1);position:relative}
-  .tcard .chip{position:absolute;top:14px;right:14px;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent2);background:#f0e2d4;padding:3px 9px;border-radius:20px}
-  .tcard p{font-style:italic;color:var(--ink2);font-size:.92rem}
-  .tcard .who2{display:flex;align-items:center;gap:10px;margin-top:12px}
-  .tcard .av{width:36px;height:36px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--muted2)}
-  .tcard b{font-size:.88rem;color:var(--ink)}.tcard small{color:var(--muted2);font-size:.76rem}
-  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;align-items:stretch}
-  .tier{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--sh1);display:flex;flex-direction:column}
-  .tier.feat{border:2px solid var(--accent);box-shadow:var(--sh2);position:relative}
-  .tier.feat::before{content:"Most popular";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;border-radius:20px}
-  .tier h3{font-size:1.3rem;margin-bottom:4px}
-  .tier .desc{font-size:.88rem;color:var(--muted);min-height:44px}
-  .tier .price{font-family:'Fraunces',serif;font-weight:700;color:var(--ink);font-size:1.5rem;margin:14px 0 4px}
-  .tier .price small{display:block;font-family:'Inter';font-weight:500;font-size:.78rem;color:var(--muted2)}
-  .tier ul{list-style:none;margin:16px 0 22px;display:flex;flex-direction:column;gap:9px}
-  .tier li{display:flex;gap:9px;align-items:flex-start;font-size:.9rem;color:var(--ink2)}
-  .tier li iconify-icon{color:var(--accent);flex:none;margin-top:3px}
-  .tier .btn{margin-top:auto}
-  .guar{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--sh1);display:flex;gap:20px;align-items:center;margin-top:8px}
-  .guar .ic{width:56px;height:56px;border-radius:15px;background:linear-gradient(160deg,#f0e2d4,#e7d3bf);display:grid;place-items:center;color:var(--accent2);font-size:1.7rem;flex:none}
-  .guar h3{font-size:1.15rem;margin-bottom:3px}.guar p{margin:0;font-size:.92rem}
-  .faq{max-width:760px;margin:0 auto}
-  .qa{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 22px;margin-top:12px}
-  .qa b{color:var(--ink);font-size:.98rem;display:block;margin-bottom:4px}.qa p{margin:0;font-size:.92rem}
-  .final{background:linear-gradient(165deg,#232d20,#181f16);color:#fff;text-align:center}
-  .final h2{color:#fff}.final p{color:#c8ccbb;max-width:50ch;margin:12px auto 26px}
-  footer{padding:34px 0;border-top:1px solid var(--line)}
-  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:var(--muted)}
-  .foot .dis{font-size:.72rem;color:var(--muted2);max-width:64ch;margin-top:10px}
-  .rv{opacity:0;transform:translateY(22px);transition:.6s var(--ease)}.rv.in{opacity:1;transform:none}
-  @media(max-width:820px){.pain-grid,.who-grid{grid-template-columns:1fr}.mod-grid,.tgrid,.tiers{grid-template-columns:1fr}.guar{flex-direction:column;text-align:center}}
+:root{
+  --ink:#20291f;
+  --paper:#f6f4ee;
+  --sand:#ebe6da;
+  --accent:#b06a3c;
+  --accent2:#8f5430;
+  --gold:#c9a15f;
+  --ink-soft:#4a5344;
+  --line:rgba(32,41,31,.12);
+  --shadow:0 18px 50px -20px rgba(32,41,31,.35);
+  --radius:20px;
+  --max:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.08;font-weight:600;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.accent-word{
+  background:linear-gradient(120deg,var(--accent) 0%,var(--gold) 55%,var(--accent2) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent2);
+}
+.eyebrow iconify-icon{font-size:1rem}
+
+/* buttons */
+.btn{
+  position:relative;overflow:hidden;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:.98rem;
+  padding:15px 28px;border-radius:100px;border:1px solid transparent;
+  cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s;
+  white-space:nowrap;
+}
+.btn iconify-icon{font-size:1.2rem}
+.btn-primary{
+  background:linear-gradient(120deg,var(--accent),var(--accent2));
+  color:#fff;box-shadow:0 14px 30px -12px rgba(176,106,60,.75);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(176,106,60,.85)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent2);transform:translateY(-2px)}
+.btn::after{
+  content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:skewX(-18deg);transition:none;
+}
+.btn:hover::after{animation:shine .9s ease}
+@keyframes shine{from{left:-120%}to{left:130%}}
+
+/* header */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:padding .3s,background .3s,box-shadow .3s,border-color .3s;
+  padding:20px 0;border-bottom:1px solid transparent;
+}
+header.stuck{
+  padding:11px 0;
+  background:rgba(246,244,238,.72);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 8px 30px -22px rgba(32,41,31,.5);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem}
+.logo-mark{
+  width:36px;height:36px;border-radius:11px;flex:0 0 auto;
+  background:linear-gradient(140deg,var(--accent),var(--accent2));
+  display:grid;place-items:center;color:#fff;font-size:1.15rem;
+  box-shadow:0 6px 16px -6px rgba(176,106,60,.7);
+}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a.link{font-size:.92rem;font-weight:500;color:var(--ink-soft);transition:color .2s}
+.nav-links a.link:hover{color:var(--accent2)}
+.header-cta{padding:11px 22px;font-size:.9rem}
+@media(max-width:860px){.nav-links a.link{display:none}}
+
+/* hero */
+.hero{position:relative;padding:170px 0 90px;overflow:hidden}
+.hero-grid-bg{
+  position:absolute;inset:0;z-index:0;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:54px 54px;
+  mask-image:radial-gradient(circle at 70% 20%,#000 0%,transparent 68%);
+  -webkit-mask-image:radial-gradient(circle at 70% 20%,#000 0%,transparent 68%);
+  opacity:.6;
+}
+.hero-glow{
+  position:absolute;z-index:0;top:-160px;right:-120px;width:640px;height:640px;
+  background:radial-gradient(circle,rgba(176,106,60,.28),rgba(201,161,95,.14) 42%,transparent 70%);
+  filter:blur(10px);pointer-events:none;
+}
+.hero-glow.two{top:auto;bottom:-220px;left:-160px;right:auto;width:520px;height:520px;
+  background:radial-gradient(circle,rgba(143,84,48,.18),transparent 70%);}
+.grain{position:absolute;inset:0;z-index:1;opacity:.5;pointer-events:none;mix-blend-mode:soft-light}
+.hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+@media(max-width:920px){.hero-inner{grid-template-columns:1fr;gap:40px}.hero{padding:140px 0 70px}}
+.hero h1{font-size:clamp(2.7rem,6vw,4.5rem);font-weight:600;margin:22px 0 20px}
+.hero p.lede{font-size:1.16rem;color:var(--ink-soft);max-width:34ch;margin-bottom:32px}
+.hero-cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-trust{display:flex;align-items:center;gap:16px;margin-top:30px;flex-wrap:wrap}
+.hero-trust .stat{display:flex;flex-direction:column}
+.hero-trust .stat b{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--ink)}
+.hero-trust .stat span{font-size:.78rem;color:var(--ink-soft)}
+.hero-trust .divider{width:1px;height:34px;background:var(--line)}
+
+/* preview image placeholder */
+.preview{
+  position:relative;border-radius:26px;overflow:hidden;
+  background:linear-gradient(160deg,var(--sand),#ddd6c6);
+  aspect-ratio:4/5;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.5);
+}
+.ph{
+  width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  color:var(--accent2);
+}
+.ph iconify-icon{font-size:3.4rem;opacity:.55}
+.ph span{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.7}
+.preview .float-card{
+  position:absolute;left:18px;bottom:18px;right:18px;
+  background:rgba(246,244,238,.82);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.6);border-radius:16px;padding:14px 16px;
+  display:flex;align-items:center;gap:12px;box-shadow:0 12px 30px -18px rgba(32,41,31,.5);
+}
+.preview .float-card .ic{width:40px;height:40px;border-radius:12px;background:linear-gradient(140deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#fff;flex:0 0 auto}
+.preview .float-card b{font-family:'Fraunces',serif;font-size:1rem;display:block}
+.preview .float-card small{font-size:.76rem;color:var(--ink-soft)}
+.preview .top-chip{position:absolute;top:16px;left:16px;background:rgba(32,41,31,.82);color:var(--paper);font-size:.72rem;font-weight:600;padding:7px 14px;border-radius:100px;letter-spacing:.05em;display:inline-flex;align-items:center;gap:6px}
+
+/* section base */
+section{position:relative}
+.section-pad{padding:88px 0}
+.section-head{max-width:640px;margin:0 auto 52px;text-align:center}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);margin:14px 0 14px}
+.section-head p{color:var(--ink-soft);font-size:1.06rem}
+
+/* problem section - dark */
+.problem{background:var(--ink);color:var(--paper);border-radius:38px;margin:0 24px;padding:80px 0}
+.problem .wrap{max-width:1100px}
+.problem .section-head h2{color:var(--paper)}
+.problem .section-head p{color:rgba(246,244,238,.72)}
+.problem .eyebrow{color:var(--gold)}
+.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:820px){.prob-grid{grid-template-columns:1fr}.problem{margin:0 12px;border-radius:26px}}
+.prob-card{
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);padding:28px;transition:transform .3s,background .3s,border-color .3s;
+}
+.prob-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.07);border-color:rgba(201,161,95,.4)}
+.prob-card .ic{width:48px;height:48px;border-radius:13px;background:rgba(201,161,95,.16);display:grid;place-items:center;color:var(--gold);margin-bottom:18px}
+.prob-card .ic iconify-icon{font-size:1.6rem}
+.prob-card h3{font-size:1.22rem;margin-bottom:9px;color:var(--paper)}
+.prob-card p{font-size:.95rem;color:rgba(246,244,238,.68)}
+
+/* modules bento */
+.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.mod-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.mod-grid{grid-template-columns:1fr}}
+.mod-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 26px;transition:transform .32s cubic-bezier(.2,.7,.2,1),box-shadow .32s,border-color .32s;
+  position:relative;overflow:hidden;
+}
+.mod-card::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(176,106,60,.05),transparent 60%);opacity:0;transition:opacity .32s}
+.mod-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(176,106,60,.35)}
+.mod-card:hover::before{opacity:1}
+.mod-card:hover .mod-ic{transform:rotate(-8deg) scale(1.06)}
+.mod-ic{
+  width:56px;height:56px;border-radius:15px;
+  background:linear-gradient(140deg,var(--sand),#ded7c8);
+  display:grid;place-items:center;color:var(--accent2);margin-bottom:20px;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.mod-ic iconify-icon{font-size:1.85rem}
+.mod-num{position:absolute;top:22px;right:24px;font-family:'Fraunces',serif;font-size:1.1rem;color:var(--line);font-weight:600}
+.mod-card h3{font-size:1.28rem;margin-bottom:10px}
+.mod-card p{font-size:.95rem;color:var(--ink-soft)}
+
+/* who its for */
+.forwho{background:var(--sand);border-radius:38px;margin:0 24px}
+@media(max-width:820px){.forwho{margin:0 12px;border-radius:26px}}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto}
+@media(max-width:760px){.who-grid{grid-template-columns:1fr}}
+.who-col{background:var(--paper);border-radius:var(--radius);padding:32px;border:1px solid var(--line)}
+.who-col h3{font-size:1.35rem;display:flex;align-items:center;gap:11px;margin-bottom:22px}
+.who-col.yes h3 iconify-icon{color:#5a7a3f}
+.who-col.no h3 iconify-icon{color:var(--accent2)}
+.who-col ul{list-style:none;display:flex;flex-direction:column;gap:15px}
+.who-col li{display:flex;gap:12px;font-size:.98rem;color:var(--ink-soft);align-items:flex-start}
+.who-col li iconify-icon{font-size:1.25rem;flex:0 0 auto;margin-top:2px}
+.who-col.yes li iconify-icon{color:#5a7a3f}
+.who-col.no li iconify-icon{color:#b06a3c}
+
+/* testimonials */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:880px){.testi-grid{grid-template-columns:1fr}}
+.testi{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;
+  display:flex;flex-direction:column;gap:16px;position:relative;
+}
+.sample-chip{
+  position:absolute;top:16px;right:16px;
+  background:rgba(176,106,60,.12);color:var(--accent2);
+  font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 11px;border-radius:100px;border:1px solid rgba(176,106,60,.28);
+  display:inline-flex;align-items:center;gap:5px;
+}
+.testi .stars{display:flex;gap:2px;color:var(--gold)}
+.testi .stars iconify-icon{font-size:1.05rem}
+.testi p.quote{font-size:1rem;color:var(--ink);font-style:italic}
+.testi .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.testi .avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(140deg,var(--sand),#d6cdba);display:grid;place-items:center;color:var(--accent2);flex:0 0 auto}
+.testi .who b{font-family:'Fraunces',serif;font-size:.98rem;display:block}
+.testi .who small{font-size:.8rem;color:var(--ink-soft)}
+
+/* pricing */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+@media(max-width:880px){.tiers{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
+.tier{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px 30px;
+  display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;position:relative;
+}
+.tier:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.tier.featured{
+  background:var(--ink);color:var(--paper);border-color:var(--ink);
+  box-shadow:0 30px 60px -26px rgba(32,41,31,.6);transform:scale(1.03);
+}
+@media(max-width:880px){.tier.featured{transform:none}}
+.tier.featured:hover{transform:translateY(-5px) scale(1.03)}
+@media(max-width:880px){.tier.featured:hover{transform:translateY(-5px)}}
+.pop-badge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(120deg,var(--accent),var(--gold));color:#fff;
+  font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:7px 16px;border-radius:100px;box-shadow:0 8px 20px -8px rgba(176,106,60,.7);
+  display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+}
+.tier h3{font-size:1.4rem;margin-bottom:6px}
+.tier .tier-sub{font-size:.9rem;color:var(--ink-soft);margin-bottom:20px}
+.tier.featured .tier-sub{color:rgba(246,244,238,.7)}
+.tier .price-hint{
+  font-family:'Fraunces',serif;font-size:1.55rem;font-weight:600;margin-bottom:4px;color:var(--accent2);
+}
+.tier.featured .price-hint{color:var(--gold)}
+.tier .price-note{font-size:.82rem;color:var(--ink-soft);margin-bottom:24px}
+.tier.featured .price-note{color:rgba(246,244,238,.6)}
+.tier ul{list-style:none;display:flex;flex-direction:column;gap:13px;margin-bottom:28px;flex:1}
+.tier li{display:flex;gap:10px;font-size:.93rem;align-items:flex-start}
+.tier li iconify-icon{color:var(--accent);font-size:1.15rem;flex:0 0 auto;margin-top:2px}
+.tier.featured li iconify-icon{color:var(--gold)}
+.tier .btn{width:100%}
+.tier.featured .btn-ghost{color:var(--paper);border-color:rgba(246,244,238,.3)}
+.tier.featured .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* guarantee */
+.guarantee{
+  background:linear-gradient(150deg,var(--sand),#e3dccc);border-radius:var(--radius);
+  padding:44px;display:flex;gap:30px;align-items:center;max-width:900px;margin:0 auto;
+  border:1px solid var(--line);
+}
+@media(max-width:680px){.guarantee{flex-direction:column;text-align:center;padding:34px 26px}}
+.guarantee .g-ic{
+  width:88px;height:88px;border-radius:22px;flex:0 0 auto;
+  background:linear-gradient(140deg,var(--accent),var(--accent2));
+  display:grid;place-items:center;color:#fff;box-shadow:0 16px 34px -14px rgba(176,106,60,.7);
+}
+.guarantee .g-ic iconify-icon{font-size:2.6rem}
+.guarantee h3{font-size:1.55rem;margin-bottom:8px}
+.guarantee p{color:var(--ink-soft);font-size:1rem}
+
+/* FAQ */
+.faq-wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:4px 4px;
+  transition:box-shadow .25s,border-color .25s;
+}
+details[open]{box-shadow:var(--shadow);border-color:rgba(176,106,60,.3)}
+summary{
+  list-style:none;cursor:pointer;padding:20px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  font-family:'Fraunces',serif;font-size:1.1rem;font-weight:500;
+}
+summary::-webkit-details-marker{display:none}
+summary iconify-icon{font-size:1.4rem;color:var(--accent2);transition:transform .3s;flex:0 0 auto}
+details[open] summary iconify-icon{transform:rotate(45deg)}
+details .faq-body{padding:0 22px 22px;color:var(--ink-soft);font-size:.98rem}
+
+/* final CTA */
+.final-cta{
+  position:relative;overflow:hidden;
+  background:var(--ink);color:var(--paper);border-radius:38px;margin:0 24px;
+  padding:80px 40px;text-align:center;
+}
+@media(max-width:820px){.final-cta{margin:0 12px;border-radius:26px;padding:60px 24px}}
+.final-cta .glow{position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:560px;height:560px;background:radial-gradient(circle,rgba(201,161,95,.22),transparent 68%);pointer-events:none}
+.final-cta .inner{position:relative;z-index:2;max-width:640px;margin:0 auto}
+.final-cta h2{font-size:clamp(2.1rem,4.5vw,3.3rem);color:var(--paper);margin:16px 0 18px}
+.final-cta p{color:rgba(246,244,238,.75);font-size:1.1rem;margin-bottom:34px}
+.final-cta .eyebrow{color:var(--gold)}
+.final-cta .btn-primary{background:linear-gradient(120deg,var(--gold),var(--accent))}
+.final-cta .microcopy{margin-top:18px;font-size:.85rem;color:rgba(246,244,238,.6);display:flex;gap:8px;align-items:center;justify-content:center}
+
+/* footer */
+footer{padding:50px 0 120px;text-align:center;color:var(--ink-soft);font-size:.85rem}
+footer .logo{justify-content:center;margin-bottom:16px;color:var(--ink)}
+footer .disclaimer{max-width:560px;margin:14px auto 0;font-size:.76rem;opacity:.75;line-height:1.6}
+
+/* sticky mobile bottom bar */
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(246,244,238,.9);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  display:none;align-items:center;gap:12px;
+  box-shadow:0 -8px 30px -20px rgba(32,41,31,.5);
+}
+.mobile-bar .mb-txt{flex:1;font-size:.82rem;color:var(--ink-soft);line-height:1.3}
+.mobile-bar .mb-txt b{font-family:'Fraunces',serif;color:var(--ink);font-size:.95rem;display:block}
+.mobile-bar .btn{padding:12px 20px;font-size:.9rem}
+@media(max-width:720px){.mobile-bar{display:flex}footer{padding-bottom:110px}}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* a11y */
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
-<header class="site">
-  <div class="nav">
-    <div class="brand"><span class="mk">AM</span><div>Alex Mansson<small>The Primal Method</small></div></div>
-    <a href="#enrol" class="btn">Join the program <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+<!-- HEADER -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark">P</span>
+      <span>The Primal Method<small>Alex Mansson</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#inside" class="link">What's inside</a>
+      <a href="#who" class="link">Who it's for</a>
+      <a href="#pricing" class="link">Tiers</a>
+      <a href="#faq" class="link">FAQ</a>
+      <a href="#enrol" class="btn btn-primary header-cta">Join the program</a>
+    </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="narrow">
-    <div class="eyebrow" style="justify-content:center">Self-paced movement program</div>
-    <h1>Rebuild your body, <span>on your own schedule.</span></h1>
-    <p class="sub">The Primal Method is a complete, self-paced system to undo stiffness, move without pain, and train the natural patterns your body was built for. Follow it from anywhere, at your own pace.</p>
-    <div class="cta-row">
-      <a href="#enrol" class="btn">Join the program <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
-      <a href="#inside" class="btn ghost">See what's inside</a>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow two"></div>
+  <svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="grainf"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#grainf)"/></svg>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow reveal"><iconify-icon icon="mdi:pine-tree"></iconify-icon> A self-paced movement program</span>
+      <h1 class="reveal" data-d="1">Move like you were <span class="accent-word">built to.</span></h1>
+      <p class="lede reveal" data-d="2">The Primal Method rebuilds the strength, mobility and control your body forgot, one guided session at a time. No gym required. No guesswork.</p>
+      <div class="hero-cta-row reveal" data-d="3">
+        <a href="#enrol" class="btn btn-primary"><iconify-icon icon="mdi:arrow-right-circle"></iconify-icon> Join the program</a>
+        <a href="#inside" class="btn btn-ghost"><iconify-icon icon="mdi:play-circle-outline"></iconify-icon> See what's inside</a>
+      </div>
+      <div class="hero-trust reveal" data-d="4">
+        <div class="stat"><b>156K</b><span>moving with Alex</span></div>
+        <div class="divider"></div>
+        <div class="stat"><b>6</b><span>guided modules</span></div>
+        <div class="divider"></div>
+        <div class="stat"><b>Any</b><span>starting level</span></div>
+      </div>
     </div>
-    <div class="microtrust">
-      <span><iconify-icon icon="mdi:infinity"></iconify-icon> Lifetime access</span>
-      <span><iconify-icon icon="mdi:cellphone-link"></iconify-icon> Train from anywhere</span>
-      <span><iconify-icon icon="mdi:account-group-outline"></iconify-icon> Built for a 156K movement community</span>
-    </div>
-  </div>
-  <div class="imgband"><div class="ph"><div><iconify-icon icon="mdi:play-circle-outline"></iconify-icon><small>Program preview video or hero image goes here</small></div></div></div>
-</section>
-
-<section class="pain">
-  <div class="wrap">
-    <div class="narrow" style="text-align:center;padding:0">
-      <div class="eyebrow" style="justify-content:center;color:#e0a877">Sound familiar?</div>
-      <h2>Strong in the gym, stiff in real life.</h2>
-    </div>
-    <div class="pain-grid rv">
-      <div class="pain-item"><iconify-icon icon="mdi:seat-recline-normal"></iconify-icon><div><b>Years at a desk</b><p>have left you tight, stiff and moving like a much older version of yourself.</p></div></div>
-      <div class="pain-item"><iconify-icon icon="mdi:weight-lifter"></iconify-icon><div><b>Workouts that hurt</b><p>build muscle but ignore the mobility your joints are quietly begging for.</p></div></div>
-      <div class="pain-item"><iconify-icon icon="mdi:map-marker-question-outline"></iconify-icon><div><b>No clear plan</b><p>just scattered stretches and videos that never add up to real change.</p></div></div>
-      <div class="pain-item"><iconify-icon icon="mdi:clock-alert-outline"></iconify-icon><div><b>No time for the gym</b><p>and no interest in a routine you cannot keep up week after week.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="inside">
-  <div class="wrap">
-    <div class="narrow" style="text-align:center;padding:0">
-      <div class="eyebrow" style="justify-content:center">What is inside</div>
-      <h2>A complete system, not scattered drills.</h2>
-      <p class="sub" style="margin:10px auto 0">Six progressive modules that take you from stiff and cautious to strong and free-moving.</p>
-    </div>
-    <div class="mod-grid rv">
-      <div class="mod"><div class="n">Module 01</div><div class="ic"><iconify-icon icon="mdi:human-handsup"></iconify-icon></div><h3>Restore your range</h3><p>Reopen stiff hips, shoulders and spine with guided daily mobility work.</p></div>
-      <div class="mod"><div class="n">Module 02</div><div class="ic"><iconify-icon icon="mdi:run"></iconify-icon></div><h3>Primal patterns</h3><p>Relearn crawl, squat, hinge and reach, the moves your body already knows.</p></div>
-      <div class="mod"><div class="n">Module 03</div><div class="ic"><iconify-icon icon="mdi:heart-pulse"></iconify-icon></div><h3>Pain-free joints</h3><p>Targeted routines for the low back, knees and neck that most bodies need.</p></div>
-      <div class="mod"><div class="n">Module 04</div><div class="ic"><iconify-icon icon="mdi:arm-flex-outline"></iconify-icon></div><h3>Natural strength</h3><p>Build real, usable strength through full ranges, no machines required.</p></div>
-      <div class="mod"><div class="n">Module 05</div><div class="ic"><iconify-icon icon="mdi:yoga"></iconify-icon></div><h3>Flow and control</h3><p>Link the patterns into smooth, controlled movement that feels effortless.</p></div>
-      <div class="mod"><div class="n">Module 06</div><div class="ic"><iconify-icon icon="mdi:calendar-sync-outline"></iconify-icon></div><h3>Your lifelong routine</h3><p>A simple, repeatable practice you can keep for good, in minutes a day.</p></div>
+    <div class="hero-visual reveal" data-d="2">
+      <div class="preview">
+        <span class="top-chip"><iconify-icon icon="mdi:motion-outline"></iconify-icon> Program preview</span>
+        <div class="ph">
+          <iconify-icon icon="mdi:image-outline"></iconify-icon>
+          <span>coach photo</span>
+        </div>
+        <div class="float-card">
+          <span class="ic"><iconify-icon icon="mdi:human-handsup"></iconify-icon></span>
+          <div>
+            <b>Follow-along sessions</b>
+            <small>Watch, move, repeat. On your own time.</small>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="who">
-  <div class="wrap">
-    <div class="narrow" style="text-align:center;padding:0">
-      <div class="eyebrow" style="justify-content:center">Is it for you?</div>
-      <h2>Built for real bodies.</h2>
-    </div>
-    <div class="who-grid rv">
-      <div class="who-item yes"><iconify-icon icon="mdi:check-circle"></iconify-icon><div><b>You want to move well for life,</b> not chase a look for a season.</div></div>
-      <div class="who-item yes"><iconify-icon icon="mdi:check-circle"></iconify-icon><div><b>You are done feeling stiff</b> and want a clear path out.</div></div>
-      <div class="who-item yes"><iconify-icon icon="mdi:check-circle"></iconify-icon><div><b>You prefer to train at home,</b> at your own pace, on your own time.</div></div>
-      <div class="who-item no"><iconify-icon icon="mdi:close-circle"></iconify-icon><div><b>Not for you</b> if you want a quick fix with no effort behind it.</div></div>
+<!-- PROBLEM -->
+<section class="section-pad">
+  <div class="problem">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow"><iconify-icon icon="mdi:alert-circle-outline"></iconify-icon> Sound familiar</span>
+        <h2>Strong in the gym. Stiff in real life.</h2>
+        <p>You can lift, run or grind through a workout, then wince getting off the floor. The body was built to move in every direction, and most of us only train a few.</p>
+      </div>
+      <div class="prob-grid">
+        <div class="prob-card reveal">
+          <span class="ic"><iconify-icon icon="mdi:seat-legroom-reduced"></iconify-icon></span>
+          <h3>Locked-up hips and back</h3>
+          <p>Years of sitting leave you tight where it matters most, and stretching alone never seems to stick.</p>
+        </div>
+        <div class="prob-card reveal" data-d="1">
+          <span class="ic"><iconify-icon icon="mdi:arm-flex-outline"></iconify-icon></span>
+          <h3>Strength that doesn't transfer</h3>
+          <p>Big numbers on the bar, yet a simple squat, crawl or reach feels foreign and unstable.</p>
+        </div>
+        <div class="prob-card reveal" data-d="2">
+          <span class="ic"><iconify-icon icon="mdi:map-marker-question-outline"></iconify-icon></span>
+          <h3>No clear path</h3>
+          <p>Random mobility clips online, no order, no progression. You never know if it is actually working.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
+<!-- WHAT'S INSIDE -->
+<section class="section-pad" id="inside">
   <div class="wrap">
-    <div class="narrow" style="text-align:center;padding:0">
-      <div class="eyebrow" style="justify-content:center">Results</div>
-      <h2>Movement that changes how you live.</h2>
+    <div class="section-head">
+      <span class="eyebrow"><iconify-icon icon="mdi:view-grid-outline"></iconify-icon> What's inside</span>
+      <h2>Six modules that rebuild you from the ground up</h2>
+      <p>A structured path from your first primal position to fluid, full-body movement, all self-paced and follow-along.</p>
     </div>
-    <div class="tgrid rv">
-      <div class="tcard"><span class="chip">Sample</span><p>"Placeholder for a real member story. Swap in a genuine before-and-after in the member's own words once you have permission to feature them."</p><div class="who2"><div class="av"><iconify-icon icon="mdi:account"></iconify-icon></div><div><b>Member name</b><br><small>Sample placeholder</small></div></div></div>
-      <div class="tcard"><span class="chip">Sample</span><p>"Placeholder for a second member story. A specific result, like pain gone or range regained, works best here."</p><div class="who2"><div class="av"><iconify-icon icon="mdi:account"></iconify-icon></div><div><b>Member name</b><br><small>Sample placeholder</small></div></div></div>
-      <div class="tcard"><span class="chip">Sample</span><p>"Placeholder for a third member story. Include how long it took so the result feels real and repeatable."</p><div class="who2"><div class="av"><iconify-icon icon="mdi:account"></iconify-icon></div><div><b>Member name</b><br><small>Sample placeholder</small></div></div></div>
+    <div class="mod-grid">
+      <div class="mod-card reveal">
+        <span class="mod-num">01</span>
+        <span class="mod-ic"><iconify-icon icon="mdi:foot-print"></iconify-icon></span>
+        <h3>Ground foundations</h3>
+        <p>Reconnect with the floor. The primal positions your body should own before anything else.</p>
+      </div>
+      <div class="mod-card reveal" data-d="1">
+        <span class="mod-num">02</span>
+        <span class="mod-ic"><iconify-icon icon="mdi:hip"></iconify-icon></span>
+        <h3>Mobility unlocks</h3>
+        <p>Open the hips, spine and shoulders with drills that actually hold, session after session.</p>
+      </div>
+      <div class="mod-card reveal" data-d="2">
+        <span class="mod-num">03</span>
+        <span class="mod-ic"><iconify-icon icon="mdi:human-handsdown"></iconify-icon></span>
+        <h3>Primal strength</h3>
+        <p>Crawls, carries and holds that build real, usable strength through your whole body.</p>
+      </div>
+      <div class="mod-card reveal">
+        <span class="mod-num">04</span>
+        <span class="mod-ic"><iconify-icon icon="mdi:vector-curve"></iconify-icon></span>
+        <h3>Flow and control</h3>
+        <p>String movements together into smooth, controlled flows that feel as good as they look.</p>
+      </div>
+      <div class="mod-card reveal" data-d="1">
+        <span class="mod-num">05</span>
+        <span class="mod-ic"><iconify-icon icon="mdi:calendar-check-outline"></iconify-icon></span>
+        <h3>Weekly practice plans</h3>
+        <p>Plug-and-play routines for every level so you always know what to do next.</p>
+      </div>
+      <div class="mod-card reveal" data-d="2">
+        <span class="mod-num">06</span>
+        <span class="mod-ic"><iconify-icon icon="mdi:account-group-outline"></iconify-icon></span>
+        <h3>Community and check-ins</h3>
+        <p>Move alongside others on the same path, with prompts to keep you consistent.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="enrol" style="background:var(--sand)">
-  <div class="wrap">
-    <div class="narrow" style="text-align:center;padding:0">
-      <div class="eyebrow" style="justify-content:center">Join the program</div>
-      <h2>Choose how you want to move.</h2>
-      <p class="sub" style="margin:10px auto 0">Start today with lifetime access. Pricing shown on the enrolment page.</p>
+<!-- WHO IT'S FOR -->
+<section class="section-pad" id="who">
+  <div class="forwho section-pad">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow"><iconify-icon icon="mdi:account-check-outline"></iconify-icon> Honest fit check</span>
+        <h2>Is The Primal Method for you?</h2>
+      </div>
+      <div class="who-grid">
+        <div class="who-col yes reveal">
+          <h3><iconify-icon icon="mdi:check-circle"></iconify-icon> This is for you if</h3>
+          <ul>
+            <li><iconify-icon icon="mdi:check"></iconify-icon> You want to feel strong and mobile in everyday life, not just under a bar</li>
+            <li><iconify-icon icon="mdi:check"></iconify-icon> You prefer following a clear plan over piecing clips together</li>
+            <li><iconify-icon icon="mdi:check"></iconify-icon> You like training with little or no equipment, at home or outdoors</li>
+            <li><iconify-icon icon="mdi:check"></iconify-icon> You are ready to practice a few times a week and stay consistent</li>
+          </ul>
+        </div>
+        <div class="who-col no reveal" data-d="1">
+          <h3><iconify-icon icon="mdi:close-circle"></iconify-icon> This is not for you if</h3>
+          <ul>
+            <li><iconify-icon icon="mdi:close"></iconify-icon> You want a quick fix with zero effort or practice</li>
+            <li><iconify-icon icon="mdi:close"></iconify-icon> You are only chasing max numbers and nothing else</li>
+            <li><iconify-icon icon="mdi:close"></iconify-icon> You would rather have every session hand-fed one at a time by DM</li>
+            <li><iconify-icon icon="mdi:close"></iconify-icon> You are not willing to start where your body is today</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="tiers rv">
-      <div class="tier">
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><iconify-icon icon="mdi:format-quote-close"></iconify-icon> In their words</span>
+      <h2>What members are saying</h2>
+      <p>Placeholder testimonials shown for layout. Real member stories replace these before launch.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <span class="sample-chip"><iconify-icon icon="mdi:tag-outline"></iconify-icon> Sample</span>
+        <div class="stars"><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon></div>
+        <p class="quote">"My hips finally feel free after years of sitting. The step-by-step order made all the difference for me."</p>
+        <div class="who">
+          <span class="avatar"><iconify-icon icon="mdi:account"></iconify-icon></span>
+          <div><b>Sample Member</b><small>Placeholder testimonial</small></div>
+        </div>
+      </div>
+      <div class="testi reveal" data-d="1">
+        <span class="sample-chip"><iconify-icon icon="mdi:tag-outline"></iconify-icon> Sample</span>
+        <div class="stars"><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon></div>
+        <p class="quote">"I lift heavy but felt stiff everywhere. The primal drills gave me strength I can actually use day to day."</p>
+        <div class="who">
+          <span class="avatar"><iconify-icon icon="mdi:account"></iconify-icon></span>
+          <div><b>Sample Member</b><small>Placeholder testimonial</small></div>
+        </div>
+      </div>
+      <div class="testi reveal" data-d="2">
+        <span class="sample-chip"><iconify-icon icon="mdi:tag-outline"></iconify-icon> Sample</span>
+        <div class="stars"><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon></div>
+        <p class="quote">"Being able to go at my own pace, then check in with the community, kept me consistent for the first time ever."</p>
+        <div class="who">
+          <span class="avatar"><iconify-icon icon="mdi:account"></iconify-icon></span>
+          <div><b>Sample Member</b><small>Placeholder testimonial</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section-pad" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><iconify-icon icon="mdi:layers-triple-outline"></iconify-icon> Choose your path</span>
+      <h2>Three ways to move with the method</h2>
+      <p>Pick the level of guidance that fits you. Every tier gives you the full self-paced program.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier reveal">
         <h3>Self-Paced</h3>
-        <div class="desc">The full program to follow on your own.</div>
-        <div class="price">Enrol to see<small>one-time, lifetime access</small></div>
+        <p class="tier-sub">Everything you need to start on your own.</p>
+        <div class="price-hint">Enrol to see</div>
+        <p class="price-note">Full program access</p>
         <ul>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> All 6 modules, lifetime access</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Follow-along video library</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Printable routines and plan</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> All 6 follow-along modules</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Weekly practice plans</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Lifetime access to updates</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Community space</li>
         </ul>
-        <a href="#" class="btn ghost">Choose Self-Paced</a>
+        <a href="#enrol" class="btn btn-ghost">Start self-paced</a>
       </div>
-      <div class="tier feat">
+      <div class="tier featured reveal" data-d="1">
+        <span class="pop-badge"><iconify-icon icon="mdi:star-four-points"></iconify-icon> Most popular</span>
         <h3>Guided</h3>
-        <div class="desc">The program plus a community and monthly coaching.</div>
-        <div class="price">Enrol to see<small>most popular option</small></div>
+        <p class="tier-sub">The program plus structure and feedback.</p>
+        <div class="price-hint">Enrol to see</div>
+        <p class="price-note">Best for staying consistent</p>
         <ul>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Everything in Self-Paced</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Private movement community</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Monthly group coaching calls</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Form-check feedback</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Everything in Self-Paced</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Structured start-here roadmap</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Group coaching check-ins</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Form-review prompts</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Priority community support</li>
         </ul>
-        <a href="#" class="btn">Choose Guided</a>
+        <a href="#enrol" class="btn btn-primary">Join Guided</a>
       </div>
-      <div class="tier">
-        <h3>1:1 Coaching</h3>
-        <div class="desc">The program plus private coaching with Alex.</div>
-        <div class="price">By application<small>limited spots</small></div>
+      <div class="tier reveal" data-d="2">
+        <h3>1:1</h3>
+        <p class="tier-sub">Personal coaching with Alex, by application.</p>
+        <div class="price-hint">By application</div>
+        <p class="price-note">Limited spots</p>
         <ul>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Everything in Guided</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Personalised plan</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Direct access to Alex</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Everything in Guided</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Personalised movement plan</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Direct 1:1 sessions</li>
+          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Ongoing private feedback</li>
         </ul>
-        <a href="#" class="btn ghost">Apply for 1:1</a>
+        <a href="#enrol" class="btn btn-ghost">Apply for 1:1</a>
       </div>
-    </div>
-    <div class="guar rv" style="margin-top:22px">
-      <div class="ic"><iconify-icon icon="mdi:shield-check-outline"></iconify-icon></div>
-      <div><h3>Try it for 14 days</h3><p>Start the program and follow it for two weeks. If it is not the right fit, reach out within 14 days and we will make it right. No hard feelings.</p></div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap faq">
-    <div style="text-align:center">
-      <div class="eyebrow" style="justify-content:center">Questions</div>
-      <h2>Good to know.</h2>
-    </div>
-    <div class="rv">
-      <div class="qa"><b>Do I need any equipment?</b><p>No. The program is built around your own body. A little floor space is all you need.</p></div>
-      <div class="qa"><b>I am not flexible or fit. Can I still do this?</b><p>Yes. Every movement starts from where you are and progresses gently. It is designed for real, stiff, everyday bodies.</p></div>
-      <div class="qa"><b>How much time does it take?</b><p>Short, focused sessions you can fit into a busy day. Consistency matters more than length.</p></div>
-      <div class="qa"><b>How long do I have access?</b><p>Lifetime. Move through it at your own pace and come back to it whenever you like.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="final">
+<!-- GUARANTEE -->
+<section class="section-pad">
   <div class="wrap">
-    <div class="eyebrow" style="justify-content:center;color:#e0a877">Start today</div>
-    <h2>Your body was built to move.</h2>
-    <p>Give it a system that finally makes sense. Join The Primal Method and start moving like you were meant to.</p>
-    <a href="#enrol" class="btn">Join the program <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+    <div class="guarantee reveal">
+      <span class="g-ic"><iconify-icon icon="mdi:shield-check-outline"></iconify-icon></span>
+      <div>
+        <h3>Try it for 14 days</h3>
+        <p>Move through the first module and see how your body responds. If it is not the right fit for you within 14 days, reach out and we will make it right. No pressure, no fine print. Results depend on your effort and consistency, and this is movement coaching, not medical advice.</p>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="section-pad" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><iconify-icon icon="mdi:help-circle-outline"></iconify-icon> Good to know</span>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq-wrap">
+      <details class="reveal">
+        <summary>Do I need any equipment or a gym? <iconify-icon icon="mdi:plus"></iconify-icon></summary>
+        <div class="faq-body">No. The Primal Method is built around bodyweight and floor-based movement. A little open space is all you need, at home or outdoors.</div>
+      </details>
+      <details class="reveal">
+        <summary>I am not flexible or strong. Can I still start? <iconify-icon icon="mdi:plus"></iconify-icon></summary>
+        <div class="faq-body">Yes. Every module starts from the ground up with regressions, so you begin exactly where your body is today and build from there.</div>
+      </details>
+      <details class="reveal">
+        <summary>How much time does it take each week? <iconify-icon icon="mdi:plus"></iconify-icon></summary>
+        <div class="faq-body">The practice plans are designed for a few short sessions a week. It is self-paced, so you fit it around your life rather than the other way around.</div>
+      </details>
+      <details class="reveal">
+        <summary>Is this a live program or self-paced? <iconify-icon icon="mdi:plus"></iconify-icon></summary>
+        <div class="faq-body">The core program is fully self-paced and available the moment you join. The Guided and 1:1 tiers add live check-ins and coaching on top.</div>
+      </details>
+      <details class="reveal">
+        <summary>What if it is not right for me? <iconify-icon icon="mdi:plus"></iconify-icon></summary>
+        <div class="faq-body">You have 14 days to try the program. If it is not a fit, reach out and we will make it right. Details are in the reassurance section above.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section-pad" id="enrol">
+  <div class="final-cta">
+    <div class="glow"></div>
+    <div class="inner reveal">
+      <span class="eyebrow"><iconify-icon icon="mdi:pine-tree"></iconify-icon> Your move</span>
+      <h2>Start moving like you were built to.</h2>
+      <p>Join The Primal Method and follow a clear, self-paced path back to a body that feels strong, mobile and free.</p>
+      <a href="#enrol" class="btn btn-primary"><iconify-icon icon="mdi:arrow-right-circle"></iconify-icon> Join the program</a>
+      <div class="microcopy"><iconify-icon icon="mdi:shield-check-outline"></iconify-icon> 14-day try-it reassurance. Start any time.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="foot"><span>Alex Mansson &middot; The Primal Method</span><span>Self-paced movement program</span></div>
-    <p class="dis">This is a sample program sales page prepared as a concept. Pricing is intentionally shown on the enrolment step; member stories are placeholders to be replaced with real, permitted testimonials. This program is educational and is not medical advice; consult a professional before starting any new movement program.</p>
+    <a href="#top" class="logo">
+      <span class="logo-mark">P</span>
+      <span>The Primal Method</span>
+    </a>
+    <p>Movement and mobility coaching with Alex Mansson.</p>
+    <p class="disclaimer">Demo sales page for concept and layout only. Testimonials shown are labelled samples and not real member statements. This program offers movement coaching and education, not medical advice or health guarantees. Results vary with individual effort and consistency.</p>
   </div>
 </footer>
 
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <div class="mb-txt"><b>The Primal Method</b>Self-paced movement program</div>
+  <a href="#enrol" class="btn btn-primary">Join the program</a>
+</div>
+
 <script>
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+// sticky header shrink
+const header=document.getElementById('header');
+const onScroll=()=>{if(window.scrollY>24)header.classList.add('stuck');else header.classList.remove('stuck');};
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// scroll reveal with staggered delays
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const d=parseInt(e.target.getAttribute('data-d')||'0',10);
+      setTimeout(()=>e.target.classList.add('in'),d*110);
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>

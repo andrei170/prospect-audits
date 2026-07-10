@@ -4,14 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Buying or selling in Mansfield and the DFW metro, with 18 years of local experience on your side. Get a free home valuation.">
-<meta name="theme-color" content="#241f26">
-<title>Sandra Ridge | Mansfield & DFW Real Estate</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238e3b4e'/%3E%3Ctext x='50%25' y='55%25' font-family='Georgia,serif' font-weight='600' font-size='30' fill='%23f7f3f1' text-anchor='middle' dominant-baseline='middle'%3ESR%3C/text%3E%3C/svg%3E">
+<title>Sandra Ridge | Mansfield &amp; DFW Real Estate</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238e3b4e'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' fill='%23f7f3f1' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
 <style>
 :root{
   --ink:#241f26;
@@ -19,386 +17,584 @@
   --sand:#efe6e4;
   --accent:#8e3b4e;
   --accent2:#743041;
-  --rose:#c07689;
-  --muted:#6b6169;
-  --muted2:#948a90;
-  --line:#e6dad7;
-  --card:#fff;
-  --radius:16px;
-  --shadow:0 18px 50px rgba(36,31,38,.12);
-  --shadow-sm:0 6px 20px rgba(36,31,38,.08);
-  --ease:cubic-bezier(.2,.7,.2,1);
+  --muted:#6d6470;
+  --line:rgba(36,31,38,.10);
+  --card:#ffffff;
+  --shadow:0 18px 50px -22px rgba(36,31,38,.35);
+  --radius:20px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  color:#302a32;background:var(--paper);line-height:1.6;font-size:16px;
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
-h1,h2,h3,h4{font-family:'Fraunces','Georgia',serif;font-weight:600;line-height:1.14;color:var(--ink);letter-spacing:-.015em}
+h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;line-height:1.08;letter-spacing:-.01em}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
-section.pad{padding:80px 0}
-iconify-icon{display:inline-block;vertical-align:-.135em}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.15em;font-size:.73rem;font-weight:700;color:var(--accent)}
-.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--accent)}
+.wrap{width:min(1140px,92vw);margin-inline:auto}
+.accent-word{
+  background:linear-gradient(100deg,var(--accent),#b8586c 55%,var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.eyebrow{
+  font-family:'Inter',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.5rem;
+}
+
+/* ---------- Buttons ---------- */
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  background:linear-gradient(180deg,#a04358,var(--accent));color:#fff;
-  font-weight:700;font-size:1rem;font-family:inherit;
-  padding:15px 28px;border-radius:12px;border:0;cursor:pointer;
-  transition:transform .2s var(--ease),box-shadow .2s var(--ease);
-  box-shadow:0 10px 26px rgba(142,59,78,.3);
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:.98rem;
+  padding:.92rem 1.55rem;border-radius:999px;border:0;cursor:pointer;
+  background:linear-gradient(120deg,var(--accent),var(--accent2));color:#fff;
+  box-shadow:0 14px 30px -12px rgba(142,59,78,.7);
+  transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s;overflow:hidden;
+  white-space:nowrap;
 }
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(142,59,78,.42)}
-.btn.block{width:100%}
-
-/* Header */
-header.site{position:sticky;top:0;z-index:50;background:rgba(247,243,241,.88);backdrop-filter:blur(11px);border-bottom:1px solid var(--line)}
-.nav{max-width:1120px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand .mk{width:42px;height:42px;border-radius:11px;background:linear-gradient(150deg,var(--accent),var(--accent2));color:#fff;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;box-shadow:var(--shadow-sm)}
-.brand .bt strong{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;color:var(--ink);letter-spacing:-.01em}
-.brand .bt small{display:block;font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted2)}
-.nav .btn{padding:11px 20px;font-size:.9rem}
-@media(max-width:640px){.brand .bt small{display:none}.nav .btn .lbl{display:none}}
-
-/* Hero */
-.hero{position:relative;overflow:hidden;padding:72px 0 78px}
-.hero::before{content:"";position:absolute;inset:0;z-index:0;background:
-  radial-gradient(1100px 520px at 82% -4%,rgba(142,59,78,.14),transparent 60%),
-  radial-gradient(760px 480px at 4% 108%,rgba(192,118,137,.12),transparent 55%),
-  linear-gradient(180deg,var(--sand),var(--paper) 60%)}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
-.hero h1{font-size:clamp(2.3rem,4.8vw,3.5rem);letter-spacing:-.025em;margin:16px 0 18px}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero .lede{font-size:1.13rem;color:#453d47;max-width:48ch}
-.hero-points{list-style:none;margin:24px 0 0;display:grid;gap:12px}
-.hero-points li{display:flex;align-items:flex-start;gap:11px;font-weight:500;color:#3d353f}
-.hero-points iconify-icon{color:var(--accent);font-size:1.25rem;margin-top:2px;flex:none}
-
-/* Form card */
-.formcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--shadow);position:relative}
-.formcard h3{font-size:1.35rem;margin-bottom:4px}
-.formcard .pk{font-size:.9rem;color:var(--muted);margin-bottom:18px}
-.field{margin-bottom:13px}
-.field label{display:block;font-size:.78rem;font-weight:600;color:var(--ink);margin-bottom:5px}
-.field input{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;font-size:1rem;font-family:inherit;background:#fcf8f7;transition:.15s}
-.field input:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(142,59,78,.13)}
-.formcard .btn{margin-top:4px}
-.fine{display:flex;align-items:center;justify-content:center;gap:7px;font-size:.75rem;color:var(--muted2);margin-top:13px}
-.success{display:none;text-align:center;padding:22px 6px}
-.success iconify-icon{font-size:2.7rem;color:var(--accent)}
-.success h3{margin:10px 0 4px}
-.success p{font-size:.9rem;color:var(--muted)}
-.ok .success{display:block}.ok .fform{display:none}
-
-/* Credibility band */
-.creds{background:var(--ink);color:#f0e8ec;padding:48px 0}
-.creds-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center}
-.cred iconify-icon{font-size:1.6rem;color:var(--rose);margin-bottom:8px}
-.cred b{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:2rem;color:#fff;line-height:1}
-.cred span{display:block;font-size:.85rem;color:#c3b5bc;margin-top:8px}
-.creds-note{text-align:center;font-size:.77rem;color:#8f8288;margin-top:28px}
-@media(max-width:700px){.creds-grid{grid-template-columns:1fr 1fr;gap:30px 20px}}
-
-/* Section head */
-.section-head{max-width:640px;margin:0 auto 46px;text-align:center}
-.section-head .eyebrow{justify-content:center}
-.section-head h2{font-size:clamp(1.7rem,3.3vw,2.4rem);margin:14px 0 12px}
-.section-head p{color:var(--muted);font-size:1.05rem}
-
-/* How I help */
-.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.help-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow-sm);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
-.help-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.help-icon{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(160deg,#f2dde3,#ecccd5);color:var(--accent2);font-size:1.6rem;margin-bottom:18px}
-.help-card h3{font-size:1.3rem;margin-bottom:9px}
-.help-card>p{color:var(--muted);margin-bottom:16px}
-.help-list{list-style:none;display:grid;gap:9px}
-.help-list li{display:flex;align-items:flex-start;gap:9px;font-size:.95rem;color:#3d353f}
-.help-list iconify-icon{color:var(--accent);font-size:1.1rem;margin-top:4px;flex:none}
-
-/* Lead magnet */
-.magnet-band{background:var(--sand)}
-.magnet{background:var(--ink);color:#efe6ea;border-radius:22px;padding:44px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;box-shadow:var(--shadow)}
-.magnet h2{color:#fff;font-size:clamp(1.6rem,2.8vw,2.1rem);margin:12px 0 12px}
-.magnet .eyebrow{color:var(--rose)}.magnet .eyebrow::before{background:var(--rose)}
-.magnet .chk{display:flex;align-items:flex-start;gap:10px;margin-bottom:11px;font-size:.96rem;color:#d6c9d0}
-.magnet .chk iconify-icon{color:var(--rose);font-size:1.15rem;margin-top:3px;flex:none}
-.mform{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:26px}
-.mform label{color:#cdbfc6}
-.mform input{background:rgba(255,255,255,.94);border-color:rgba(255,255,255,.2)}
-.mform .success p{color:#bcaeb5}
-
-/* About */
-.about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:50px;align-items:center}
-.photo-ph{aspect-ratio:4/5;border-radius:20px;border:2px dashed #cbb9bd;background:linear-gradient(160deg,var(--sand),#fff);display:grid;place-items:center;text-align:center;color:var(--muted2);box-shadow:var(--shadow-sm)}
-.photo-ph iconify-icon{font-size:2.6rem;color:#c0aab0;margin-bottom:8px}
-.photo-ph span{font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;font-weight:600}
-.about-txt h2{font-size:clamp(1.7rem,3.1vw,2.3rem);margin:14px 0 18px}
-.about-txt p{color:var(--muted);margin-bottom:16px;font-size:1.04rem}
-.about-txt .sig{font-family:'Fraunces',serif;font-size:1.35rem;color:var(--accent);margin-top:6px}
-
-/* Testimonials */
-.tst-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.tst{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm);position:relative}
-.tst .sample{position:absolute;top:16px;right:16px;background:#f2dde3;color:var(--accent2);font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
-.tst .stars{color:var(--accent);font-size:1.05rem;margin-bottom:12px;display:flex;gap:2px}
-.tst p{font-style:italic;color:var(--ink);font-size:1.01rem;margin-bottom:18px}
-.tst .who{display:flex;align-items:center;gap:12px}
-.tst .who .av{width:42px;height:42px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--accent);font-family:'Fraunces',serif;font-weight:600}
-.tst .who b{display:block;font-size:.92rem;color:var(--ink)}
-.tst .who span{display:block;font-size:.8rem;color:var(--muted2)}
-
-/* Final CTA */
-.final{background:linear-gradient(165deg,#271f28,#1a151b);color:#fff;text-align:center}
-.final .eyebrow{justify-content:center;color:var(--rose)}.final .eyebrow::before{background:var(--rose)}
-.final h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 12px}
-.final>.wrap>p{color:#d3c8ce;max-width:50ch;margin:0 auto 30px}
-.final .formcard{max-width:460px;margin:0 auto;text-align:left}
-.final .formcard h3,.final .formcard .success h3{color:var(--ink)}
-
-/* Footer */
-footer{background:var(--ink);color:#b7abaf;padding:44px 0 34px;font-size:.88rem}
-.foot-grid{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-.foot-brand{display:flex;align-items:center;gap:12px;color:#fff}
-.foot-brand .mk{width:38px;height:38px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:600}
-.foot-brand strong{font-family:'Fraunces',serif;font-weight:600}
-.foot-social{display:flex;gap:16px;font-size:1.3rem}
-.foot-social a{color:#b7abaf;transition:.15s}.foot-social a:hover{color:#fff}
-.legal{max-width:1120px;margin:26px auto 0;padding:20px 26px 0;border-top:1px solid #3a333b;font-size:.75rem;color:#8a7e83;line-height:1.6}
-
-/* Reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.rv.in{opacity:1;transform:none}
-
-@media(max-width:860px){
-  .hero-grid,.magnet,.about-grid{grid-template-columns:1fr;gap:36px}
-  .help-grid,.tst-grid{grid-template-columns:1fr}
-  .about-grid .photo-ph{max-width:320px}
+.btn::after{
+  content:"";position:absolute;top:0;left:-130%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:skewX(-18deg);transition:left .6s ease;
 }
-@media(max-width:480px){section.pad{padding:58px 0}.magnet{padding:30px}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 20px 40px -12px rgba(142,59,78,.8)}
+.btn:hover::after{left:130%}
+.btn-ghost{
+  background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none;
+}
+.btn-ghost:hover{background:var(--sand);box-shadow:none}
+.btn-sm{padding:.62rem 1.05rem;font-size:.86rem}
+
+/* ---------- Header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  transition:padding .35s ease,background .35s ease,box-shadow .35s ease,border-color .35s;
+  padding:1.1rem 0;border-bottom:1px solid transparent;
+}
+header.stuck{
+  padding:.55rem 0;
+  background:rgba(247,243,241,.72);
+  backdrop-filter:blur(16px) saturate(1.4);
+  -webkit-backdrop-filter:blur(16px) saturate(1.4);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 8px 30px -20px rgba(36,31,38,.4);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.72rem}
+.brand-mark{
+  width:44px;height:44px;border-radius:13px;flex:none;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+  display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:600;font-size:1.12rem;
+  box-shadow:0 8px 20px -8px rgba(142,59,78,.7);transition:width .35s,height .35s;
+}
+header.stuck .brand-mark{width:38px;height:38px}
+.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.16rem;line-height:1.05}
+.brand-sub{font-size:.72rem;color:var(--muted);letter-spacing:.02em}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:9.5rem 0 5rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:54px 54px;
+  -webkit-mask-image:radial-gradient(120% 90% at 70% 10%,#000 25%,transparent 72%);
+  mask-image:radial-gradient(120% 90% at 70% 10%,#000 25%,transparent 72%);
+  opacity:.6;
+}
+.hero-glow{
+  position:absolute;width:760px;height:760px;top:-260px;right:-160px;border-radius:50%;
+  background:radial-gradient(circle,rgba(142,59,78,.28),rgba(142,59,78,.08) 45%,transparent 70%);
+  filter:blur(8px);
+}
+.hero-glow.two{top:auto;bottom:-320px;left:-220px;right:auto;width:620px;height:620px;
+  background:radial-gradient(circle,rgba(116,48,65,.20),transparent 68%);}
+.grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:multiply;pointer-events:none;z-index:1}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:3.5rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4rem);font-weight:600;margin:1.1rem 0 1.2rem}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:34rem;margin-bottom:1.7rem}
+.hero-cta-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.trust-row{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+.trust-row span{display:inline-flex;align-items:center;gap:.4rem}
+.trust-row iconify-icon{color:var(--accent);font-size:1.15rem}
+
+/* ---------- Capture card ---------- */
+.capture{
+  position:relative;border-radius:calc(var(--radius) + 6px);padding:2px;
+  background:linear-gradient(140deg,rgba(142,59,78,.55),rgba(255,255,255,.15) 40%,rgba(116,48,65,.5));
+  box-shadow:var(--shadow);
+}
+.capture-inner{
+  background:rgba(255,255,255,.86);backdrop-filter:blur(10px);
+  border-radius:var(--radius);padding:2rem 1.9rem;
+}
+.capture h3{font-size:1.32rem;font-weight:600;margin-bottom:.3rem}
+.capture .sub{color:var(--muted);font-size:.92rem;margin-bottom:1.3rem}
+.field{margin-bottom:.85rem}
+.field label{display:block;font-size:.78rem;font-weight:600;color:var(--ink);margin-bottom:.34rem;letter-spacing:.01em}
+.field input{
+  width:100%;padding:.82rem .95rem;border-radius:12px;border:1px solid var(--line);
+  background:#fff;font-family:'Inter',sans-serif;font-size:.96rem;color:var(--ink);transition:border-color .2s,box-shadow .2s;
+}
+.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(142,59,78,.14)}
+.capture .btn{width:100%;margin-top:.4rem}
+.form-note{font-size:.74rem;color:var(--muted);text-align:center;margin-top:.7rem}
+.success{display:none;text-align:center;padding:1rem 0}
+.success.show{display:block}
+.success iconify-icon{font-size:3rem;color:var(--accent)}
+.success h3{margin:.5rem 0 .3rem}
+.success p{color:var(--muted);font-size:.94rem}
+form.hide{display:none}
+
+/* ---------- Credibility band ---------- */
+.cred{background:var(--ink);color:var(--paper);padding:3.4rem 0}
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;text-align:center}
+.cred-item .num{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:600;color:#e8b7c2}
+.cred-item .lbl{color:rgba(247,243,241,.72);font-size:.92rem;margin-top:.2rem}
+.cred-item iconify-icon{font-size:1.8rem;color:#e8b7c2;margin-bottom:.3rem}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--sand);border-block:1px solid var(--line);overflow:hidden;padding:.9rem 0}
+.marquee-track{display:flex;gap:2.6rem;width:max-content;animation:scroll 26s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:inline-flex;align-items:center;gap:.6rem;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--accent2);font-weight:500;white-space:nowrap}
+.marquee-item iconify-icon{color:var(--accent);font-size:.7rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Sections ---------- */
+section.pad{padding:5.2rem 0}
+.sec-head{max-width:42rem;margin-bottom:2.8rem}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:600;margin:.7rem 0 .6rem}
+.sec-head p{color:var(--muted);font-size:1.04rem}
+
+/* ---------- Bento ---------- */
+.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:2rem 1.9rem;box-shadow:0 10px 30px -24px rgba(36,31,38,.5);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(142,59,78,.3)}
+.card-ic{
+  width:56px;height:56px;border-radius:15px;display:grid;place-items:center;margin-bottom:1.1rem;
+  background:linear-gradient(135deg,rgba(142,59,78,.14),rgba(116,48,65,.08));
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.card:hover .card-ic{transform:rotate(-8deg) scale(1.08)}
+.card-ic iconify-icon{font-size:1.7rem;color:var(--accent)}
+.card h3{font-size:1.34rem;font-weight:600;margin-bottom:.55rem}
+.card p{color:var(--muted);font-size:.97rem;margin-bottom:1rem}
+.card ul{list-style:none;display:grid;gap:.5rem}
+.card li{display:flex;align-items:flex-start;gap:.55rem;font-size:.92rem}
+.card li iconify-icon{color:var(--accent);font-size:1.1rem;flex:none;margin-top:.15rem}
+
+/* ---------- Lead magnet ---------- */
+.magnet{
+  position:relative;overflow:hidden;border-radius:calc(var(--radius) + 6px);
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+  padding:3.2rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2.5rem;align-items:center;
+  box-shadow:var(--shadow);
+}
+.magnet::before{
+  content:"";position:absolute;inset:0;opacity:.14;
+  background-image:linear-gradient(rgba(255,255,255,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.4) 1px,transparent 1px);
+  background-size:40px 40px;
+  -webkit-mask-image:radial-gradient(90% 90% at 90% 10%,#000,transparent 70%);
+  mask-image:radial-gradient(90% 90% at 90% 10%,#000,transparent 70%);
+}
+.magnet-txt{position:relative;z-index:1}
+.magnet .eyebrow{color:#f2cdd6}
+.magnet h2{color:#fff;font-size:clamp(1.7rem,3vw,2.3rem);font-weight:600;margin:.6rem 0 .7rem}
+.magnet p{color:rgba(255,255,255,.85);margin-bottom:1.4rem;max-width:30rem}
+.magnet-form{position:relative;z-index:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius);padding:1.5rem;backdrop-filter:blur(6px)}
+.magnet-form .field label{color:#fff}
+.magnet-form .field input{background:rgba(255,255,255,.94);border-color:transparent}
+.magnet-form .field input:focus{box-shadow:0 0 0 3px rgba(255,255,255,.4)}
+.magnet-form .btn{width:100%;background:#fff;color:var(--accent2);box-shadow:none}
+.magnet-form .btn:hover{background:#fff;transform:translateY(-2px)}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:3rem;align-items:center}
+.photo-ph{
+  aspect-ratio:4/5;border-radius:var(--radius);border:1.5px dashed rgba(142,59,78,.4);
+  background:
+    radial-gradient(120% 90% at 50% 0%,rgba(142,59,78,.10),transparent 60%),
+    var(--sand);
+  display:grid;place-items:center;text-align:center;color:var(--muted);gap:.5rem;position:relative;
+}
+.photo-ph iconify-icon{font-size:2.6rem;color:rgba(142,59,78,.5)}
+.photo-ph span{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.about h2{font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:600;margin:.6rem 0 1rem}
+.about p{color:var(--muted);margin-bottom:1rem;font-size:1.02rem}
+.about .sign{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--accent);font-weight:500;margin-top:.6rem}
+.about-tags{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.3rem}
+.tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:500;padding:.42rem .85rem;border-radius:999px;background:var(--sand);border:1px solid var(--line);color:var(--ink)}
+.tag iconify-icon{color:var(--accent);font-size:1rem}
+
+/* ---------- Testimonials ---------- */
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:2rem;box-shadow:0 10px 30px -26px rgba(36,31,38,.5);position:relative}
+.tcard .stars{display:flex;gap:.15rem;color:#d9a441;margin-bottom:.9rem}
+.tcard .stars iconify-icon{font-size:1.1rem}
+.tcard blockquote{font-family:'Fraunces',serif;font-size:1.12rem;line-height:1.5;color:var(--ink);margin-bottom:1.1rem}
+.tcard .who{display:flex;align-items:center;gap:.7rem}
+.tcard .who .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#fff;font-weight:600;font-size:.9rem;flex:none}
+.tcard .who .nm{font-weight:600;font-size:.92rem}
+.tcard .who .mt{font-size:.78rem;color:var(--muted)}
+.sample-badge{position:absolute;top:1.1rem;right:1.1rem;font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:rgba(142,59,78,.1);padding:.28rem .6rem;border-radius:999px}
+
+/* ---------- Final CTA ---------- */
+.final{position:relative;overflow:hidden;background:var(--ink);color:var(--paper);border-radius:calc(var(--radius) + 8px);padding:4rem 3rem;text-align:center}
+.final .hero-glow{opacity:.7}
+.final-inner{position:relative;z-index:2;max-width:38rem;margin-inline:auto}
+.final h2{color:#fff;font-size:clamp(2rem,4vw,2.9rem);font-weight:600;margin-bottom:.9rem}
+.final p{color:rgba(247,243,241,.78);margin-bottom:1.8rem;font-size:1.06rem}
+
+/* ---------- Footer ---------- */
+footer{padding:3.4rem 0 6rem;border-top:1px solid var(--line);margin-top:4rem}
+.foot{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap}
+.foot .brand-name{font-size:1.05rem}
+.foot p{color:var(--muted);font-size:.86rem;margin-top:.5rem;max-width:24rem}
+.foot-links{display:flex;gap:1.6rem;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+.foot-links a:hover{color:var(--accent)}
+.foot-legal{margin-top:2rem;font-size:.76rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1.3rem}
+
+/* ---------- Mobile sticky CTA ---------- */
+.mbar{
+  position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;
+  padding:.7rem .9rem;gap:.6rem;align-items:center;justify-content:space-between;
+  background:rgba(247,243,241,.9);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+}
+.mbar .mtxt{font-size:.82rem;font-weight:600;line-height:1.2}
+.mbar .mtxt small{display:block;color:var(--muted);font-weight:400;font-size:.72rem}
+.mbar .btn{flex:none}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:2.4rem}
+  .about{grid-template-columns:1fr;gap:2rem}
+  .photo-ph{max-width:340px}
+  .magnet{grid-template-columns:1fr;padding:2.4rem}
+  .bento,.tgrid,.cred-grid{grid-template-columns:1fr}
+  .cred-grid{gap:2rem}
+}
+@media(max-width:640px){
+  .hero{padding:8rem 0 3.5rem}
+  .final{padding:3rem 1.5rem}
+  .mbar{display:flex}
+  footer{padding-bottom:6.5rem}
+  .nav .btn{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
 </style>
 </head>
 <body>
 
-<header class="site">
-  <div class="nav">
-    <div class="brand">
-      <span class="mk">SR</span>
-      <div class="bt"><strong>Sandra Ridge</strong><small>Mansfield &amp; DFW Real Estate</small></div>
-    </div>
-    <a href="#valuation" class="btn"><iconify-icon icon="mdi:home-search-outline"></iconify-icon><span class="lbl">What's my home worth</span></a>
+<!-- feTurbulence grain (allowed single SVG) -->
+<svg width="0" height="0" style="position:absolute"><filter id="grainf"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter></svg>
+
+<!-- ===== Header ===== -->
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <div class="brand-mark">SR</div>
+      <div>
+        <div class="brand-name">Sandra Ridge</div>
+        <div class="brand-sub">Mansfield &amp; DFW Real Estate</div>
+      </div>
+    </a>
+    <a href="#valuation" class="btn btn-sm">
+      <iconify-icon icon="mdi:home-search-outline"></iconify-icon> What's my home worth
+    </a>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="valuation">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="rv">
-        <span class="eyebrow"><iconify-icon icon="mdi:map-marker"></iconify-icon> Mansfield, TX &amp; the DFW Metro</span>
-        <h1>Buying or selling in Mansfield? You deserve an agent <em>who knows this market by heart.</em></h1>
-        <p class="lede">Eighteen years helping DFW families make confident, well-timed moves. Whether you are listing your home or searching for the right one, I will guide you every step of the way.</p>
-        <ul class="hero-points">
-          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> 18 years of local Mansfield and DFW experience</li>
-          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Straight-talk pricing and a clear plan to sell</li>
-          <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Personal, responsive service from first call to close</li>
-        </ul>
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow two"></div>
+  </div>
+  <div class="grain" style="filter:url(#grainf)"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy reveal">
+      <span class="eyebrow"><iconify-icon icon="mdi:map-marker-radius-outline"></iconify-icon> Mansfield, TX &amp; the DFW Metroplex</span>
+      <h1>18 years on your side, <span class="accent-word">buying or selling</span> in Mansfield and DFW</h1>
+      <p class="lead">Local expertise, honest guidance, and a proven track record. Whether you are pricing to sell or searching for the right neighborhood, let's find out what your next move looks like.</p>
+      <div class="hero-cta-row">
+        <a href="#valuation" class="btn"><iconify-icon icon="mdi:home-analytics"></iconify-icon> Get my free home valuation</a>
+        <a href="#guide" class="btn btn-ghost"><iconify-icon icon="mdi:book-open-page-variant-outline"></iconify-icon> Free seller's guide</a>
       </div>
+      <div class="trust-row">
+        <span><iconify-icon icon="mdi:calendar-check-outline"></iconify-icon> ~18 years experience</span>
+        <span><iconify-icon icon="mdi:trophy-outline"></iconify-icon> Top-5 producer at Rendon Realty</span>
+        <span><iconify-icon icon="mdi:handshake-outline"></iconify-icon> Community first</span>
+      </div>
+    </div>
 
-      <div class="formcard rv" id="heroCard">
-        <div class="fform">
+    <div class="capture reveal" data-d="1" id="valuation">
+      <div class="capture-inner">
+        <form id="valForm" onsubmit="return handleSubmit(event,'valForm','valSuccess')">
           <h3>What's your home worth today?</h3>
-          <p class="pk">Get a free, no-obligation valuation for the current Mansfield market.</p>
-          <form onsubmit="return sent(this)" novalidate>
-            <div class="field"><label for="h-name">Full name</label><input id="h-name" type="text" placeholder="Jane Smith" required></div>
-            <div class="field"><label for="h-email">Email</label><input id="h-email" type="email" placeholder="jane@email.com" required></div>
-            <div class="field"><label for="h-phone">Phone</label><input id="h-phone" type="tel" placeholder="(817) 000-0000" required></div>
-            <button type="submit" class="btn block"><iconify-icon icon="mdi:home-analytics"></iconify-icon> Get my free home valuation</button>
-          </form>
-          <p class="fine"><iconify-icon icon="mdi:lock-outline"></iconify-icon> Your information stays private. No spam, ever.</p>
-        </div>
-        <div class="success"><iconify-icon icon="mdi:check-circle"></iconify-icon><h3>Thank you</h3><p>Your request is in. I will personally reach out with your Mansfield home valuation.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CREDIBILITY BAND -->
-<section class="creds">
-  <div class="wrap">
-    <div class="creds-grid">
-      <div class="cred rv"><iconify-icon icon="mdi:calendar-clock"></iconify-icon><b>18 yrs</b><span>Serving Mansfield &amp; DFW buyers and sellers</span></div>
-      <div class="cred rv"><iconify-icon icon="mdi:trophy-outline"></iconify-icon><b>Top 5</b><span>Producer of 78 agents at Rendon Realty</span></div>
-      <div class="cred rv"><iconify-icon icon="mdi:map-marker-radius"></iconify-icon><b>DFW</b><span>Deep local knowledge across the metro</span></div>
-      <div class="cred rv"><iconify-icon icon="mdi:handshake-outline"></iconify-icon><b>1-on-1</b><span>Personal guidance from first call to close</span></div>
-    </div>
-    <p class="creds-note">Record stated honestly. Top-5-of-78 reflects producer ranking at Rendon Realty.</p>
-  </div>
-</section>
-
-<!-- HOW I HELP -->
-<section class="pad">
-  <div class="wrap">
-    <div class="section-head rv">
-      <span class="eyebrow"><iconify-icon icon="mdi:compass-outline"></iconify-icon> How I help</span>
-      <h2>Two paths, one trusted guide</h2>
-      <p>Every move is different. Here is how I support you, whether you are stepping into a new home or preparing to sell the one you have.</p>
-    </div>
-    <div class="help-grid">
-      <div class="help-card rv">
-        <div class="help-icon"><iconify-icon icon="mdi:home-heart"></iconify-icon></div>
-        <h3>For buyers</h3>
-        <p>Find the right home in the right neighborhood, without the guesswork or the pressure.</p>
-        <ul class="help-list">
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Neighborhood and school-zone guidance across Mansfield and DFW</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Honest advice on what a home is really worth today</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Steady negotiation and support all the way to closing day</li>
-        </ul>
-      </div>
-      <div class="help-card rv">
-        <div class="help-icon"><iconify-icon icon="mdi:sign-real-estate"></iconify-icon></div>
-        <h3>For sellers</h3>
-        <p>Price it right, present it well, and sell with confidence in today's market.</p>
-        <ul class="help-list">
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Accurate, data-backed pricing for the current Mansfield market</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> A clear marketing plan to reach the right buyers</li>
-          <li><iconify-icon icon="mdi:check"></iconify-icon> Straightforward communication at every stage</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LEAD MAGNET -->
-<section class="pad magnet-band">
-  <div class="wrap">
-    <div class="magnet rv">
-      <div>
-        <span class="eyebrow"><iconify-icon icon="mdi:file-document-outline"></iconify-icon> Free download</span>
-        <h2>The Mansfield Seller's Guide</h2>
-        <div class="chk"><iconify-icon icon="mdi:check-circle"></iconify-icon> How to price your home for today's DFW market</div>
-        <div class="chk"><iconify-icon icon="mdi:check-circle"></iconify-icon> Simple, low-cost updates that lift your sale price</div>
-        <div class="chk"><iconify-icon icon="mdi:check-circle"></iconify-icon> The timeline from listing to closing, step by step</div>
-        <div class="chk"><iconify-icon icon="mdi:check-circle"></iconify-icon> Mistakes that cost sellers time and money</div>
-      </div>
-      <div class="mform" id="magnetCard">
-        <div class="fform">
-          <form onsubmit="return sent(this)" novalidate>
-            <div class="field"><label for="m-name">Full name</label><input id="m-name" type="text" placeholder="Jane Smith" required></div>
-            <div class="field"><label for="m-email">Email</label><input id="m-email" type="email" placeholder="jane@email.com" required></div>
-            <div class="field"><label for="m-phone">Phone</label><input id="m-phone" type="tel" placeholder="(817) 000-0000" required></div>
-            <button type="submit" class="btn block"><iconify-icon icon="mdi:download"></iconify-icon> Send me the free guide</button>
-          </form>
-        </div>
-        <div class="success"><iconify-icon icon="mdi:check-circle"></iconify-icon><h3 style="color:#fff">On its way</h3><p>Check your inbox for the Mansfield Seller's Guide.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="pad">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="rv">
-        <div class="photo-ph"><div><iconify-icon icon="mdi:account-tie-outline"></iconify-icon><span>Agent photo</span></div></div>
-      </div>
-      <div class="about-txt rv">
-        <span class="eyebrow"><iconify-icon icon="mdi:hand-wave-outline"></iconify-icon> About Sandra</span>
-        <h2>Eighteen years, and every client still feels like the first.</h2>
-        <p>I have called the Mansfield and DFW area home for a long time, and I have spent the last eighteen years helping my neighbors buy and sell with confidence. As a top-5 producer of 78 agents at Rendon Realty, I have learned that great real estate is less about transactions and more about people.</p>
-        <p>I am proud to serve this community with honesty, patience, and care, and I welcome every family who comes my way. When you work with me, you get someone who listens first, tells you the truth, and stays in your corner from the first showing to closing day.</p>
-        <p class="sig">- Sandra Ridge</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="pad magnet-band">
-  <div class="wrap">
-    <div class="section-head rv">
-      <span class="eyebrow"><iconify-icon icon="mdi:message-star-outline"></iconify-icon> Kind words</span>
-      <h2>What working with Sandra feels like</h2>
-      <p>The two cards below are sample placeholders and will be replaced with real, verified client reviews before this page goes live.</p>
-    </div>
-    <div class="tst-grid">
-      <div class="tst rv">
-        <span class="sample">Sample</span>
-        <div class="stars"><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon></div>
-        <p>"Sample testimonial placeholder. Sandra made selling our Mansfield home feel simple and stress-free, and she was honest with us every step of the way."</p>
-        <div class="who"><div class="av">JS</div><div><b>Sample Client</b><span>Mansfield, TX</span></div></div>
-      </div>
-      <div class="tst rv">
-        <span class="sample">Sample</span>
-        <div class="stars"><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon></div>
-        <p>"Sample testimonial placeholder. As first-time buyers we had a lot of questions, and Sandra answered all of them with patience and real local knowledge."</p>
-        <div class="who"><div class="av">RM</div><div><b>Sample Client</b><span>DFW Metro</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final pad">
-  <div class="wrap">
-    <span class="eyebrow"><iconify-icon icon="mdi:home-city-outline"></iconify-icon> Let's talk</span>
-    <h2>Ready to make your next move?</h2>
-    <p>Start with a free, no-pressure home valuation. Whether you are buying, selling, or just exploring, I would be glad to help you plan your next step in Mansfield and DFW.</p>
-    <div class="formcard rv" id="finalCard">
-      <div class="fform">
-        <h3>Get my free home valuation</h3>
-        <p class="pk">Free valuation, no obligation.</p>
-        <form onsubmit="return sent(this)" novalidate>
-          <div class="field"><label for="f-name">Full name</label><input id="f-name" type="text" placeholder="Jane Smith" required></div>
-          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="jane@email.com" required></div>
-          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" placeholder="(817) 000-0000" required></div>
-          <button type="submit" class="btn block"><iconify-icon icon="mdi:arrow-right"></iconify-icon> Get my free home valuation</button>
+          <p class="sub">Get a free, no-obligation valuation based on the current Mansfield market.</p>
+          <div class="field">
+            <label for="vName">Name</label>
+            <input id="vName" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="vEmail">Email</label>
+            <input id="vEmail" name="email" type="email" placeholder="you@email.com" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="vPhone">Phone</label>
+            <input id="vPhone" name="phone" type="tel" placeholder="(817) 555-0100" required autocomplete="tel">
+          </div>
+          <button class="btn" type="submit"><iconify-icon icon="mdi:home-analytics"></iconify-icon> Get my free home valuation</button>
+          <p class="form-note">No spam. No pressure. Just a real number from a real local agent.</p>
         </form>
+        <div class="success" id="valSuccess">
+          <iconify-icon icon="mdi:check-circle-outline"></iconify-icon>
+          <h3>Thank you</h3>
+          <p>Your request is in. Sandra will personally reach out with your home valuation shortly.</p>
+        </div>
       </div>
-      <div class="success"><iconify-icon icon="mdi:check-circle"></iconify-icon><h3>Thank you</h3><p>I will be in touch shortly with your valuation and next steps.</p></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===== Credibility band ===== -->
+<section class="cred">
+  <div class="wrap cred-grid">
+    <div class="cred-item reveal"><iconify-icon icon="mdi:calendar-star"></iconify-icon><div class="num">~18 yrs</div><div class="lbl">Serving Mansfield &amp; DFW buyers and sellers</div></div>
+    <div class="cred-item reveal" data-d="1"><iconify-icon icon="mdi:podium-gold"></iconify-icon><div class="num">Top 5 of 78</div><div class="lbl">Producer at Rendon Realty</div></div>
+    <div class="cred-item reveal" data-d="2"><iconify-icon icon="mdi:home-heart"></iconify-icon><div class="num">Local &amp; trusted</div><div class="lbl">Community-minded, relationship-driven service</div></div>
+  </div>
+</section>
+
+<!-- ===== Marquee ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Mansfield <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Arlington <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Grand Prairie <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Kennedale <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Midlothian <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Burleson <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Fort Worth <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Mansfield <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Arlington <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Grand Prairie <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Kennedale <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Midlothian <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Burleson <iconify-icon icon="mdi:circle"></iconify-icon></span>
+    <span class="marquee-item">Fort Worth <iconify-icon icon="mdi:circle"></iconify-icon></span>
+  </div>
+</div>
+
+<!-- ===== How I help ===== -->
+<section class="pad wrap">
+  <div class="sec-head center reveal">
+    <span class="eyebrow"><iconify-icon icon="mdi:compass-outline"></iconify-icon> How I help</span>
+    <h2>Whatever your move, you have a guide</h2>
+    <p>Two paths, one steady hand. Clear pricing, real local knowledge, and someone in your corner from first call to closing table.</p>
+  </div>
+  <div class="bento">
+    <div class="card reveal">
+      <div class="card-ic"><iconify-icon icon="mdi:key-chain-variant"></iconify-icon></div>
+      <h3>For buyers</h3>
+      <p>Find the right home in the right neighborhood, at a price that makes sense, without the guesswork.</p>
+      <ul>
+        <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Neighborhood-by-neighborhood guidance across Mansfield and DFW</li>
+        <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Honest advice on value, schools, and long-term fit</li>
+        <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Skilled negotiation to protect your budget</li>
+      </ul>
+    </div>
+    <div class="card reveal" data-d="1">
+      <div class="card-ic"><iconify-icon icon="mdi:sign-real-estate"></iconify-icon></div>
+      <h3>For sellers</h3>
+      <p>Price it right, present it well, and reach the buyers who matter. Backed by ~18 years of local selling.</p>
+      <ul>
+        <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Accurate, current-market home valuation</li>
+        <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Staging and prep guidance that lifts perceived value</li>
+        <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> A marketing plan tailored to your home and timeline</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Lead magnet ===== -->
+<section class="pad wrap" id="guide">
+  <div class="magnet reveal">
+    <div class="magnet-txt">
+      <span class="eyebrow"><iconify-icon icon="mdi:gift-outline"></iconify-icon> Free download</span>
+      <h2>The Mansfield Seller's Guide</h2>
+      <p>A simple, no-fluff walkthrough of what it takes to sell for the best price in today's market: pricing, prep, timing, and the mistakes that cost sellers the most. Get your copy free.</p>
+      <div class="trust-row" style="color:rgba(255,255,255,.8)">
+        <span><iconify-icon icon="mdi:file-pdf-box" style="color:#fff"></iconify-icon> Instant PDF</span>
+        <span><iconify-icon icon="mdi:lock-outline" style="color:#fff"></iconify-icon> Your info stays private</span>
+      </div>
+    </div>
+    <form class="magnet-form" id="guideForm" onsubmit="return handleSubmit(event,'guideForm','guideSuccess')">
+      <div class="field">
+        <label for="gName">Name</label>
+        <input id="gName" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="gEmail">Email</label>
+        <input id="gEmail" name="email" type="email" placeholder="you@email.com" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="gPhone">Phone</label>
+        <input id="gPhone" name="phone" type="tel" placeholder="(817) 555-0100" required autocomplete="tel">
+      </div>
+      <button class="btn" type="submit"><iconify-icon icon="mdi:download"></iconify-icon> Send me the free guide</button>
+      <div class="success" id="guideSuccess">
+        <iconify-icon icon="mdi:check-circle-outline" style="color:#fff"></iconify-icon>
+        <h3 style="color:#fff">On its way</h3>
+        <p style="color:rgba(255,255,255,.85)">Check your inbox. Your seller's guide is being sent now.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="pad wrap">
+  <div class="about">
+    <div class="photo-ph reveal">
+      <iconify-icon icon="mdi:image-account"></iconify-icon>
+      <span>Agent photo</span>
+    </div>
+    <div class="about-copy reveal" data-d="1">
+      <span class="eyebrow"><iconify-icon icon="mdi:account-heart-outline"></iconify-icon> About Sandra</span>
+      <h2>A steady, trusted hand in the Mansfield market</h2>
+      <p>For nearly two decades, Sandra Ridge has helped families across Mansfield and the DFW Metroplex buy and sell with confidence. As a top-5 producer of 78 agents at Rendon Realty, she pairs deep local knowledge with the kind of honest, patient guidance that turns first-time clients into lifelong ones.</p>
+      <p>Grounded in her faith and rooted in her community, Sandra believes real estate is about people first. Every client, every neighborhood, every move treated with the same care she would want for her own family.</p>
+      <div class="about-tags">
+        <span class="tag"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Mansfield local</span>
+        <span class="tag"><iconify-icon icon="mdi:handshake-outline"></iconify-icon> Relationship-driven</span>
+        <span class="tag"><iconify-icon icon="mdi:church-outline"></iconify-icon> Community &amp; faith minded</span>
+        <span class="tag"><iconify-icon icon="mdi:home-city-outline"></iconify-icon> Rendon Realty</span>
+      </div>
+      <div class="sign">- Sandra Ridge</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section class="pad wrap">
+  <div class="sec-head center reveal">
+    <span class="eyebrow"><iconify-icon icon="mdi:message-star-outline"></iconify-icon> In their words</span>
+    <h2>What working with Sandra feels like</h2>
+    <p>Sample placeholders shown below. Real client reviews will be featured here.</p>
+  </div>
+  <div class="tgrid">
+    <div class="tcard reveal">
+      <span class="sample-badge">Sample</span>
+      <div class="stars">
+        <iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon>
+      </div>
+      <blockquote>"Sandra made selling our home feel simple. She priced it right, guided us through every step, and we felt looked after the whole way."</blockquote>
+      <div class="who">
+        <div class="av">JM</div>
+        <div><div class="nm">Sample Client</div><div class="mt">Sold in Mansfield, TX</div></div>
+      </div>
+    </div>
+    <div class="tcard reveal" data-d="1">
+      <span class="sample-badge">Sample</span>
+      <div class="stars">
+        <iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon>
+      </div>
+      <blockquote>"As first-time buyers we had a hundred questions. Sandra answered every one with patience and honesty. We could not have asked for a better guide."</blockquote>
+      <div class="who">
+        <div class="av">RT</div>
+        <div><div class="nm">Sample Client</div><div class="mt">Bought in the DFW area</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="pad wrap">
+  <div class="final reveal">
+    <div class="hero-glow" style="top:-200px;right:-120px"></div>
+    <div class="final-inner">
+      <span class="eyebrow" style="color:#e8b7c2"><iconify-icon icon="mdi:home-clock-outline"></iconify-icon> Let's talk</span>
+      <h2>Curious what your home is worth?</h2>
+      <p>Start with a free valuation. No obligation, no pressure, just a clear, current number and a real conversation about your next move.</p>
+      <a href="#valuation" class="btn"><iconify-icon icon="mdi:home-analytics"></iconify-icon> Get my free home valuation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <span class="mk">SR</span>
-        <div><strong>Sandra Ridge</strong><br><span style="font-size:.8rem;color:#b7abaf">Real Estate Agent, Rendon Realty</span></div>
+    <div class="foot">
+      <div>
+        <div class="brand" style="margin-bottom:.3rem">
+          <div class="brand-mark" style="width:38px;height:38px">SR</div>
+          <div class="brand-name">Sandra Ridge</div>
+        </div>
+        <p>Real estate agent serving Mansfield, TX and the greater DFW Metroplex. Rendon Realty.</p>
       </div>
-      <div class="foot-social">
-        <a href="#valuation" aria-label="Home valuation"><iconify-icon icon="mdi:home-search-outline"></iconify-icon></a>
-        <a href="#valuation" aria-label="Email Sandra"><iconify-icon icon="mdi:email-outline"></iconify-icon></a>
-        <a href="#valuation" aria-label="Instagram"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+      <div class="foot-links">
+        <a href="#valuation">Home valuation</a>
+        <a href="#guide">Seller's guide</a>
+        <a href="#top">Buyers</a>
+        <a href="#top">Sellers</a>
       </div>
     </div>
-    <div class="legal">
-      Sandra Ridge, Licensed Texas Real Estate Agent with Rendon Realty, serving Mansfield, TX and the greater DFW metro. This is a demonstration landing page prepared as a concept. The years of experience and top-producer standing referenced are drawn from public sources; testimonials shown are placeholders to be replaced with real, permitted client reviews. Equal Housing Opportunity. All information deemed reliable but not guaranteed. All services provided in accordance with Texas Real Estate Commission rules. &copy; 2026 Sandra Ridge.
+    <div class="foot-legal">
+      &copy; <span id="yr"></span> Sandra Ridge, Rendon Realty. All rights reserved. Equal Housing Opportunity. This page is a private demo and is not indexed. Information is provided for illustration; no results are guaranteed.
     </div>
   </div>
 </footer>
 
+<!-- ===== Mobile sticky CTA ===== -->
+<div class="mbar">
+  <div class="mtxt">Free home valuation<small>No obligation, real local pricing</small></div>
+  <a href="#valuation" class="btn btn-sm"><iconify-icon icon="mdi:home-analytics"></iconify-icon> Get it</a>
+</div>
+
 <script>
-function sent(f){
-  if(!f.checkValidity()){f.reportValidity();return false;}
-  var card=f.closest('.formcard,.mform');
-  card.classList.add('ok');
-  card.scrollIntoView({behavior:'smooth',block:'center'});
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const header = document.getElementById('header');
+const onScroll = () => header.classList.toggle('stuck', window.scrollY > 20);
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
+
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const d = parseInt(e.target.getAttribute('data-d')||'0',10);
+      setTimeout(()=>e.target.classList.add('in'), d*110);
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+function handleSubmit(ev, formId, successId){
+  ev.preventDefault();
+  document.getElementById(formId).classList.add('hide');
+  document.getElementById(successId).classList.add('show');
   return false;
 }
-var io=new IntersectionObserver(function(es){
-  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
 </script>
-
 </body>
 </html>

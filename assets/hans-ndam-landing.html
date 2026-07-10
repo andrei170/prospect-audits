@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Hans Ndam | Dallas Real Estate</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2317233a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' text-anchor='middle' fill='%23b8912f'%3EHN%3C/text%3E%3C/svg%3E">
+<title>Hans Ndam - Dallas Real Estate</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317233a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' text-anchor='middle' fill='%23b8912f'%3EHN%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 <style>
 :root{
@@ -17,11 +17,17 @@
   --sand:#eee9df;
   --accent:#b8912f;
   --accent2:#9a7724;
-  --white:#ffffff;
-  --muted:#5b6577;
+  --ink-soft:#33415c;
   --line:rgba(23,35,58,.12);
-  --shadow:0 18px 50px rgba(23,35,58,.12);
-  --radius:16px;
+  --white:#ffffff;
+  --shadow-sm:0 2px 8px rgba(23,35,58,.06);
+  --shadow-md:0 12px 32px rgba(23,35,58,.10);
+  --shadow-lg:0 30px 70px rgba(23,35,58,.18);
+  --r-sm:12px;
+  --r-md:18px;
+  --r-lg:28px;
+  --sp:clamp(64px,9vw,120px);
+  --maxw:1180px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -31,369 +37,631 @@ body{
   background:var(--paper);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
-h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.05;letter-spacing:-.01em;font-weight:600}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-family:'Inter',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:12px;
+  font-weight:600;
+  color:var(--accent2);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.accent-word{
+  background:linear-gradient(100deg,var(--accent) 0%,#e2be5f 45%,var(--accent2) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Buttons */
+.btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:15px;
+  padding:15px 26px;
+  border-radius:100px;
+  border:0;
+  cursor:pointer;
+  overflow:hidden;
+  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
+  white-space:nowrap;
+}
+.btn iconify-icon{font-size:18px}
+.btn-gold{
+  background:linear-gradient(120deg,var(--accent) 0%,var(--accent2) 100%);
+  color:#fff;
+  box-shadow:0 10px 26px rgba(184,145,47,.34);
+}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(184,145,47,.44)}
+.btn-ink{background:var(--ink);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-ink:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent2)}
+.btn::after{
+  content:"";
+  position:absolute;
+  top:0;left:-120%;
+  width:70%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:skewX(-20deg);
+  transition:left .6s ease;
+}
+.btn:hover::after{left:130%}
 
 /* Header */
 header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(246,246,242,.88);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  transition:padding .35s ease,background .35s ease,box-shadow .35s ease;
+  padding:20px 0;
 }
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+header .bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:12px 22px;
+  border-radius:100px;
+  background:rgba(246,246,242,.55);
+  backdrop-filter:blur(14px) saturate(150%);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  border:1px solid rgba(255,255,255,.4);
+  box-shadow:0 6px 24px rgba(23,35,58,.06);
+  transition:padding .35s ease,box-shadow .35s ease,background .35s ease;
+}
+header.stuck{padding:10px 0}
+header.stuck .bar{
+  padding:9px 22px;
+  background:rgba(246,246,242,.82);
+  box-shadow:0 10px 30px rgba(23,35,58,.12);
+}
 .brand{display:flex;align-items:center;gap:12px}
 .brand .mark{
-  width:44px;height:44px;border-radius:12px;
-  background:linear-gradient(135deg,var(--ink),#26334f);
-  display:grid;place-items:center;color:var(--accent);
-  font-family:'Fraunces',serif;font-weight:700;font-size:18px;
-  box-shadow:var(--shadow);
+  width:42px;height:42px;flex:0 0 42px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--ink),#26375a);
+  display:grid;place-items:center;
+  color:var(--accent);
+  font-family:'Fraunces',serif;
+  font-weight:700;
+  font-size:19px;
+  box-shadow:inset 0 0 0 1px rgba(184,145,47,.4);
 }
-.brand .name{font-family:'Fraunces',serif;font-weight:600;font-size:19px;line-height:1.1}
-.brand .sub{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);font-weight:600}
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--accent);color:var(--ink);
-  font-weight:600;font-size:15px;
-  padding:12px 22px;border-radius:999px;border:0;cursor:pointer;
-  transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
-  box-shadow:0 10px 24px rgba(184,145,47,.28);
-}
-.btn:hover{transform:translateY(-2px);background:var(--accent2);box-shadow:0 14px 30px rgba(184,145,47,.38)}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-.btn.ghost:hover{background:var(--sand)}
-.btn.dark{background:var(--ink);color:var(--white);box-shadow:0 10px 24px rgba(23,35,58,.25)}
-.btn.dark:hover{background:#26334f}
-.nav .btn{display:none}
-@media(min-width:720px){.nav .btn{display:inline-flex}}
+.brand .who{line-height:1.15}
+.brand .who b{font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:-.01em}
+.brand .who span{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+header .btn{padding:11px 20px;font-size:14px}
+@media(max-width:640px){.brand .who span{font-size:10px}header .btn span{display:none}header .btn{padding:11px 14px}}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;padding:56px 0 72px}
-.hero::before{
-  content:"";position:absolute;inset:0;
+.hero{
+  position:relative;
+  padding:170px 0 90px;
+  overflow:hidden;
   background:
-    radial-gradient(900px 460px at 88% -8%,rgba(184,145,47,.16),transparent 60%),
-    radial-gradient(760px 520px at -6% 110%,rgba(23,35,58,.08),transparent 60%);
-  z-index:0;
+    radial-gradient(1100px 620px at 78% -8%,rgba(184,145,47,.20),transparent 60%),
+    radial-gradient(900px 700px at 8% 110%,rgba(23,35,58,.06),transparent 55%),
+    linear-gradient(180deg,#f9f8f4,var(--paper));
 }
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
-@media(min-width:940px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:48px}}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);background:var(--sand);padding:7px 14px;border-radius:999px;margin-bottom:18px}
-.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin-bottom:18px}
-.hero h1 .g{color:var(--accent2)}
-.hero .lead{font-size:1.12rem;color:var(--muted);max-width:52ch;margin-bottom:24px}
-.trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px}
-.trust .t{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:500;color:var(--ink)}
-.trust .t iconify-icon{color:var(--accent2);font-size:20px}
-
-/* Card / form */
-.card{
-  background:var(--white);border:1px solid var(--line);
-  border-radius:var(--radius);box-shadow:var(--shadow);
+.hero .grid-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(23,35,58,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(23,35,58,.05) 1px,transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(900px 620px at 60% 30%,#000,transparent 78%);
+  -webkit-mask-image:radial-gradient(900px 620px at 60% 30%,#000,transparent 78%);
+  pointer-events:none;
 }
-.form-card{padding:28px}
-.form-card h3{font-size:1.4rem;margin-bottom:6px}
-.form-card .fsub{font-size:14px;color:var(--muted);margin-bottom:20px}
-.field{margin-bottom:14px}
-.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--ink)}
-.field input{
-  width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;
-  font-family:inherit;font-size:15px;color:var(--ink);background:var(--paper);
-  transition:border .16s ease,box-shadow .16s ease;
+.grain{position:absolute;inset:0;opacity:.05;pointer-events:none;mix-blend-mode:multiply}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media(max-width:920px){.hero-inner{grid-template-columns:1fr;gap:38px}}
+.hero h1{
+  font-size:clamp(40px,6.4vw,74px);
+  font-weight:600;
+  margin:20px 0 20px;
 }
-.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,145,47,.18);background:var(--white)}
-.form-card .btn{width:100%;justify-content:center;margin-top:6px}
-.form-note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:6px}
-.form-note iconify-icon{color:var(--accent2)}
-.success{display:none;text-align:center;padding:22px 8px}
-.success.show{display:block}
-.success iconify-icon{font-size:52px;color:var(--accent)}
-.success h3{margin:12px 0 6px}
-.success p{color:var(--muted);font-size:15px}
-.form-live.hide{display:none}
-
-/* Photo placeholder */
-.ph{
-  position:relative;border-radius:var(--radius);overflow:hidden;
-  background:
-    repeating-linear-gradient(45deg,var(--sand),var(--sand) 14px,#e7e1d4 14px,#e7e1d4 28px);
+.hero p.lede{font-size:clamp(16px,2vw,19px);color:var(--ink-soft);max-width:36ch;margin-bottom:26px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:13px;font-weight:500;color:var(--ink-soft);
+  background:rgba(255,255,255,.7);
   border:1px solid var(--line);
-  display:grid;place-items:center;text-align:center;color:var(--muted);
-  min-height:280px;
+  padding:8px 14px;border-radius:100px;
 }
-.ph .plabel{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;background:rgba(246,246,242,.82);padding:14px 18px;border-radius:12px;border:1px dashed var(--accent2)}
-.ph .plabel iconify-icon{font-size:30px;color:var(--accent2)}
+.pill iconify-icon{color:var(--accent2);font-size:16px}
+
+/* Capture card */
+.capture{
+  position:relative;
+  border-radius:var(--r-lg);
+  padding:2px;
+  background:linear-gradient(135deg,rgba(184,145,47,.6),rgba(255,255,255,.15) 40%,rgba(23,35,58,.25));
+  box-shadow:var(--shadow-lg);
+}
+.capture .inner{
+  border-radius:calc(var(--r-lg) - 2px);
+  background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.86));
+  backdrop-filter:blur(10px);
+  padding:32px 30px;
+}
+.capture .cap-head{display:flex;align-items:center;gap:11px;margin-bottom:6px}
+.capture .cap-head iconify-icon{font-size:26px;color:var(--accent)}
+.capture h3{font-size:23px;font-weight:600}
+.capture .sub{font-size:14px;color:var(--ink-soft);margin:6px 0 20px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12.5px;font-weight:600;letter-spacing:.02em;margin-bottom:6px;color:var(--ink)}
+.field input{
+  width:100%;
+  font-family:'Inter',sans-serif;
+  font-size:15px;
+  padding:13px 15px;
+  border-radius:12px;
+  border:1.5px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  transition:border-color .2s,box-shadow .2s;
+}
+.field input::placeholder{color:#9aa3b2}
+.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(184,145,47,.16)}
+.capture .btn{width:100%;margin-top:6px}
+.capture .fineprint{font-size:11.5px;color:#8a92a2;text-align:center;margin-top:12px;line-height:1.5}
+.form-success{
+  display:none;
+  text-align:center;
+  padding:20px 8px;
+}
+.form-success.show{display:block;animation:pop .5s cubic-bezier(.22,1,.36,1)}
+.form-success iconify-icon{font-size:46px;color:var(--accent)}
+.form-success h4{font-family:'Fraunces',serif;font-size:22px;margin:10px 0 6px}
+.form-success p{font-size:14px;color:var(--ink-soft)}
+@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+
+/* Marquee */
+.marquee{
+  background:var(--ink);
+  color:#fff;
+  padding:16px 0;
+  overflow:hidden;
+  position:relative;
+  border-top:1px solid rgba(184,145,47,.3);
+  border-bottom:1px solid rgba(184,145,47,.3);
+}
+.marquee .track{display:flex;gap:44px;white-space:nowrap;width:max-content;animation:scroll 26s linear infinite}
+.marquee .item{display:inline-flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-size:19px;font-weight:500;letter-spacing:.01em}
+.marquee .item iconify-icon{color:var(--accent);font-size:14px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.marquee:hover .track{animation-play-state:paused}
 
 /* Sections */
-section.block{padding:72px 0}
-.sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
-.sec-head .eyebrow{margin-bottom:14px}
-.sec-head h2{font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:12px}
-.sec-head p{color:var(--muted);font-size:1.05rem}
+section.pad{padding:var(--sp) 0}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{font-size:clamp(30px,4.4vw,48px);margin:14px 0 14px;font-weight:600}
+.sec-head p{font-size:17px;color:var(--ink-soft)}
 
-/* How I help cards */
-.cards{display:grid;grid-template-columns:1fr;gap:22px}
-@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
-.hcard{padding:30px 26px;transition:transform .2s ease,box-shadow .2s ease}
-.hcard:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(23,35,58,.14)}
-.hcard .ico{
-  width:54px;height:54px;border-radius:14px;display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--ink),#26334f);color:var(--accent);
-  font-size:28px;margin-bottom:18px;
+/* Bento / cards */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:860px){.bento{grid-template-columns:1fr}}
+.card{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  padding:30px 28px;
+  box-shadow:var(--shadow-sm);
+  transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s,border-color .4s;
+  overflow:hidden;
 }
-.hcard h3{font-size:1.28rem;margin-bottom:8px}
-.hcard p{color:var(--muted);font-size:15px}
+.card::before{
+  content:"";
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),transparent);
+  opacity:0;transition:opacity .4s;
+}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:rgba(184,145,47,.4)}
+.card:hover::before{opacity:1}
+.card .ic{
+  width:56px;height:56px;
+  border-radius:15px;
+  background:linear-gradient(135deg,var(--sand),#fff);
+  border:1px solid var(--line);
+  display:grid;place-items:center;
+  margin-bottom:20px;
+  transition:transform .4s cubic-bezier(.22,1,.36,1);
+}
+.card .ic iconify-icon{font-size:28px;color:var(--accent2)}
+.card:hover .ic{transform:rotate(-8deg) scale(1.06)}
+.card h3{font-size:21px;margin-bottom:10px;font-weight:600}
+.card p{font-size:15px;color:var(--ink-soft)}
 
-/* Lead magnet block */
-.magnet{background:var(--ink);color:var(--white);border-radius:22px;overflow:hidden;position:relative}
-.magnet::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 340px at 92% 0%,rgba(184,145,47,.22),transparent 62%);}
-.magnet-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:34px;align-items:center;padding:44px 36px}
-@media(min-width:880px){.magnet-grid{grid-template-columns:1.1fr .9fr;padding:52px 48px}}
-.magnet .eyebrow{background:rgba(184,145,47,.16);color:var(--accent)}
-.magnet h2{color:var(--white);font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:14px}
-.magnet p{color:rgba(246,246,242,.78);margin-bottom:22px;max-width:46ch}
-.mlist{list-style:none;display:grid;gap:12px;margin-bottom:6px}
-.mlist li{display:flex;align-items:flex-start;gap:11px;font-size:15px;color:rgba(246,246,242,.9)}
-.mlist li iconify-icon{color:var(--accent);font-size:22px;flex-shrink:0;margin-top:1px}
-.mini-form{background:var(--white);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
-.mini-form h3{color:var(--ink);font-size:1.25rem;margin-bottom:16px;text-align:center}
-.mini-form .btn{width:100%;justify-content:center}
-.mini-form .success h3{color:var(--ink)}
+/* Lead magnet */
+.magnet{
+  position:relative;
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  background:
+    radial-gradient(700px 400px at 90% 10%,rgba(184,145,47,.28),transparent 60%),
+    linear-gradient(135deg,var(--ink),#22344f);
+  color:#fff;
+  padding:clamp(38px,5vw,64px);
+  box-shadow:var(--shadow-lg);
+}
+.magnet .grain{opacity:.08;mix-blend-mode:overlay}
+.magnet-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+@media(max-width:860px){.magnet-grid{grid-template-columns:1fr;gap:30px}}
+.magnet h2{font-size:clamp(28px,3.8vw,42px);margin-bottom:16px;color:#fff}
+.magnet p{color:rgba(255,255,255,.82);font-size:16px;margin-bottom:24px;max-width:44ch}
+.magnet ul{list-style:none;display:grid;gap:11px;margin-bottom:8px}
+.magnet li{display:flex;align-items:flex-start;gap:11px;font-size:15px;color:rgba(255,255,255,.9)}
+.magnet li iconify-icon{color:var(--accent);font-size:20px;flex:0 0 auto;margin-top:2px}
+.magnet-form{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--r-md);
+  padding:28px 26px;
+  backdrop-filter:blur(6px);
+}
+.magnet-form .field label{color:rgba(255,255,255,.85)}
+.magnet-form .field input{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
+.magnet-form .field input::placeholder{color:rgba(255,255,255,.5)}
+.magnet-form .field input:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(184,145,47,.22)}
+.magnet-form h3{color:#fff;font-size:20px;display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.magnet-form h3 iconify-icon{color:var(--accent)}
+.magnet-form .btn{width:100%}
+.magnet-form .form-success h4{color:#fff}
+.magnet-form .form-success p{color:rgba(255,255,255,.8)}
 
-/* Why work with me */
-.why-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
-@media(min-width:900px){.why-grid{grid-template-columns:.9fr 1.1fr}}
-.why-list{display:grid;gap:20px}
-.wrow{display:flex;gap:16px;align-items:flex-start}
-.wrow .ico{width:48px;height:48px;flex-shrink:0;border-radius:12px;display:grid;place-items:center;background:var(--sand);color:var(--accent2);font-size:24px}
-.wrow h3{font-size:1.15rem;margin-bottom:4px}
-.wrow p{color:var(--muted);font-size:15px}
+/* Why me */
+.why{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
+@media(max-width:860px){.why{grid-template-columns:1fr;gap:34px}}
+.photo-ph{
+  position:relative;
+  border-radius:var(--r-lg);
+  aspect-ratio:4/5;
+  background:
+    repeating-linear-gradient(45deg,var(--sand),var(--sand) 14px,#e7e1d5 14px,#e7e1d5 28px);
+  border:1px solid var(--line);
+  display:grid;place-items:center;
+  box-shadow:var(--shadow-md);
+  overflow:hidden;
+}
+.photo-ph .tag{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:var(--ink-soft);text-align:center;
+  background:rgba(246,246,242,.86);
+  padding:16px 22px;border-radius:14px;border:1px dashed var(--accent);
+}
+.photo-ph .tag iconify-icon{font-size:40px;color:var(--accent2)}
+.photo-ph .tag b{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.photo-ph .tag small{font-size:11.5px;color:#8a92a2}
+.why-list{display:grid;gap:20px;margin-top:26px}
+.why-item{display:flex;gap:16px;align-items:flex-start}
+.why-item .wic{
+  width:48px;height:48px;flex:0 0 48px;
+  border-radius:13px;
+  background:linear-gradient(135deg,var(--ink),#2a3d5e);
+  display:grid;place-items:center;color:var(--accent);
+  box-shadow:var(--shadow-sm);
+}
+.why-item .wic iconify-icon{font-size:23px}
+.why-item h4{font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-bottom:4px}
+.why-item p{font-size:14.5px;color:var(--ink-soft)}
 
-/* Neighborhoods */
-.hoods{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.hood{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-weight:500;font-size:15px;transition:transform .16s ease,box-shadow .16s ease}
-.hood:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-.hood iconify-icon{color:var(--accent2);font-size:19px}
+/* Neighborhood chips */
+.chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14.5px;font-weight:500;
+  padding:11px 20px;border-radius:100px;
+  background:#fff;border:1px solid var(--line);
+  color:var(--ink);
+  box-shadow:var(--shadow-sm);
+  transition:transform .3s,border-color .3s,color .3s;
+}
+.chip iconify-icon{color:var(--accent);font-size:16px}
+.chip:hover{transform:translateY(-3px);border-color:var(--accent);color:var(--accent2)}
 
 /* Testimonials */
-.tgrid{display:grid;grid-template-columns:1fr;gap:24px}
-@media(min-width:760px){.tgrid{grid-template-columns:1fr 1fr}}
-.tcard{padding:30px 28px;position:relative}
-.sample-tag{position:absolute;top:16px;right:16px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);background:var(--sand);padding:4px 10px;border-radius:999px}
-.stars{display:flex;gap:3px;color:var(--accent);font-size:18px;margin-bottom:14px}
-.tcard p.quote{font-size:15px;color:var(--ink);margin-bottom:18px}
-.tby{display:flex;align-items:center;gap:12px}
-.tby .av{width:44px;height:44px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--accent2);font-size:22px}
-.tby .who strong{display:block;font-size:14px}
-.tby .who span{font-size:13px;color:var(--muted)}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.tgrid{grid-template-columns:1fr}}
+.tcard{
+  position:relative;
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--r-md);padding:32px 30px;
+  box-shadow:var(--shadow-sm);
+}
+.sample-chip{
+  position:absolute;top:18px;right:18px;
+  font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent2);
+  background:rgba(184,145,47,.12);
+  border:1px solid rgba(184,145,47,.35);
+  padding:5px 11px;border-radius:100px;
+}
+.tcard .stars{display:flex;gap:2px;color:var(--accent);margin-bottom:16px}
+.tcard .stars iconify-icon{font-size:18px}
+.tcard blockquote{font-family:'Fraunces',serif;font-size:18.5px;line-height:1.5;font-weight:500;color:var(--ink);margin-bottom:20px}
+.tcard .who{display:flex;align-items:center;gap:12px}
+.tcard .av{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--sand),#e7e1d5);
+  border:1px solid var(--line);
+  display:grid;place-items:center;color:var(--ink-soft);
+}
+.tcard .av iconify-icon{font-size:22px}
+.tcard .who b{font-family:'Inter',sans-serif;font-size:14.5px;font-weight:600;display:block}
+.tcard .who span{font-size:12.5px;color:#8a92a2}
 
 /* Final CTA */
-.final{background:linear-gradient(135deg,var(--ink),#26334f);color:var(--white);border-radius:24px;text-align:center;padding:60px 36px;position:relative;overflow:hidden}
-.final::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 320px at 50% -10%,rgba(184,145,47,.24),transparent 62%)}
-.final .inner{position:relative;z-index:1}
-.final h2{color:var(--white);font-size:clamp(1.8rem,3.8vw,2.7rem);margin-bottom:14px}
-.final p{color:rgba(246,246,242,.82);max-width:52ch;margin:0 auto 26px;font-size:1.08rem}
-.final .btn{background:var(--accent);color:var(--ink)}
-.final .btn:hover{background:#c99e35}
+.finalcta{
+  position:relative;
+  text-align:center;
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  background:
+    radial-gradient(600px 380px at 50% -20%,rgba(184,145,47,.30),transparent 60%),
+    linear-gradient(135deg,var(--ink),#22344f);
+  color:#fff;
+  padding:clamp(48px,6vw,88px) 28px;
+  box-shadow:var(--shadow-lg);
+}
+.finalcta .grain{opacity:.08;mix-blend-mode:overlay}
+.finalcta .inner{position:relative;z-index:2;max-width:640px;margin:0 auto}
+.finalcta h2{font-size:clamp(30px,4.6vw,52px);color:#fff;margin-bottom:18px}
+.finalcta p{color:rgba(255,255,255,.82);font-size:17px;margin-bottom:30px}
+.finalcta .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 /* Footer */
-footer{background:var(--ink);color:rgba(246,246,242,.72);padding:48px 0 36px;margin-top:8px}
-.foot-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
-.foot-brand{display:flex;align-items:center;gap:12px}
-.foot-brand .mark{width:42px;height:42px;border-radius:11px;background:rgba(184,145,47,.16);display:grid;place-items:center;color:var(--accent);font-family:'Fraunces',serif;font-weight:700}
-.foot-brand .name{font-family:'Fraunces',serif;font-weight:600;color:var(--white);font-size:18px}
-.foot-brand .sub{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.foot-contact{display:grid;gap:8px;font-size:14px}
-.foot-contact a{display:flex;align-items:center;gap:9px}
-.foot-contact iconify-icon{color:var(--accent);font-size:18px}
-.foot-legal{border-top:1px solid rgba(246,246,242,.14);margin-top:30px;padding-top:22px;font-size:13px;line-height:1.7}
-.foot-legal .lic{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:rgba(246,246,242,.9)}
-.foot-legal .lic iconify-icon{color:var(--accent)}
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:60px 0 120px}
+.foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand{display:flex;align-items:center;gap:13px}
+.foot-brand .mark{
+  width:46px;height:46px;border-radius:12px;
+  background:linear-gradient(135deg,#22344f,#2c4265);
+  display:grid;place-items:center;color:var(--accent);
+  font-family:'Fraunces',serif;font-weight:700;font-size:20px;
+  box-shadow:inset 0 0 0 1px rgba(184,145,47,.4);
+}
+.foot-brand b{font-family:'Fraunces',serif;color:#fff;font-size:20px;display:block}
+.foot-brand span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.foot-links{display:flex;gap:28px;flex-wrap:wrap}
+.foot-links a{font-size:14px;color:rgba(255,255,255,.72);transition:color .2s}
+.foot-links a:hover{color:var(--accent)}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:rgba(255,255,255,.5)}
+.foot-bottom .lic{display:flex;align-items:center;gap:8px}
+.foot-bottom .lic iconify-icon{color:var(--accent);font-size:15px}
 
-/* Reveal */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+/* Mobile sticky CTA */
+.mobile-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  display:none;
+  gap:10px;padding:11px 14px;
+  background:rgba(246,246,242,.92);
+  backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  box-shadow:0 -6px 24px rgba(23,35,58,.1);
+}
+.mobile-cta .btn{flex:1;padding:14px;font-size:14.5px}
+@media(max-width:720px){.mobile-cta{display:flex}footer{padding-bottom:96px}}
+
+/* Scroll reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
 .rv.in{opacity:1;transform:none}
 
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+/* A11y */
+a:focus-visible,button:focus-visible,input:focus-visible,.btn:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
+  border-radius:8px;
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
+<!-- Grain filter (single feTurbulence data source) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="grainf"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter>
+</svg>
+
 <!-- Header -->
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Hans Ndam, Dallas Real Estate">
-      <span class="mark">HN</span>
-      <span>
-        <span class="name">Hans Ndam</span><br>
-        <span class="sub">Dallas Real Estate</span>
-      </span>
-    </a>
-    <a href="#valuation" class="btn">
-      <iconify-icon icon="mdi:home-search-outline"></iconify-icon>
-      Get my home value
-    </a>
+<header id="hdr">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#top" aria-label="Hans Ndam, Dallas Real Estate">
+        <span class="mark">HN</span>
+        <span class="who"><b>Hans Ndam</b><span>Dallas Real Estate</span></span>
+      </a>
+      <a class="btn btn-gold" href="#valuation"><iconify-icon icon="mdi:home-search-outline" aria-hidden="true"></iconify-icon><span>Get my home value</span></a>
+    </div>
   </div>
 </header>
 
 <!-- Hero -->
 <section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="rv">
-      <span class="eyebrow"><iconify-icon icon="mdi:map-marker"></iconify-icon> Dallas, Texas</span>
-      <h1>Buying or selling in <span class="g">Dallas?</span> Let's get you moving.</h1>
-      <p class="lead">Local guidance from a licensed Dallas agent - clear pricing, straight answers, and a plan built around your timeline. Start with a free, no-obligation home valuation.</p>
-      <div class="trust">
-        <span class="t"><iconify-icon icon="mdi:shield-check-outline"></iconify-icon> Licensed Texas agent</span>
-        <span class="t"><iconify-icon icon="mdi:map-marker-radius-outline"></iconify-icon> Dallas market focus</span>
-        <span class="t"><iconify-icon icon="mdi:message-reply-text-outline"></iconify-icon> Responsive communication</span>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="grain" style="filter:url(#grainf)" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow rv"><iconify-icon icon="mdi:map-marker" aria-hidden="true"></iconify-icon> Dallas, Texas</span>
+      <h1 class="rv" data-d="1">What's your <span class="accent-word">Dallas home</span> really worth today?</h1>
+      <p class="lede rv" data-d="2">Get a personalized, no-pressure home valuation from a licensed Dallas agent who knows these neighborhoods block by block.</p>
+      <div class="hero-badges rv" data-d="3">
+        <span class="pill"><iconify-icon icon="mdi:shield-check-outline" aria-hidden="true"></iconify-icon> Licensed TX Agent</span>
+        <span class="pill"><iconify-icon icon="mdi:map-marker-radius-outline" aria-hidden="true"></iconify-icon> Local Dallas Expert</span>
+        <span class="pill"><iconify-icon icon="mdi:message-reply-text-outline" aria-hidden="true"></iconify-icon> Responsive &amp; Direct</span>
       </div>
     </div>
 
-    <div class="rv card form-card" id="valuation">
-      <div class="form-live">
-        <h3>What's your Dallas home worth?</h3>
-        <p class="fsub">Get a free, no-obligation valuation and a quick market snapshot for your neighborhood.</p>
-        <form action="#" novalidate onsubmit="return handleForm(event,'s1')">
+    <div class="capture rv" data-d="2" id="valuation">
+      <div class="inner">
+        <form action="#" novalidate onsubmit="return handleForm(event,this)">
+          <div class="cap-head">
+            <iconify-icon icon="mdi:home-analytics" aria-hidden="true"></iconify-icon>
+            <h3>Free Home Valuation</h3>
+          </div>
+          <p class="sub">Tell me where to send your Dallas home value estimate.</p>
           <div class="field">
-            <label for="n1">Full name</label>
-            <input id="n1" name="name" type="text" placeholder="Your name" required autocomplete="name">
+            <label for="v-name">Full name</label>
+            <input id="v-name" name="name" type="text" placeholder="Your name" required autocomplete="name">
           </div>
           <div class="field">
-            <label for="e1">Email</label>
-            <input id="e1" name="email" type="email" placeholder="you@email.com" required autocomplete="email">
+            <label for="v-email">Email address</label>
+            <input id="v-email" name="email" type="email" placeholder="you@email.com" required autocomplete="email">
           </div>
           <div class="field">
-            <label for="p1">Phone</label>
-            <input id="p1" name="phone" type="tel" placeholder="(214) 000-0000" required autocomplete="tel">
+            <label for="v-phone">Phone number</label>
+            <input id="v-phone" name="phone" type="tel" placeholder="(214) 000-0000" required autocomplete="tel">
           </div>
-          <button class="btn" type="submit">
-            <iconify-icon icon="mdi:home-analytics"></iconify-icon>
-            Get my free home valuation
-          </button>
-          <p class="form-note"><iconify-icon icon="mdi:lock-outline"></iconify-icon> Your details stay private. No spam, ever.</p>
+          <button class="btn btn-gold" type="submit"><iconify-icon icon="mdi:chart-line" aria-hidden="true"></iconify-icon> Get my free home valuation</button>
+          <p class="fineprint">No spam and no obligation. Your details stay private and are used only to prepare your estimate.</p>
         </form>
-      </div>
-      <div class="success" id="s1">
-        <iconify-icon icon="mdi:check-circle"></iconify-icon>
-        <h3>Thank you</h3>
-        <p>We'll be in touch shortly with your Dallas home valuation.</p>
+        <div class="form-success" role="status" aria-live="polite">
+          <iconify-icon icon="mdi:check-circle" aria-hidden="true"></iconify-icon>
+          <h4>Thank you</h4>
+          <p>We'll be in touch shortly with your Dallas home valuation.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span class="item">Uptown <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Oak Lawn <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Bishop Arts <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Lakewood <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Preston Hollow <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Deep Ellum <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Uptown <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Oak Lawn <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Bishop Arts <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Lakewood <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Preston Hollow <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+    <span class="item">Deep Ellum <iconify-icon icon="mdi:star-four-points"></iconify-icon></span>
+  </div>
+</div>
+
 <!-- How I help -->
-<section class="block" style="background:var(--sand)">
+<section class="pad">
   <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow"><iconify-icon icon="mdi:handshake-outline"></iconify-icon> How I help</span>
-      <h2>Guidance for every kind of move</h2>
-      <p>Whether you're buying your first home, selling for top value, or relocating to the metroplex, you get a clear plan and a partner through every step.</p>
+    <div class="sec-head center rv">
+      <span class="eyebrow"><iconify-icon icon="mdi:hand-heart-outline" aria-hidden="true"></iconify-icon> How I help</span>
+      <h2>Guidance for every move in Dallas</h2>
+      <p>Whether you're buying your first place, selling for top dollar, or landing in Dallas from out of state, you get a clear plan and a real person on your side.</p>
     </div>
-    <div class="cards">
-      <div class="rv card hcard">
-        <div class="ico"><iconify-icon icon="mdi:home-heart"></iconify-icon></div>
+    <div class="bento">
+      <div class="card rv" data-d="1">
+        <div class="ic"><iconify-icon icon="mdi:key-chain-variant" aria-hidden="true"></iconify-icon></div>
         <h3>Buyers</h3>
-        <p>Find the right home at the right price with local insight on neighborhoods, schools, and value, plus steady guidance from search to closing.</p>
+        <p>Find the right home with a search built around your budget, your must-haves, and the Dallas neighborhoods that actually fit your life.</p>
       </div>
-      <div class="rv card hcard">
-        <div class="ico"><iconify-icon icon="mdi:sale"></iconify-icon></div>
+      <div class="card rv" data-d="2">
+        <div class="ic"><iconify-icon icon="mdi:sign-real-estate" aria-hidden="true"></iconify-icon></div>
         <h3>Sellers</h3>
-        <p>Price with confidence and present your home to stand out. A tailored plan to attract strong offers and negotiate on your behalf.</p>
+        <p>Price with real local data, present your home at its best, and market it to the right buyers so it moves on your terms.</p>
       </div>
-      <div class="rv card hcard">
-        <div class="ico"><iconify-icon icon="mdi:airplane-marker"></iconify-icon></div>
+      <div class="card rv" data-d="3">
+        <div class="ic"><iconify-icon icon="mdi:airplane-landing" aria-hidden="true"></iconify-icon></div>
         <h3>Relocating to Dallas</h3>
-        <p>New to the area? Get a local's view of where to live, what to expect, and how to plan a smooth move to the Dallas metroplex.</p>
+        <p>New to the metroplex? Get a neighborhood-by-neighborhood breakdown so your first Dallas home feels like the right call.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Lead magnet -->
-<section class="block">
+<section class="pad" style="padding-top:0">
   <div class="wrap">
-    <div class="rv magnet">
+    <div class="magnet rv" id="guide">
+      <div class="grain" style="filter:url(#grainf)" aria-hidden="true"></div>
       <div class="magnet-grid">
         <div>
-          <span class="eyebrow"><iconify-icon icon="mdi:book-open-page-variant-outline"></iconify-icon> Free download</span>
+          <span class="eyebrow" style="color:var(--accent)"><iconify-icon icon="mdi:book-open-page-variant-outline" aria-hidden="true"></iconify-icon> Free download</span>
           <h2>The Dallas Buyer's Guide</h2>
-          <p>A practical walkthrough of buying a home in Dallas, from budgeting to closing. Written for real buyers, not jargon.</p>
-          <ul class="mlist">
-            <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> How to set a realistic budget and get pre-approved</li>
-            <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Neighborhood snapshots across the metroplex</li>
-            <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> What to expect at each step through closing</li>
-            <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Questions to ask before you make an offer</li>
+          <p>A straight-talking playbook for buying a home in Dallas without the guesswork. Grab your copy free.</p>
+          <ul>
+            <li><iconify-icon icon="mdi:check-circle-outline" aria-hidden="true"></iconify-icon> How to read Dallas neighborhoods and price trends</li>
+            <li><iconify-icon icon="mdi:check-circle-outline" aria-hidden="true"></iconify-icon> A step-by-step timeline from search to closing day</li>
+            <li><iconify-icon icon="mdi:check-circle-outline" aria-hidden="true"></iconify-icon> Questions to ask before you make an offer</li>
           </ul>
         </div>
-        <div class="mini-form">
-          <div class="form-live">
-            <h3>Send me the free guide</h3>
-            <form action="#" novalidate onsubmit="return handleForm(event,'s2')">
-              <div class="field">
-                <label for="n2">Full name</label>
-                <input id="n2" name="name" type="text" placeholder="Your name" required autocomplete="name">
-              </div>
-              <div class="field">
-                <label for="e2">Email</label>
-                <input id="e2" name="email" type="email" placeholder="you@email.com" required autocomplete="email">
-              </div>
-              <div class="field">
-                <label for="p2">Phone</label>
-                <input id="p2" name="phone" type="tel" placeholder="(214) 000-0000" required autocomplete="tel">
-              </div>
-              <button class="btn dark" type="submit">
-                <iconify-icon icon="mdi:download"></iconify-icon>
-                Get the free guide
-              </button>
-              <p class="form-note"><iconify-icon icon="mdi:lock-outline"></iconify-icon> No spam. Unsubscribe anytime.</p>
-            </form>
+        <form class="magnet-form" action="#" novalidate onsubmit="return handleForm(event,this)">
+          <h3><iconify-icon icon="mdi:tray-arrow-down" aria-hidden="true"></iconify-icon> Send me the guide</h3>
+          <div class="field">
+            <label for="g-name">Full name</label>
+            <input id="g-name" name="name" type="text" placeholder="Your name" required autocomplete="name">
           </div>
-          <div class="success" id="s2">
-            <iconify-icon icon="mdi:check-circle"></iconify-icon>
-            <h3>On its way</h3>
-            <p>We'll be in touch shortly with your Dallas Buyer's Guide.</p>
+          <div class="field">
+            <label for="g-email">Email address</label>
+            <input id="g-email" name="email" type="email" placeholder="you@email.com" required autocomplete="email">
           </div>
-        </div>
+          <div class="field">
+            <label for="g-phone">Phone number</label>
+            <input id="g-phone" name="phone" type="tel" placeholder="(214) 000-0000" required autocomplete="tel">
+          </div>
+          <button class="btn btn-gold" type="submit"><iconify-icon icon="mdi:download" aria-hidden="true"></iconify-icon> Get the free guide</button>
+          <div class="form-success" role="status" aria-live="polite">
+            <iconify-icon icon="mdi:check-circle" aria-hidden="true"></iconify-icon>
+            <h4>You're all set</h4>
+            <p>We'll be in touch shortly with your Dallas buyer's guide.</p>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Why work with me -->
-<section class="block" style="background:var(--sand)">
-  <div class="wrap why-grid">
-    <div class="rv ph" aria-hidden="true">
-      <span class="plabel"><iconify-icon icon="mdi:account-box-outline"></iconify-icon> Agent photo</span>
-    </div>
-    <div class="rv">
-      <span class="eyebrow"><iconify-icon icon="mdi:star-outline"></iconify-icon> Why work with me</span>
-      <h2 style="font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:22px">A local partner who keeps it straight</h2>
-      <div class="why-list">
-        <div class="wrow">
-          <div class="ico"><iconify-icon icon="mdi:map-marker-star-outline"></iconify-icon></div>
-          <div>
-            <h3>Local expert</h3>
-            <p>Dallas-focused knowledge of neighborhoods, pricing trends, and what makes a home move well in this market.</p>
-          </div>
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="why">
+      <div class="photo-ph rv">
+        <div class="tag">
+          <iconify-icon icon="mdi:account-tie" aria-hidden="true"></iconify-icon>
+          <b>Agent Photo</b>
+          <small>placeholder - Hans Ndam headshot</small>
         </div>
-        <div class="wrow">
-          <div class="ico"><iconify-icon icon="mdi:clock-fast"></iconify-icon></div>
-          <div>
-            <h3>Responsive</h3>
-            <p>Quick, clear communication so you're never left guessing. Questions answered and next steps always laid out.</p>
-          </div>
+      </div>
+      <div>
+        <div class="sec-head rv" style="margin-bottom:0">
+          <span class="eyebrow"><iconify-icon icon="mdi:handshake-outline" aria-hidden="true"></iconify-icon> Why work with me</span>
+          <h2>A local agent who actually picks up the phone</h2>
+          <p>Real estate is personal. You deserve someone who knows Dallas, communicates clearly, and treats your move like it matters.</p>
         </div>
-        <div class="wrow">
-          <div class="ico"><iconify-icon icon="mdi:chart-box-outline"></iconify-icon></div>
-          <div>
-            <h3>Data-driven</h3>
-            <p>Decisions grounded in current market data, not guesswork, so you price, offer, and negotiate with confidence.</p>
+        <div class="why-list">
+          <div class="why-item rv" data-d="1">
+            <div class="wic"><iconify-icon icon="mdi:map-marker-check-outline" aria-hidden="true"></iconify-icon></div>
+            <div><h4>Local Dallas expert</h4><p>I live and work these neighborhoods, so you get real ground-level insight, not a generic printout.</p></div>
+          </div>
+          <div class="why-item rv" data-d="2">
+            <div class="wic"><iconify-icon icon="mdi:clock-fast" aria-hidden="true"></iconify-icon></div>
+            <div><h4>Responsive and direct</h4><p>You reach me, not a call center. Clear updates and honest answers at every step.</p></div>
+          </div>
+          <div class="why-item rv" data-d="3">
+            <div class="wic"><iconify-icon icon="mdi:chart-box-outline" aria-hidden="true"></iconify-icon></div>
+            <div><h4>Data-driven decisions</h4><p>Pricing and strategy grounded in current Dallas market data, so your choices are informed.</p></div>
           </div>
         </div>
       </div>
@@ -401,59 +669,57 @@ footer{background:var(--ink);color:rgba(246,246,242,.72);padding:48px 0 36px;mar
   </div>
 </section>
 
-<!-- Neighborhoods -->
-<section class="block">
+<!-- Neighborhood chips -->
+<section class="pad" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow"><iconify-icon icon="mdi:home-city-outline"></iconify-icon> Where I work</span>
-      <h2>Dallas neighborhoods and beyond</h2>
-      <p>From the heart of the city to the surrounding suburbs, here are areas across the Dallas metroplex.</p>
+    <div class="sec-head center rv">
+      <span class="eyebrow"><iconify-icon icon="mdi:city-variant-outline" aria-hidden="true"></iconify-icon> Where I work</span>
+      <h2>Dallas neighborhoods I know</h2>
     </div>
-    <div class="hoods rv">
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Uptown</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Oak Cliff</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Lakewood</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Bishop Arts</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Preston Hollow</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Deep Ellum</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Frisco</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Plano</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Richardson</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> McKinney</span>
-      <span class="hood"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon> Irving</span>
+    <div class="chips rv">
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Uptown</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Oak Lawn</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Bishop Arts</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Lakewood</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Preston Hollow</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Deep Ellum</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Kessler Park</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> M Streets</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Design District</span>
+      <span class="chip"><iconify-icon icon="mdi:map-marker"></iconify-icon> Lower Greenville</span>
     </div>
   </div>
 </section>
 
 <!-- Testimonials -->
-<section class="block" style="background:var(--sand)">
+<section class="pad" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow"><iconify-icon icon="mdi:format-quote-close"></iconify-icon> What clients say</span>
-      <h2>Real stories, sample placeholders</h2>
-      <p>The cards below are clearly labeled samples, shown as placeholders until real client reviews are added.</p>
+    <div class="sec-head center rv">
+      <span class="eyebrow"><iconify-icon icon="mdi:comment-quote-outline" aria-hidden="true"></iconify-icon> In their words</span>
+      <h2>What clients say</h2>
+      <p>Sample placeholders shown below. Real client reviews will replace these once collected.</p>
     </div>
     <div class="tgrid">
-      <div class="rv card tcard">
-        <span class="sample-tag">Sample</span>
-        <div class="stars">
+      <div class="tcard rv" data-d="1">
+        <span class="sample-chip">Sample</span>
+        <div class="stars" aria-hidden="true">
           <iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon>
         </div>
-        <p class="quote">This is a sample placeholder testimonial. A real client story about a smooth buying experience in Dallas would appear here once collected.</p>
-        <div class="tby">
-          <div class="av"><iconify-icon icon="mdi:account"></iconify-icon></div>
-          <div class="who"><strong>Sample Client</strong><span>Dallas homebuyer</span></div>
+        <blockquote>This is placeholder testimonial copy shown to demonstrate layout. A real client quote will appear here once collected.</blockquote>
+        <div class="who">
+          <span class="av"><iconify-icon icon="mdi:account" aria-hidden="true"></iconify-icon></span>
+          <div><b>Client Name</b><span>Sample placeholder - Dallas, TX</span></div>
         </div>
       </div>
-      <div class="rv card tcard">
-        <span class="sample-tag">Sample</span>
-        <div class="stars">
+      <div class="tcard rv" data-d="2">
+        <span class="sample-chip">Sample</span>
+        <div class="stars" aria-hidden="true">
           <iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon>
         </div>
-        <p class="quote">This is a sample placeholder testimonial. A real seller story about pricing and a strong result would appear here once collected.</p>
-        <div class="tby">
-          <div class="av"><iconify-icon icon="mdi:account"></iconify-icon></div>
-          <div class="who"><strong>Sample Client</strong><span>Dallas home seller</span></div>
+        <blockquote>Another placeholder quote used only to show the design. Genuine reviews from real clients will be added here.</blockquote>
+        <div class="who">
+          <span class="av"><iconify-icon icon="mdi:account" aria-hidden="true"></iconify-icon></span>
+          <div><b>Client Name</b><span>Sample placeholder - Dallas, TX</span></div>
         </div>
       </div>
     </div>
@@ -461,13 +727,18 @@ footer{background:var(--ink);color:rgba(246,246,242,.72);padding:48px 0 36px;mar
 </section>
 
 <!-- Final CTA -->
-<section class="block">
+<section class="pad" style="padding-top:0">
   <div class="wrap">
-    <div class="rv final">
+    <div class="finalcta rv">
+      <div class="grain" style="filter:url(#grainf)" aria-hidden="true"></div>
       <div class="inner">
-        <h2>Ready to make your move?</h2>
-        <p>Start with a free home valuation or grab the Dallas Buyer's Guide. Either way, you'll get a clear, no-pressure next step.</p>
-        <a href="#valuation" class="btn"><iconify-icon icon="mdi:home-search-outline"></iconify-icon> Get my free home valuation</a>
+        <span class="eyebrow" style="color:var(--accent)"><iconify-icon icon="mdi:home-city-outline" aria-hidden="true"></iconify-icon> Ready when you are</span>
+        <h2>Let's talk about your Dallas move</h2>
+        <p>Start with a free home valuation or the Dallas buyer's guide. No pressure, just a clear next step.</p>
+        <div class="row">
+          <a class="btn btn-gold" href="#valuation"><iconify-icon icon="mdi:home-search-outline" aria-hidden="true"></iconify-icon> Get my home value</a>
+          <a class="btn btn-ghost" href="#guide" style="color:#fff;border-color:rgba(255,255,255,.35)"><iconify-icon icon="mdi:book-open-page-variant-outline" aria-hidden="true"></iconify-icon> Get the buyer's guide</a>
+        </div>
       </div>
     </div>
   </div>
@@ -477,48 +748,58 @@ footer{background:var(--ink);color:rgba(246,246,242,.72);padding:48px 0 36px;mar
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="foot-brand">
-          <span class="mark">HN</span>
-          <span>
-            <span class="name">Hans Ndam</span><br>
-            <span class="sub">Dallas Real Estate</span>
-          </span>
-        </div>
-        <p style="margin-top:14px;max-width:34ch;font-size:14px">Helping Dallas buyers and sellers make confident moves with local, honest guidance.</p>
+      <div class="foot-brand">
+        <span class="mark">HN</span>
+        <div><b>Hans Ndam</b><span>Dallas Real Estate</span></div>
       </div>
-      <div class="foot-contact">
-        <a href="#valuation"><iconify-icon icon="mdi:home-search-outline"></iconify-icon> Free home valuation</a>
-        <a href="#valuation"><iconify-icon icon="mdi:book-open-page-variant-outline"></iconify-icon> Dallas Buyer's Guide</a>
-        <a href="https://instagram.com/ndamrealtor" rel="nofollow"><iconify-icon icon="simple-icons:instagram"></iconify-icon> @ndamrealtor</a>
+      <div class="foot-links">
+        <a href="#valuation">Home Valuation</a>
+        <a href="#guide">Buyer's Guide</a>
+        <a href="#top">How I Help</a>
+        <a href="#valuation">Contact</a>
       </div>
     </div>
-    <div class="foot-legal">
-      <span class="lic"><iconify-icon icon="mdi:certificate-outline"></iconify-icon> Licensed Texas Real Estate Agent - TREC #737686</span>
-      <p style="margin-top:8px">Dallas, Texas. This page is provided for information purposes only and is not a guarantee of any specific result. All home valuations are estimates.</p>
+    <div class="foot-bottom">
+      <span class="lic"><iconify-icon icon="mdi:certificate-outline" aria-hidden="true"></iconify-icon> Licensed Texas Real Estate Agent - TREC #737686</span>
+      <span>&copy; 2026 Hans Ndam. All rights reserved.</span>
     </div>
   </div>
 </footer>
 
+<!-- Mobile sticky CTA -->
+<div class="mobile-cta">
+  <a class="btn btn-ink" href="tel:+1"><iconify-icon icon="mdi:phone" aria-hidden="true"></iconify-icon> Call</a>
+  <a class="btn btn-gold" href="#valuation"><iconify-icon icon="mdi:home-search-outline" aria-hidden="true"></iconify-icon> Get my home value</a>
+</div>
+
 <script>
-function handleForm(e,successId){
-  e.preventDefault();
-  var form=e.target;
-  if(!form.checkValidity()){form.reportValidity();return false;}
-  var live=form.closest('.form-live');
-  if(live)live.classList.add('hide');
-  var box=document.getElementById(successId);
-  if(box)box.classList.add('show');
+// Header shrink on scroll
+var hdr=document.getElementById('hdr');
+function onScroll(){if(window.scrollY>24){hdr.classList.add('stuck')}else{hdr.classList.remove('stuck')}}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// Scroll reveal with staggered delays
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      var d=parseInt(e.target.getAttribute('data-d')||'0',10);
+      e.target.style.transitionDelay=(d*90)+'ms';
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+// Form success state
+function handleForm(ev,form){
+  ev.preventDefault();
+  var wrap=form.parentElement;
+  var success=wrap.querySelector('.form-success');
+  form.style.display='none';
+  if(success){success.classList.add('show')}
   return false;
 }
-(function(){
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
-    });
-  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
-})();
 </script>
 </body>
 </html>

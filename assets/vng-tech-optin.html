@@ -3,210 +3,561 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free 5-Point Website Audit | VNG Tech</title>
-<meta name="description" content="Is your website costing you leads? Get a free 5-point website audit and see exactly what to fix.">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#17202e">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2317202e'/%3E%3Ctext x='50' y='66' font-family='Inter,Arial' font-size='38' font-weight='bold' fill='%233b76d6' text-anchor='middle'%3EVNG%3C/text%3E%3C/svg%3E">
+<title>Free 5-Point Website Audit | VNG Tech</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317202e'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' text-anchor='middle' fill='%233b76d6'%3EV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 <style>
-  :root{
-    --ink:#17202e; --ink2:#28344a; --paper:#f5f7fa; --sand:#eaeef4; --card:#fff;
-    --accent:#3b76d6; --accent2:#2b5db8; --sky:#7fa9ee;
-    --line:#e2e8f1; --muted:#5c6675; --muted2:#8a94a3;
-    --sh1:0 1px 2px rgba(23,32,46,.05),0 4px 12px rgba(23,32,46,.08);
-    --sh2:0 10px 24px rgba(23,32,46,.1),0 30px 60px rgba(23,32,46,.16);
-    --ease:cubic-bezier(.2,.7,.2,1);
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#232c3a;background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,h4{font-family:'Fraunces','Georgia',serif;font-weight:600;line-height:1.1;color:var(--ink);letter-spacing:-.015em}
-  h1{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.025em}
-  h2{font-size:clamp(1.6rem,3.2vw,2.3rem)}
-  p{margin-bottom:1rem;color:var(--muted)}
-  a{color:var(--accent2);text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
-  .narrow{max-width:720px;margin:0 auto;padding:0 26px}
-  section{padding:62px 0}
-  iconify-icon{display:inline-block;width:1em;height:1em;vertical-align:-.135em}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--accent);margin-bottom:16px}
-  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--accent)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(180deg,#4884e4,var(--accent));color:#fff;font-weight:700;padding:15px 30px;border-radius:12px;border:none;cursor:pointer;font-size:1rem;font-family:inherit;transition:.2s var(--ease);box-shadow:0 10px 26px rgba(59,118,214,.3)}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(59,118,214,.42)}
-  .btn.block{width:100%}
-  header.site{position:sticky;top:0;z-index:40;background:rgba(245,247,250,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{max-width:1080px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .brand{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-weight:600;color:var(--ink);font-size:1.1rem}
-  .brand .mk{width:36px;height:36px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800;font-family:'Inter';font-size:.78rem}
-  .nav .btn{padding:10px 20px;font-size:.9rem}
-  @media(max-width:620px){.nav .btn{display:none}}
-  .hero{position:relative;overflow:hidden;padding:70px 0 58px}
-  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(1100px 520px at 82% 4%,rgba(59,118,214,.14),transparent 60%),radial-gradient(760px 480px at 2% 100%,rgba(23,32,46,.06),transparent 55%);z-index:0}
-  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
-  .hero h1 span{color:var(--accent)}
-  .hero .sub{font-size:1.14rem;color:var(--ink2);max-width:46ch;margin-top:6px}
-  .trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px}
-  .trust span{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--muted);font-weight:500}
-  .trust iconify-icon{color:var(--accent);font-size:1.15rem}
-  .formcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--sh2)}
-  .formcard h3{font-size:1.35rem;margin-bottom:4px}
-  .formcard .pk{font-size:.86rem;color:var(--muted);margin-bottom:18px}
-  .field{margin-bottom:13px}
-  .field label{display:block;font-size:.78rem;font-weight:600;color:var(--ink2);margin-bottom:5px}
-  .field input{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;font-size:1rem;font-family:inherit;background:#fafbfd;transition:.15s}
-  .field input:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(59,118,214,.13)}
-  .formcard .fine{font-size:.74rem;color:var(--muted2);text-align:center;margin-top:12px}
-  .success{display:none;text-align:center;padding:22px 6px}
-  .success iconify-icon{font-size:2.6rem;color:var(--accent)}
-  .success h3{margin:10px 0 4px}
-  .ok .success{display:block}.ok .fform{display:none}
-  .feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px}
-  .fcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:22px 18px;box-shadow:var(--sh1);text-align:center;transition:.2s var(--ease)}
-  .fcard:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
-  .fcard .ic{width:46px;height:46px;border-radius:12px;background:linear-gradient(160deg,#dbe7fb,#c7d9f6);display:grid;place-items:center;color:var(--accent2);font-size:1.4rem;margin:0 auto 12px}
-  .fcard h3{font-size:1rem;margin-bottom:4px}.fcard p{font-size:.85rem;margin:0}
-  @media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.feat-grid{grid-template-columns:1fr}}
-  .why{background:var(--sand)}
-  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
-  .why-item{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 20px}
-  .why-item iconify-icon{color:var(--accent);font-size:1.4rem;flex:none;margin-top:2px}
-  .why-item b{color:var(--ink);font-size:.98rem}.why-item p{font-size:.9rem;margin:4px 0 0}
-  .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
-  .tcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:22px;box-shadow:var(--sh1);position:relative}
-  .tcard .chip{position:absolute;top:14px;right:14px;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent2);background:#dbe7fb;padding:3px 9px;border-radius:20px}
-  .tcard p{font-style:italic;color:var(--ink2);font-size:.95rem}
-  .tcard .who2{display:flex;align-items:center;gap:10px;margin-top:12px}
-  .tcard .av{width:38px;height:38px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--muted2)}
-  .tcard b{font-size:.9rem;color:var(--ink)}.tcard small{color:var(--muted2);font-size:.78rem}
-  .final{background:linear-gradient(165deg,#1a2333,#131a26);color:#fff;text-align:center}
-  .final h2{color:#fff}.final p{color:#c2cdda;max-width:48ch;margin:12px auto 26px}
-  .final .formcard{max-width:460px;margin:0 auto;text-align:left}.final .formcard h3{color:var(--ink)}
-  footer{padding:34px 0;border-top:1px solid var(--line)}
-  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:var(--muted)}
-  .foot .dis{font-size:.72rem;color:var(--muted2);max-width:60ch;margin-top:10px}
-  .rv{opacity:0;transform:translateY(22px);transition:.6s var(--ease)}.rv.in{opacity:1;transform:none}
-  @media(max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:32px}.why-grid,.tgrid{grid-template-columns:1fr}}
+:root{
+  --ink:#17202e;
+  --paper:#f5f7fa;
+  --sand:#eaeef4;
+  --accent:#3b76d6;
+  --accent2:#2b5db8;
+  --line:rgba(23,32,46,.10);
+  --muted:#5a6577;
+  --shadow:0 18px 50px -20px rgba(23,32,46,.28);
+  --radius:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.08;letter-spacing:-.02em;font-weight:600}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.grad{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- Header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:all .35s cubic-bezier(.4,0,.2,1);
+}
+.hdr-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  margin:14px auto;max-width:1140px;padding:12px 22px;
+  background:rgba(245,247,250,.72);
+  backdrop-filter:blur(16px) saturate(1.5);
+  -webkit-backdrop-filter:blur(16px) saturate(1.5);
+  border:1px solid var(--line);
+  border-radius:16px;
+  transition:all .35s cubic-bezier(.4,0,.2,1);
+}
+header.stuck .hdr-inner{
+  margin-top:8px;padding:8px 18px;
+  box-shadow:var(--shadow);
+  background:rgba(245,247,250,.9);
+}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.brand .mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,var(--ink),#22304a);
+  display:grid;place-items:center;color:var(--accent);
+  font-weight:700;box-shadow:inset 0 0 0 1px rgba(59,118,214,.4);
+}
+.brand small{font-weight:400;color:var(--muted);font-family:'Inter';font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:8px;
+  font-family:'Inter';font-weight:600;font-size:.95rem;
+  padding:12px 22px;border-radius:12px;cursor:pointer;border:none;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;overflow:hidden;transition:transform .25s,box-shadow .25s;
+  box-shadow:0 10px 24px -10px rgba(59,118,214,.7);
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(59,118,214,.8)}
+.btn::after{
+  content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:skewX(-20deg);
+}
+.btn:hover::after{animation:shine .9s ease}
+@keyframes shine{to{left:130%}}
+.hdr-cta{font-size:.88rem;padding:10px 18px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:170px 0 90px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(ellipse 80% 70% at 60% 20%,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 20%,#000 30%,transparent 75%);
+}
+.hero-glow{
+  position:absolute;top:-160px;right:-80px;width:720px;height:720px;
+  background:radial-gradient(circle,rgba(59,118,214,.30),rgba(59,118,214,0) 62%);
+  filter:blur(10px);
+}
+.hero-glow.two{top:200px;left:-220px;width:560px;height:560px;background:radial-gradient(circle,rgba(43,93,184,.20),transparent 65%)}
+.grain{position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent2);background:rgba(59,118,214,.09);
+  padding:7px 14px;border-radius:100px;border:1px solid rgba(59,118,214,.2);
+  margin-bottom:22px;
+}
+.eyebrow iconify-icon{font-size:1rem}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4rem);margin-bottom:22px}
+.hero p.lead{font-size:1.16rem;color:var(--muted);max-width:520px;margin-bottom:26px}
+.trust-row{display:flex;flex-wrap:wrap;gap:20px;align-items:center;color:var(--muted);font-size:.9rem}
+.trust-row span{display:inline-flex;align-items:center;gap:7px;font-weight:500}
+.trust-row iconify-icon{font-size:1.15rem;color:var(--accent)}
+
+/* ---------- Form card ---------- */
+.form-card{position:relative;border-radius:var(--radius);padding:2px;background:linear-gradient(140deg,rgba(59,118,214,.6),rgba(23,32,46,.08) 40%,rgba(43,93,184,.5));box-shadow:var(--shadow)}
+.form-inner{background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-radius:calc(var(--radius) - 2px);padding:32px 30px}
+.form-inner h3{font-size:1.5rem;margin-bottom:5px}
+.form-inner .sub{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.field input{
+  width:100%;padding:13px 15px;border-radius:11px;font-size:.98rem;font-family:'Inter';
+  border:1px solid var(--line);background:var(--paper);color:var(--ink);transition:border .2s,box-shadow .2s;
+}
+.field input::placeholder{color:#9aa4b4}
+.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,118,214,.16)}
+.form-inner .btn{width:100%;justify-content:center;margin-top:6px;font-size:1rem;padding:15px}
+.form-note{text-align:center;font-size:.78rem;color:var(--muted);margin-top:13px;display:flex;align-items:center;justify-content:center;gap:6px}
+.form-note iconify-icon{color:var(--accent)}
+.success{display:none;text-align:center;padding:26px 10px}
+.success.show{display:block}
+.success iconify-icon{font-size:3.4rem;color:var(--accent)}
+.success h3{margin:12px 0 6px}
+.success p{color:var(--muted);font-size:.95rem}
+.form-fields.hide{display:none}
+
+/* ---------- Marquee ---------- */
+.marquee{position:relative;overflow:hidden;background:var(--ink);padding:16px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.marquee-track{display:flex;width:max-content;animation:scroll 26s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{display:inline-flex;align-items:center;gap:12px;padding:0 30px;color:rgba(255,255,255,.62);font-family:'Fraunces';font-size:1.28rem;font-weight:500;white-space:nowrap}
+.marquee-track iconify-icon{color:var(--accent);font-size:1.3rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Section ---------- */
+section.blk{padding:96px 0;position:relative}
+.sec-head{max-width:640px;margin:0 auto 54px;text-align:center}
+.sec-head .kick{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin-bottom:14px}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:1.06rem}
+
+/* ---------- Bento ---------- */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;
+  transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s,border-color .3s;position:relative;overflow:hidden;
+}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 0%,rgba(59,118,214,.07),transparent 55%);opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(59,118,214,.3)}
+.card:hover::before{opacity:1}
+.card .ico{
+  width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
+  background:linear-gradient(135deg,rgba(59,118,214,.12),rgba(43,93,184,.08));color:var(--accent2);
+  transition:transform .35s cubic-bezier(.34,1.56,.64,1);
+}
+.card:hover .ico{transform:rotate(-8deg) scale(1.08)}
+.card .ico iconify-icon{font-size:1.7rem}
+.card .num{position:absolute;top:22px;right:26px;font-family:'Fraunces';font-size:2.2rem;color:var(--sand);font-weight:600}
+.card:hover .num{color:rgba(59,118,214,.2)}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.96rem}
+.bento .card:nth-child(1){grid-column:span 3}
+.bento .card:nth-child(2){grid-column:span 3}
+.bento .card:nth-child(3){grid-column:span 2}
+.bento .card:nth-child(4){grid-column:span 2}
+.bento .card:nth-child(5){grid-column:span 2}
+
+/* ---------- Why ---------- */
+.why{background:var(--ink);color:#fff}
+.why .sec-head h2{color:#fff}
+.why .sec-head p{color:rgba(255,255,255,.68)}
+.why .kick{color:var(--accent)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:10px}
+.stat{text-align:center;padding:30px 20px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.03)}
+.stat iconify-icon{font-size:2rem;color:var(--accent);margin-bottom:12px}
+.stat h3{font-size:1.2rem;color:#fff;margin-bottom:6px}
+.stat p{color:rgba(255,255,255,.62);font-size:.92rem}
+
+/* ---------- Social proof ---------- */
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:920px;margin:0 auto}
+.quote{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;position:relative}
+.quote .stars{display:flex;gap:3px;color:#e8a33d;margin-bottom:14px}
+.quote .stars iconify-icon{font-size:1.15rem}
+.quote p{font-size:1.05rem;color:var(--ink);margin-bottom:20px;font-family:'Fraunces';font-weight:400;font-style:italic;line-height:1.5}
+.quote .who{display:flex;align-items:center;gap:12px}
+.quote .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#fff;font-weight:600;font-family:'Fraunces'}
+.quote .who b{display:block;font-size:.92rem}
+.quote .who small{color:var(--muted);font-size:.8rem}
+.sample-tag{position:absolute;top:18px;right:18px;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);background:rgba(59,118,214,.1);padding:4px 9px;border-radius:6px;border:1px solid rgba(59,118,214,.2)}
+
+/* ---------- Final CTA ---------- */
+.final{background:linear-gradient(135deg,var(--sand),var(--paper));position:relative;overflow:hidden}
+.final-grid{display:grid;grid-template-columns:1fr .9fr;gap:50px;align-items:center;position:relative;z-index:2}
+.final h2{font-size:clamp(2rem,3.6vw,2.9rem);margin-bottom:16px}
+.final p{color:var(--muted);font-size:1.08rem;margin-bottom:22px}
+.final .checks{list-style:none;display:grid;gap:12px}
+.final .checks li{display:flex;align-items:center;gap:11px;font-weight:500;font-size:1rem}
+.final .checks iconify-icon{color:var(--accent);font-size:1.35rem}
+.final .hero-glow{z-index:0}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:rgba(255,255,255,.6);padding:52px 0 34px}
+.foot-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer .brand{color:#fff}
+footer .brand .mark{background:rgba(255,255,255,.08)}
+.foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:22px;font-size:.85rem}
+.foot-bot a:hover{color:var(--accent)}
+.disclaimer{font-size:.76rem;color:rgba(255,255,255,.4);max-width:640px;margin-top:14px}
+
+/* ---------- Mobile sticky ---------- */
+.mobile-cta{
+  position:fixed;bottom:0;left:0;right:0;z-index:90;display:none;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(245,247,250,.9);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+}
+.mobile-cta .btn{width:100%;justify-content:center}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .final-grid{grid-template-columns:1fr;gap:34px}
+  .bento{grid-template-columns:1fr 1fr}
+  .bento .card{grid-column:span 1 !important}
+  .why-grid{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr}
+  .hdr-cta{display:none}
+  .mobile-cta{display:block}
+  body{padding-bottom:76px}
+}
+@media(max-width:560px){
+  .bento{grid-template-columns:1fr}
+  .foot-top,.foot-bot{flex-direction:column;align-items:flex-start}
+  .hero{padding-top:140px}
+}
+:focus-visible{outline:3px solid rgba(59,118,214,.5);outline-offset:2px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
-<header class="site">
-  <div class="nav">
-    <div class="brand"><span class="mk">VNG</span><div>VNG Tech</div></div>
-    <a href="#audit" class="btn">Get my free audit <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+<!-- Grain SVG filter -->
+<svg width="0" height="0" style="position:absolute">
+  <filter id="grainf"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter>
+</svg>
+
+<header id="hdr">
+  <div class="hdr-inner">
+    <a href="#top" class="brand">
+      <span class="mark">V</span>
+      <span>VNG Tech<br><small>Digital Agency</small></span>
+    </a>
+    <button class="btn hdr-cta" onclick="scrollForm()">
+      <iconify-icon icon="mdi:magnify-scan"></iconify-icon> Get my free audit
+    </button>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow two"></div>
+    <div class="grain" style="filter:url(#grainf)"></div>
+  </div>
+  <div class="wrap hero-inner">
     <div>
-      <div class="eyebrow">Free website audit</div>
-      <h1>Is your website quietly <span>costing you leads?</span></h1>
-      <p class="sub">Get a free 5-point audit of your site. In one clear report, see exactly where visitors drop off and what to fix first, no sales call required.</p>
-      <div class="trust">
-        <span><iconify-icon icon="mdi:clipboard-check-outline"></iconify-icon> 5 key checks</span>
-        <span><iconify-icon icon="mdi:email-fast-outline"></iconify-icon> Delivered by email</span>
-        <span><iconify-icon icon="mdi:cash-remove"></iconify-icon> Free, no obligation</span>
+      <span class="eyebrow reveal"><iconify-icon icon="mdi:file-search-outline"></iconify-icon> Free 5-Point Website Audit</span>
+      <h1 class="reveal" data-d="1">Is your website <span class="grad">costing you leads?</span> Get a free 5-point audit.</h1>
+      <p class="lead reveal" data-d="2">A clear, no-fluff review of the five things that quietly leak leads: your conversion path, page speed, SEO basics, mobile experience, and on-page trust. Built by the VNG Tech team.</p>
+      <div class="trust-row reveal" data-d="3">
+        <span><iconify-icon icon="mdi:clock-fast"></iconify-icon> Delivered within 2 business days</span>
+        <span><iconify-icon icon="mdi:cash-remove"></iconify-icon> No cost, no obligation</span>
       </div>
     </div>
-    <div class="formcard" id="audit">
-      <div class="fform">
-        <h3>Get your free audit</h3>
-        <p class="pk">Tell us where to look and we will send your report.</p>
-        <form onsubmit="return sent(this)">
-          <div class="field"><label for="n1">Name</label><input id="n1" type="text" required placeholder="Your name"></div>
-          <div class="field"><label for="w1">Website URL</label><input id="w1" type="text" required placeholder="yourwebsite.com"></div>
-          <div class="field"><label for="e1">Email</label><input id="e1" type="email" required placeholder="you@email.com"></div>
-          <button class="btn block" type="submit">Send my free audit <iconify-icon icon="mdi:arrow-right"></iconify-icon></button>
-        </form>
-        <p class="fine">We review your site by hand. No spam, ever.</p>
+
+    <div class="form-card reveal" data-d="2" id="form">
+      <div class="form-inner">
+        <div class="form-fields" id="formFields">
+          <h3>Send my free audit</h3>
+          <p class="sub">Drop your details and we will review your site.</p>
+          <form action="#" onsubmit="return handleSubmit(event)">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Jordan Reyes" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="url">Website URL</label>
+              <input type="url" id="url" name="url" placeholder="https://yoursite.com" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+            </div>
+            <button type="submit" class="btn">
+              <iconify-icon icon="mdi:send-check-outline"></iconify-icon> Send my free audit
+            </button>
+          </form>
+          <div class="form-note"><iconify-icon icon="mdi:lock-outline"></iconify-icon> We respect your inbox. No spam, ever.</div>
+        </div>
+        <div class="success" id="success">
+          <iconify-icon icon="mdi:check-decagram"></iconify-icon>
+          <h3>Your audit is on its way</h3>
+          <p>Thanks. Our team will review your site and send your 5-point audit within 2 business days.</p>
+        </div>
       </div>
-      <div class="success"><iconify-icon icon="mdi:check-circle"></iconify-icon><h3>Your audit is on its way</h3><p style="margin:0">We will review your site and email your 5-point report shortly.</p></div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="narrow" style="text-align:center;padding:0">
-      <div class="eyebrow" style="justify-content:center">What we check</div>
-      <h2>The 5 things that make or break conversions.</h2>
-    </div>
-    <div class="feat-grid rv">
-      <div class="fcard"><div class="ic"><iconify-icon icon="mdi:cursor-default-click-outline"></iconify-icon></div><h3>Conversion path</h3><p>Clear CTAs and a route to contact you.</p></div>
-      <div class="fcard"><div class="ic"><iconify-icon icon="mdi:speedometer"></iconify-icon></div><h3>Page speed</h3><p>How fast it loads before people leave.</p></div>
-      <div class="fcard"><div class="ic"><iconify-icon icon="mdi:magnify"></iconify-icon></div><h3>SEO basics</h3><p>Whether search engines can find you.</p></div>
-      <div class="fcard"><div class="ic"><iconify-icon icon="mdi:cellphone-check"></iconify-icon></div><h3>Mobile UX</h3><p>How it works on the phones most visitors use.</p></div>
-      <div class="fcard"><div class="ic"><iconify-icon icon="mdi:shield-star-outline"></iconify-icon></div><h3>Trust &amp; proof</h3><p>Whether the site earns a visitor's confidence.</p></div>
-    </div>
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span><iconify-icon icon="mdi:target-arrow"></iconify-icon> Conversion</span>
+    <span><iconify-icon icon="mdi:speedometer"></iconify-icon> Speed</span>
+    <span><iconify-icon icon="mdi:magnify"></iconify-icon> SEO</span>
+    <span><iconify-icon icon="mdi:cellphone-check"></iconify-icon> Mobile</span>
+    <span><iconify-icon icon="mdi:shield-check-outline"></iconify-icon> Trust</span>
+    <span><iconify-icon icon="mdi:target-arrow"></iconify-icon> Conversion</span>
+    <span><iconify-icon icon="mdi:speedometer"></iconify-icon> Speed</span>
+    <span><iconify-icon icon="mdi:magnify"></iconify-icon> SEO</span>
+    <span><iconify-icon icon="mdi:cellphone-check"></iconify-icon> Mobile</span>
+    <span><iconify-icon icon="mdi:shield-check-outline"></iconify-icon> Trust</span>
   </div>
-</section>
+</div>
 
-<section class="why">
+<!-- ============ WHAT IT COVERS ============ -->
+<section class="blk" id="covers">
   <div class="wrap">
-    <div class="narrow" style="text-align:center;padding:0">
-      <div class="eyebrow" style="justify-content:center">Why it matters</div>
-      <h2>Most sites leak leads they never see.</h2>
+    <div class="sec-head reveal">
+      <div class="kick">What the audit covers</div>
+      <h2>Five checks. One honest picture.</h2>
+      <p>We look at the levers that actually move leads, then hand you a plain-language rundown of what is working and what to fix first.</p>
     </div>
-    <div class="why-grid rv">
-      <div class="why-item"><iconify-icon icon="mdi:trending-down"></iconify-icon><div><b>Small gaps, big losses</b><p>A slow page or an unclear call to action can quietly cost you the majority of would-be enquiries.</p></div></div>
-      <div class="why-item"><iconify-icon icon="mdi:eye-check-outline"></iconify-icon><div><b>You cannot fix what you cannot see</b><p>The audit shows you exactly where visitors drop off, in plain language, so you know what to prioritise.</p></div></div>
-      <div class="why-item"><iconify-icon icon="mdi:hand-heart-outline"></iconify-icon><div><b>Value first, no pressure</b><p>You get the report and the insights whether or not we ever work together.</p></div></div>
-      <div class="why-item"><iconify-icon icon="mdi:account-hard-hat-outline"></iconify-icon><div><b>Reviewed by real people</b><p>Not an automated score. A human looks at your site and tells you what actually needs attention.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="narrow" style="text-align:center;padding:0">
-      <div class="eyebrow" style="justify-content:center">What clients say</div>
-      <h2>Websites that do their job.</h2>
-    </div>
-    <div class="tgrid rv">
-      <div class="tcard"><span class="chip">Sample</span><p>"Placeholder for a real client review. Replace with a genuine testimonial about the results a new or improved site delivered."</p><div class="who2"><div class="av"><iconify-icon icon="mdi:account"></iconify-icon></div><div><b>Client name</b><br><small>Sample placeholder</small></div></div></div>
-      <div class="tcard"><span class="chip">Sample</span><p>"Placeholder for a second review. A specific outcome, such as more enquiries or a faster site, works best here."</p><div class="who2"><div class="av"><iconify-icon icon="mdi:account"></iconify-icon></div><div><b>Client name</b><br><small>Sample placeholder</small></div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="final">
-  <div class="wrap">
-    <div class="eyebrow" style="justify-content:center;color:#7fa9ee">Start here</div>
-    <h2>See what your website is really doing.</h2>
-    <p>Get your free 5-point audit and a clear list of what to fix first.</p>
-    <div class="formcard">
-      <div class="fform">
-        <h3>Get your free audit</h3>
-        <p class="pk">Free, no obligation.</p>
-        <form onsubmit="return sent(this)">
-          <div class="field"><label for="n2">Name</label><input id="n2" type="text" required placeholder="Your name"></div>
-          <div class="field"><label for="w2">Website URL</label><input id="w2" type="text" required placeholder="yourwebsite.com"></div>
-          <div class="field"><label for="e2">Email</label><input id="e2" type="email" required placeholder="you@email.com"></div>
-          <button class="btn block" type="submit">Send my free audit <iconify-icon icon="mdi:arrow-right"></iconify-icon></button>
-        </form>
+    <div class="bento">
+      <div class="card reveal" data-d="1">
+        <span class="num">01</span>
+        <div class="ico"><iconify-icon icon="mdi:cursor-default-click-outline"></iconify-icon></div>
+        <h3>Conversion path & CTAs</h3>
+        <p>Where visitors get stuck, weak or missing calls to action, and the fastest wins to turn traffic into enquiries.</p>
       </div>
-      <div class="success"><iconify-icon icon="mdi:check-circle"></iconify-icon><h3>Your audit is on its way</h3><p style="margin:0">We will email your report shortly.</p></div>
+      <div class="card reveal" data-d="2">
+        <span class="num">02</span>
+        <div class="ico"><iconify-icon icon="mdi:speedometer"></iconify-icon></div>
+        <h3>Page speed</h3>
+        <p>Load times and Core Web Vitals signals that frustrate visitors and drag down your search ranking.</p>
+      </div>
+      <div class="card reveal" data-d="1">
+        <span class="num">03</span>
+        <div class="ico"><iconify-icon icon="mdi:magnify-expand"></iconify-icon></div>
+        <h3>SEO basics</h3>
+        <p>Titles, headings, metadata, and structure so the right people can actually find you on Google.</p>
+      </div>
+      <div class="card reveal" data-d="2">
+        <span class="num">04</span>
+        <div class="ico"><iconify-icon icon="mdi:cellphone-cog"></iconify-icon></div>
+        <h3>Mobile UX</h3>
+        <p>How the site feels on a phone, where most of your visitors are, and the layout snags costing you taps.</p>
+      </div>
+      <div class="card reveal" data-d="3">
+        <span class="num">05</span>
+        <div class="ico"><iconify-icon icon="mdi:seal-variant"></iconify-icon></div>
+        <h3>Trust & proof</h3>
+        <p>Reviews, credentials, and reassurance cues that tell a first-time visitor you are the safe choice.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ============ WHY IT MATTERS ============ -->
+<section class="blk why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Why it matters</div>
+      <h2>Small gaps quietly cost real revenue.</h2>
+      <p>Most sites do not fail loudly. They lose a little here and a little there until the pipeline runs dry. The audit surfaces those leaks before they add up.</p>
+    </div>
+    <div class="why-grid">
+      <div class="stat reveal" data-d="1">
+        <iconify-icon icon="mdi:eye-off-outline"></iconify-icon>
+        <h3>Invisible friction</h3>
+        <p>A slow load or buried CTA rarely announces itself. You just see fewer enquiries and never know why.</p>
+      </div>
+      <div class="stat reveal" data-d="2">
+        <iconify-icon icon="mdi:trending-up"></iconify-icon>
+        <h3>Compounding upside</h3>
+        <p>Fixing the basics lifts every visit that follows, so one round of clean-up keeps paying you back.</p>
+      </div>
+      <div class="stat reveal" data-d="3">
+        <iconify-icon icon="mdi:map-marker-path"></iconify-icon>
+        <h3>A clear next step</h3>
+        <p>You get a prioritised list, not a jargon dump. You will know exactly what to tackle first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIAL PROOF ============ -->
+<section class="blk" id="proof">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">What people say</div>
+      <h2>Straight talk, no guesswork.</h2>
+      <p>Illustrative examples of the feedback an audit like this earns.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="quote reveal" data-d="1">
+        <span class="sample-tag">Sample</span>
+        <div class="stars">
+          <iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon>
+        </div>
+        <p>The audit pointed out three fixes we never would have spotted. Clear, specific, and no pressure to buy anything.</p>
+        <div class="who">
+          <span class="av">SP</span>
+          <div><b>Sample Placeholder</b><small>Owner, Local Service Business</small></div>
+        </div>
+      </div>
+      <div class="quote reveal" data-d="2">
+        <span class="sample-tag">Sample</span>
+        <div class="stars">
+          <iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon><iconify-icon icon="mdi:star"></iconify-icon>
+        </div>
+        <p>Finally a review written in plain English. We knew what to fix first and why it mattered for our leads.</p>
+        <div class="who">
+          <span class="av">SP</span>
+          <div><b>Sample Placeholder</b><small>Founder, E-commerce Brand</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="blk final" id="final">
+  <div class="hero-glow" style="top:-100px;left:-120px"></div>
+  <div class="wrap final-grid">
+    <div class="reveal">
+      <div class="kick" style="color:var(--accent2);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px">Ready when you are</div>
+      <h2>Get your free 5-point audit.</h2>
+      <p>One short form. A clear picture of what is leaking leads and what to do about it. Sent straight to your inbox.</p>
+      <ul class="checks">
+        <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Reviewed by the VNG Tech team</li>
+        <li><iconify-icon icon="mdi:check-circle"></iconify-icon> Plain-language, prioritised findings</li>
+        <li><iconify-icon icon="mdi:check-circle"></iconify-icon> No cost and no obligation</li>
+      </ul>
+    </div>
+    <div class="form-card reveal" data-d="1">
+      <div class="form-inner">
+        <div class="form-fields" id="formFields2">
+          <h3>Send my free audit</h3>
+          <p class="sub">We will get back to you within 2 business days.</p>
+          <form action="#" onsubmit="return handleSubmit(event,2)">
+            <div class="field">
+              <label for="name2">Name</label>
+              <input type="text" id="name2" name="name" placeholder="Jordan Reyes" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="url2">Website URL</label>
+              <input type="url" id="url2" name="url" placeholder="https://yoursite.com" required>
+            </div>
+            <div class="field">
+              <label for="email2">Email</label>
+              <input type="email" id="email2" name="email" placeholder="you@company.com" required autocomplete="email">
+            </div>
+            <button type="submit" class="btn">
+              <iconify-icon icon="mdi:send-check-outline"></iconify-icon> Send my free audit
+            </button>
+          </form>
+          <div class="form-note"><iconify-icon icon="mdi:lock-outline"></iconify-icon> We respect your inbox. No spam, ever.</div>
+        </div>
+        <div class="success" id="success2">
+          <iconify-icon icon="mdi:check-decagram"></iconify-icon>
+          <h3>Your audit is on its way</h3>
+          <p>Thanks. Our team will review your site and send your 5-point audit within 2 business days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
-    <div class="foot"><span>VNG Tech - Free Website Audit</span><span>We build websites that sell</span></div>
-    <p class="dis">This is a sample lead-magnet landing page prepared as a concept. Testimonials shown are placeholders to be replaced with real, permitted client reviews before publishing.</p>
+    <div class="foot-top">
+      <a href="#top" class="brand">
+        <span class="mark">V</span>
+        <span>VNG Tech<br><small>Digital Agency</small></span>
+      </a>
+      <button class="btn" onclick="scrollForm()">
+        <iconify-icon icon="mdi:magnify-scan"></iconify-icon> Get my free audit
+      </button>
+    </div>
+    <div class="foot-bot">
+      <span>Websites that sell. SEO and content that ranks. Rancho Mission Viejo, CA.</span>
+      <span>Copyright 2026 VNG Tech. All rights reserved.</span>
+    </div>
+    <p class="disclaimer">This is a demonstration landing page. Testimonials shown are clearly labeled sample placeholders and do not represent real clients. No specific results or outcomes are promised or guaranteed.</p>
   </div>
 </footer>
 
+<!-- ============ MOBILE STICKY CTA ============ -->
+<div class="mobile-cta">
+  <button class="btn" onclick="scrollForm()">
+    <iconify-icon icon="mdi:magnify-scan"></iconify-icon> Get my free audit
+  </button>
+</div>
+
 <script>
-  function sent(f){f.closest('.formcard').classList.add('ok');return false;}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+// Sticky header shrink
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>{hdr.classList.toggle('stuck',window.scrollY>30)},{passive:true});
+
+// Scroll to form
+function scrollForm(){
+  document.getElementById('form').scrollIntoView({behavior:'smooth',block:'center'});
+  setTimeout(()=>document.getElementById('name').focus(),500);
+}
+
+// Scroll reveal with staggered delays
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const d=e.target.getAttribute('data-d')||0;
+      e.target.style.transitionDelay=(d*90)+'ms';
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Form submit -> success state
+function handleSubmit(e,n){
+  e.preventDefault();
+  const suffix=n===2?'2':'';
+  document.getElementById('formFields'+suffix).classList.add('hide');
+  document.getElementById('success'+suffix).classList.add('show');
+  return false;
+}
 </script>
 </body>
 </html>
